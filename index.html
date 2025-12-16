@@ -18,7 +18,6 @@
 
         .dashboard-container { width: 100%; max-width: 600px; }
 
-        /* KUTU STİLİ */
         .highlight-box {
             background: white;
             padding: 25px;
@@ -33,19 +32,19 @@
         .highlight-box:active { transform: scale(0.98); }
 
         .box-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .box-title { font-size: 20px; font-weight: 700; color: #333; margin: 0; }
+        .box-title { font-size: 18px; font-weight: 700; color: #333; margin: 0; }
         .status-badge { font-size: 11px; background: #e1f5fe; color: #0288d1; padding: 4px 8px; border-radius: 6px; }
 
         .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
         .metric-row:last-of-type { border-bottom: none; }
-        .label { font-size: 15px; color: #666; }
+        /* Fontlama maliyeti yazısı uzun olduğu için mobilde taşmasın diye biraz küçülttüm */
+        .label { font-size: 14px; color: #666; font-weight: 500;} 
         .value { font-size: 18px; font-weight: 600; color: #333; }
 
         .trend-up { color: #d63031; }
         .trend-down { color: #00b894; }
         .hint-text { text-align: center; font-size: 12px; color: #0071e3; margin-top: 10px; font-weight: 500; }
 
-        /* GRAFİK ALANI */
         .chart-wrapper {
             display: none;
             background: white;
@@ -67,7 +66,7 @@
     <div class="highlight-box" onclick="toggleGrafik('chart-tufe', this)">
         <div class="box-header">
             <h2 class="box-title">TÜFE (Enflasyon)</h2>
-            <span class="status-badge" id="date-tufe">...</span>
+            <span class="status-badge" id="date-tufe">Veri Yok</span>
         </div>
         <div class="metric-row">
             <span class="label">Aylık Değişim:</span>
@@ -86,13 +85,13 @@
 
     <div class="highlight-box" onclick="toggleGrafik('chart-faiz', this)">
         <div class="box-header">
-            <h2 class="box-title">Faiz Oranları</h2>
-            <span class="status-badge" id="date-faiz">...</span>
+            <h2 class="box-title">TCMB Fonlama</h2>
+            <span class="status-badge" id="date-faiz">Veri Yok</span>
         </div>
         
         <div class="metric-row">
-            <span class="label">Politika Faizi:</span>
-            <span class="value" id="val-politika">...</span>
+            <span class="label">Ağırlıklı Ortalama Fonlama Maliyeti:</span>
+            <span class="value" id="val-fonlama">...</span>
         </div>
         
         <div class="hint-text">Grafik için dokunun ▼</div>
@@ -104,7 +103,6 @@
 </div>
 
 <script>
-    // --- GRAFİK AÇ/KAPA FONKSİYONU ---
     function toggleGrafik(chartId, boxElement) {
         const chartDiv = document.getElementById(chartId);
         const hint = boxElement.querySelector('.hint-text');
@@ -114,6 +112,77 @@
             hint.innerText = "Grafik için dokunun ▼";
             boxElement.style.borderRadius = "16px";
         } else {
-            // Açık olan diğerlerini kapat (isteğe bağlı)
             document.querySelectorAll('.chart-wrapper').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.hint-text').forEach(el => el.innerText =
+            document.querySelectorAll('.hint-text').forEach(el => el.innerText = "Grafik için dokunun ▼");
+            
+            chartDiv.style.display = 'block';
+            hint.innerText = "Kapatmak için dokunun ▲";
+            boxElement.style.borderRadius = "16px 16px 0 0";
+        }
+    }
+
+    fetch('veri.json')
+        .then(res => res.json())
+        .then(data => {
+            
+            // ENFLASYON
+            const tufeData = data.enflasyon;
+            if (tufeData && tufeData.length > 0) {
+                const sonTufe = tufeData[tufeData.length - 1];
+                document.getElementById('date-tufe').innerText = sonTufe.tarih;
+                document.getElementById('val-aylik').innerText = "%" + sonTufe.aylik;
+                document.getElementById('val-yillik').innerText = "%" + sonTufe.yillik;
+                document.getElementById('val-aylik').className = sonTufe.aylik > 0 ? "value trend-up" : "value trend-down";
+
+                new Chart(document.getElementById('canvas-tufe'), {
+                    type: 'line',
+                    data: {
+                        labels: tufeData.map(d => d.tarih),
+                        datasets: [{
+                            label: 'Yıllık Enflasyon (%)',
+                            data: tufeData.map(d => d.yillik),
+                            borderColor: '#e17055',
+                            backgroundColor: 'rgba(225, 112, 85, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.3,
+                            fill: true
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false }
+                });
+            }
+
+            // TCMB FONLAMA (GÜNCELLENDİ)
+            const faizData = data.faiz;
+            if (faizData && faizData.length > 0) {
+                const sonFaiz = faizData[faizData.length - 1];
+                document.getElementById('date-faiz').innerText = sonFaiz.tarih;
+                
+                // --- KRİTİK DEĞİŞİKLİK BURADA ---
+                // Number(x).toFixed(2) kullanarak her zaman 2 ondalık (örn: 39.47) gösteriyoruz.
+                document.getElementById('val-fonlama').innerText = "%" + Number(sonFaiz.fonlama).toFixed(2);
+
+                new Chart(document.getElementById('canvas-faiz'), {
+                    type: 'line',
+                    data: {
+                        labels: faizData.map(d => d.tarih),
+                        datasets: [{
+                            label: 'AOFM (%)',
+                            data: faizData.map(d => d.fonlama),
+                            borderColor: '#6c5ce7', 
+                            backgroundColor: 'rgba(108, 92, 231, 0.1)',
+                            borderWidth: 3,
+                            pointRadius: 3,
+                            tension: 0.1,
+                            fill: true
+                        }]
+                    },
+                    options: { responsive: true, maintainAspectRatio: false }
+                });
+            }
+        })
+        .catch(err => console.error("Veri okuma hatası:", err));
+</script>
+
+</body>
+</html>
