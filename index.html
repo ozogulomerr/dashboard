@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>TCMB Enflasyon Paneli</title>
+    <title>Ekonomi Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -10,154 +10,110 @@
             background-color: #f0f2f5;
             color: #1d1d1f;
             margin: 0;
-            padding: 40px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* Ana Kutu Tasarımı (İstediğin Kısım) */
+        .dashboard-container { width: 100%; max-width: 600px; }
+
+        /* KUTU STİLİ */
         .highlight-box {
-            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-            width: 100%;
-            max-width: 400px;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            text-align: center;
-            border: 1px solid rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-
-        .highlight-box h1 {
-            margin: 0 0 20px 0;
-            font-size: 28px;
-            color: #333;
-            letter-spacing: -0.5px;
-        }
-
-        .metric-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .metric-row:last-child { border-bottom: none; }
-
-        .label {
-            font-size: 16px;
-            color: #666;
-            font-weight: 500;
-        }
-
-        .value {
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        /* Renkler */
-        .trend-up { color: #d63031; } /* Kırmızı (Enflasyon kötü) */
-        .trend-down { color: #00b894; } /* Yeşil */
-
-        /* Grafik Kutusu */
-        .chart-container {
             background: white;
-            width: 100%;
-            max-width: 900px;
-            padding: 20px;
+            padding: 25px;
             border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            height: 400px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0,0,0,0.05);
         }
-        
-        .date-info {
-            font-size: 12px;
-            color: #aaa;
-            margin-top: 10px;
+        .highlight-box:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .highlight-box:active { transform: scale(0.98); }
+
+        .box-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .box-title { font-size: 20px; font-weight: 700; color: #333; margin: 0; }
+        .status-badge { font-size: 11px; background: #e1f5fe; color: #0288d1; padding: 4px 8px; border-radius: 6px; }
+
+        .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+        .metric-row:last-of-type { border-bottom: none; }
+        .label { font-size: 15px; color: #666; }
+        .value { font-size: 18px; font-weight: 600; color: #333; }
+
+        .trend-up { color: #d63031; }
+        .trend-down { color: #00b894; }
+        .hint-text { text-align: center; font-size: 12px; color: #0071e3; margin-top: 10px; font-weight: 500; }
+
+        /* GRAFİK ALANI */
+        .chart-wrapper {
+            display: none;
+            background: white;
+            padding: 15px;
+            border-radius: 0 0 16px 16px;
+            margin-top: -20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            height: 300px;
+            animation: slideDown 0.3s ease-out;
         }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-    <div class="highlight-box">
-        <h1>TÜFE (Enflasyon)</h1>
-        
+<div class="dashboard-container">
+    
+    <div class="highlight-box" onclick="toggleGrafik('chart-tufe', this)">
+        <div class="box-header">
+            <h2 class="box-title">TÜFE (Enflasyon)</h2>
+            <span class="status-badge" id="date-tufe">...</span>
+        </div>
         <div class="metric-row">
-            <span class="label">Aylık TÜFE Değişim:</span>
+            <span class="label">Aylık Değişim:</span>
             <span class="value" id="val-aylik">...</span>
         </div>
-
         <div class="metric-row">
-            <span class="label">Yıllık TÜFE Değişim:</span>
+            <span class="label">Yıllık Değişim:</span>
             <span class="value" id="val-yillik">...</span>
         </div>
-        
-        <div class="date-info" id="val-tarih">Veri bekleniyor...</div>
+        <div class="hint-text">Grafik için dokunun ▼</div>
+    </div>
+    <div class="chart-wrapper" id="chart-tufe">
+        <canvas id="canvas-tufe"></canvas>
     </div>
 
-    <div class="chart-container">
-        <canvas id="mainChart"></canvas>
+
+    <div class="highlight-box" onclick="toggleGrafik('chart-faiz', this)">
+        <div class="box-header">
+            <h2 class="box-title">Faiz Oranları</h2>
+            <span class="status-badge" id="date-faiz">...</span>
+        </div>
+        
+        <div class="metric-row">
+            <span class="label">Politika Faizi:</span>
+            <span class="value" id="val-politika">...</span>
+        </div>
+        
+        <div class="hint-text">Grafik için dokunun ▼</div>
     </div>
+    <div class="chart-wrapper" id="chart-faiz">
+        <canvas id="canvas-faiz"></canvas>
+    </div>
+
+</div>
 
 <script>
-    fetch('veri.json')
-        .then(response => response.json())
-        .then(data => {
-            // Son veriyi al (En güncel ay)
-            const sonVeri = data[data.length - 1];
-
-            // 1. KUTUYU DOLDUR
-            const aylikEl = document.getElementById('val-aylik');
-            const yillikEl = document.getElementById('val-yillik');
-
-            aylikEl.innerText = "%" + sonVeri.aylik;
-            yillikEl.innerText = "%" + sonVeri.yillik;
-            document.getElementById('val-tarih').innerText = sonVeri.tarih + " itibarıyla güncel veri";
-
-            // Rengi ayarla (Artıysa kırmızı yapalım)
-            aylikEl.className = sonVeri.aylik > 0 ? "value trend-up" : "value trend-down";
-            yillikEl.className = "value trend-up"; // Yıllık enflasyon TR'de genelde hep pozitif
-
-            // 2. GRAFİĞİ ÇİZ (Sadece Yıllık Değişimi Gösterelim, daha temiz durur)
-            const labels = data.map(d => d.tarih);
-            const yillikData = data.map(d => d.yillik);
-
-            const ctx = document.getElementById('mainChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Yıllık Enflasyon (%)',
-                        data: yillikData,
-                        borderColor: '#e17055',
-                        backgroundColor: 'rgba(225, 112, 85, 0.1)',
-                        borderWidth: 3,
-                        fill: true,
-                        tension: 0.3,
-                        pointRadius: 4,
-                        pointBackgroundColor: '#fff',
-                        pointBorderColor: '#e17055'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        title: { display: true, text: 'Son 2 Yılın Yıllık Enflasyon Trendi' }
-                    },
-                    scales: {
-                        y: { beginAtZero: false, grid: { color: '#f1f1f1' } },
-                        x: { grid: { display: false } }
-                    }
-                }
-            });
-        })
-        .catch(err => console.error("Veri okunamadı:", err));
-</script>
-
-</body>
-</html>
+    // --- GRAFİK AÇ/KAPA FONKSİYONU ---
+    function toggleGrafik(chartId, boxElement) {
+        const chartDiv = document.getElementById(chartId);
+        const hint = boxElement.querySelector('.hint-text');
+        
+        if (chartDiv.style.display === 'block') {
+            chartDiv.style.display = 'none';
+            hint.innerText = "Grafik için dokunun ▼";
+            boxElement.style.borderRadius = "16px";
+        } else {
+            // Açık olan diğerlerini kapat (isteğe bağlı)
+            document.querySelectorAll('.chart-wrapper').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.hint-text').forEach(el => el.innerText =

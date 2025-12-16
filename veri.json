@@ -1,212 +1,3151 @@
-[
-    {
-        "tarih": "2023-1",
-        "endeks": 1203.48,
-        "aylik": 6.65,
-        "yillik": 57.68
-    },
-    {
-        "tarih": "2023-2",
-        "endeks": 1241.33,
-        "aylik": 3.15,
-        "yillik": 55.18
-    },
-    {
-        "tarih": "2023-3",
-        "endeks": 1269.75,
-        "aylik": 2.29,
-        "yillik": 50.51
-    },
-    {
-        "tarih": "2023-4",
-        "endeks": 1300.04,
-        "aylik": 2.39,
-        "yillik": 43.68
-    },
-    {
-        "tarih": "2023-5",
-        "endeks": 1300.6,
-        "aylik": 0.04,
-        "yillik": 39.59
-    },
-    {
-        "tarih": "2023-6",
-        "endeks": 1351.59,
-        "aylik": 3.92,
-        "yillik": 38.21
-    },
-    {
-        "tarih": "2023-7",
-        "endeks": 1479.84,
-        "aylik": 9.49,
-        "yillik": 47.83
-    },
-    {
-        "tarih": "2023-8",
-        "endeks": 1614.31,
-        "aylik": 9.09,
-        "yillik": 58.94
-    },
-    {
-        "tarih": "2023-9",
-        "endeks": 1691.04,
-        "aylik": 4.75,
-        "yillik": 61.53
-    },
-    {
-        "tarih": "2023-10",
-        "endeks": 1749.11,
-        "aylik": 3.43,
-        "yillik": 61.36
-    },
-    {
-        "tarih": "2023-11",
-        "endeks": 1806.5,
-        "aylik": 3.28,
-        "yillik": 61.98
-    },
-    {
-        "tarih": "2023-12",
-        "endeks": 1859.38,
-        "aylik": 2.93,
-        "yillik": 64.77
-    },
-    {
-        "tarih": "2024-1",
-        "endeks": 1984.02,
-        "aylik": 6.7,
-        "yillik": 64.86
-    },
-    {
-        "tarih": "2024-2",
-        "endeks": 2073.88,
-        "aylik": 4.53,
-        "yillik": 67.07
-    },
-    {
-        "tarih": "2024-3",
-        "endeks": 2139.47,
-        "aylik": 3.16,
-        "yillik": 68.5
-    },
-    {
-        "tarih": "2024-4",
-        "endeks": 2207.5,
-        "aylik": 3.18,
-        "yillik": 69.8
-    },
-    {
-        "tarih": "2024-5",
-        "endeks": 2281.85,
-        "aylik": 3.37,
-        "yillik": 75.45
-    },
-    {
-        "tarih": "2024-6",
-        "endeks": 2319.29,
-        "aylik": 1.64,
-        "yillik": 71.6
-    },
-    {
-        "tarih": "2024-7",
-        "endeks": 2394.1,
-        "aylik": 3.23,
-        "yillik": 61.78
-    },
-    {
-        "tarih": "2024-8",
-        "endeks": 2453.34,
-        "aylik": 2.47,
-        "yillik": 51.97
-    },
-    {
-        "tarih": "2024-9",
-        "endeks": 2526.16,
-        "aylik": 2.97,
-        "yillik": 49.38
-    },
-    {
-        "tarih": "2024-10",
-        "endeks": 2598.91,
-        "aylik": 2.88,
-        "yillik": 48.58
-    },
-    {
-        "tarih": "2024-11",
-        "endeks": 2657.23,
-        "aylik": 2.24,
-        "yillik": 47.09
-    },
-    {
-        "tarih": "2024-12",
-        "endeks": 2684.55,
-        "aylik": 1.03,
-        "yillik": 44.38
-    },
-    {
-        "tarih": "2025-1",
-        "endeks": 2819.65,
-        "aylik": 5.03,
-        "yillik": 42.12
-    },
-    {
-        "tarih": "2025-2",
-        "endeks": 2883.75,
-        "aylik": 2.27,
-        "yillik": 39.05
-    },
-    {
-        "tarih": "2025-3",
-        "endeks": 2954.69,
-        "aylik": 2.46,
-        "yillik": 38.1
-    },
-    {
-        "tarih": "2025-4",
-        "endeks": 3043.23,
-        "aylik": 3.0,
-        "yillik": 37.86
-    },
-    {
-        "tarih": "2025-5",
-        "endeks": 3089.74,
-        "aylik": 1.53,
-        "yillik": 35.41
-    },
-    {
-        "tarih": "2025-6",
-        "endeks": 3132.17,
-        "aylik": 1.37,
-        "yillik": 35.05
-    },
-    {
-        "tarih": "2025-7",
-        "endeks": 3196.66,
-        "aylik": 2.06,
-        "yillik": 33.52
-    },
-    {
-        "tarih": "2025-8",
-        "endeks": 3261.72,
-        "aylik": 2.04,
-        "yillik": 32.95
-    },
-    {
-        "tarih": "2025-9",
-        "endeks": 3367.22,
-        "aylik": 3.23,
-        "yillik": 33.29
-    },
-    {
-        "tarih": "2025-10",
-        "endeks": 3453.09,
-        "aylik": 2.55,
-        "yillik": 32.87
-    },
-    {
-        "tarih": "2025-11",
-        "endeks": 3482.96,
-        "aylik": 0.87,
-        "yillik": 31.07
-    }
-]
+{
+    "enflasyon": [
+        {
+            "tarih": "2023-1",
+            "aylik": 6.65,
+            "yillik": 57.68
+        },
+        {
+            "tarih": "2023-2",
+            "aylik": 3.15,
+            "yillik": 55.18
+        },
+        {
+            "tarih": "2023-3",
+            "aylik": 2.29,
+            "yillik": 50.51
+        },
+        {
+            "tarih": "2023-4",
+            "aylik": 2.39,
+            "yillik": 43.68
+        },
+        {
+            "tarih": "2023-5",
+            "aylik": 0.04,
+            "yillik": 39.59
+        },
+        {
+            "tarih": "2023-6",
+            "aylik": 3.92,
+            "yillik": 38.21
+        },
+        {
+            "tarih": "2023-7",
+            "aylik": 9.49,
+            "yillik": 47.83
+        },
+        {
+            "tarih": "2023-8",
+            "aylik": 9.09,
+            "yillik": 58.94
+        },
+        {
+            "tarih": "2023-9",
+            "aylik": 4.75,
+            "yillik": 61.53
+        },
+        {
+            "tarih": "2023-10",
+            "aylik": 3.43,
+            "yillik": 61.36
+        },
+        {
+            "tarih": "2023-11",
+            "aylik": 3.28,
+            "yillik": 61.98
+        },
+        {
+            "tarih": "2023-12",
+            "aylik": 2.93,
+            "yillik": 64.77
+        },
+        {
+            "tarih": "2024-1",
+            "aylik": 6.7,
+            "yillik": 64.86
+        },
+        {
+            "tarih": "2024-2",
+            "aylik": 4.53,
+            "yillik": 67.07
+        },
+        {
+            "tarih": "2024-3",
+            "aylik": 3.16,
+            "yillik": 68.5
+        },
+        {
+            "tarih": "2024-4",
+            "aylik": 3.18,
+            "yillik": 69.8
+        },
+        {
+            "tarih": "2024-5",
+            "aylik": 3.37,
+            "yillik": 75.45
+        },
+        {
+            "tarih": "2024-6",
+            "aylik": 1.64,
+            "yillik": 71.6
+        },
+        {
+            "tarih": "2024-7",
+            "aylik": 3.23,
+            "yillik": 61.78
+        },
+        {
+            "tarih": "2024-8",
+            "aylik": 2.47,
+            "yillik": 51.97
+        },
+        {
+            "tarih": "2024-9",
+            "aylik": 2.97,
+            "yillik": 49.38
+        },
+        {
+            "tarih": "2024-10",
+            "aylik": 2.88,
+            "yillik": 48.58
+        },
+        {
+            "tarih": "2024-11",
+            "aylik": 2.24,
+            "yillik": 47.09
+        },
+        {
+            "tarih": "2024-12",
+            "aylik": 1.03,
+            "yillik": 44.38
+        },
+        {
+            "tarih": "2025-1",
+            "aylik": 5.03,
+            "yillik": 42.12
+        }
+    ],
+    "faiz": [
+        {
+            "tarih": "03-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "04-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "05-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "06-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "07-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "10-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "11-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "12-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "13-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "14-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "17-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "18-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "19-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "20-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "21-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "24-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "25-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "26-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "27-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "28-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "31-01-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "01-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "02-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "03-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "04-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "07-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "08-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "09-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "10-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "11-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "14-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "15-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "16-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "17-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "18-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "21-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "22-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "23-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "24-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "25-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "28-02-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "01-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "02-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "03-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "04-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "07-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "08-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "09-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "10-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "11-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "14-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "15-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "16-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "17-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "18-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "21-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "22-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "23-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "24-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "25-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "28-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "29-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "30-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "31-03-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "01-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "04-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "05-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "06-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "07-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "08-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "11-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "12-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "13-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "14-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "15-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "18-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "19-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "20-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "21-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "22-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "25-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "26-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "27-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "28-04-2022",
+            "politika": 14.02
+        },
+        {
+            "tarih": "29-04-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "05-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "06-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "09-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "10-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "11-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "12-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "13-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "16-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "17-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "18-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "20-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "23-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "24-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "25-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "26-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "27-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "30-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "31-05-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "01-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "02-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "03-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "06-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "07-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "08-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "09-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "10-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "13-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "14-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "15-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "16-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "17-06-2022",
+            "politika": 14.03
+        },
+        {
+            "tarih": "20-06-2022",
+            "politika": 14.01
+        },
+        {
+            "tarih": "21-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "22-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "23-06-2022",
+            "politika": 14.02
+        },
+        {
+            "tarih": "24-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "27-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "28-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "29-06-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "30-06-2022",
+            "politika": 14.05
+        },
+        {
+            "tarih": "01-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "04-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "05-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "06-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "07-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "08-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "13-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "14-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "18-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "19-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "20-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "21-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "22-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "25-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "26-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "27-07-2022",
+            "politika": 14.01
+        },
+        {
+            "tarih": "28-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "29-07-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "01-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "02-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "03-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "04-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "05-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "08-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "09-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "10-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "11-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "12-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "15-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "16-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "17-08-2022",
+            "politika": 14.0
+        },
+        {
+            "tarih": "18-08-2022",
+            "politika": 14.03
+        },
+        {
+            "tarih": "19-08-2022",
+            "politika": 13.7
+        },
+        {
+            "tarih": "22-08-2022",
+            "politika": 13.42
+        },
+        {
+            "tarih": "23-08-2022",
+            "politika": 13.29
+        },
+        {
+            "tarih": "24-08-2022",
+            "politika": 13.18
+        },
+        {
+            "tarih": "25-08-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "26-08-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "29-08-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "31-08-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "01-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "02-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "05-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "06-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "07-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "08-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "09-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "12-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "13-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "14-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "15-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "16-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "19-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "20-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "21-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "22-09-2022",
+            "politika": 13.0
+        },
+        {
+            "tarih": "23-09-2022",
+            "politika": 12.7
+        },
+        {
+            "tarih": "26-09-2022",
+            "politika": 12.52
+        },
+        {
+            "tarih": "27-09-2022",
+            "politika": 12.4
+        },
+        {
+            "tarih": "28-09-2022",
+            "politika": 12.15
+        },
+        {
+            "tarih": "29-09-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "30-09-2022",
+            "politika": 12.04
+        },
+        {
+            "tarih": "03-10-2022",
+            "politika": 12.01
+        },
+        {
+            "tarih": "04-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "05-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "06-10-2022",
+            "politika": 12.02
+        },
+        {
+            "tarih": "07-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "10-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "11-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "12-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "13-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "14-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "17-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "18-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "19-10-2022",
+            "politika": 12.0
+        },
+        {
+            "tarih": "20-10-2022",
+            "politika": 12.02
+        },
+        {
+            "tarih": "21-10-2022",
+            "politika": 11.55
+        },
+        {
+            "tarih": "24-10-2022",
+            "politika": 11.48
+        },
+        {
+            "tarih": "25-10-2022",
+            "politika": 11.22
+        },
+        {
+            "tarih": "26-10-2022",
+            "politika": 10.77
+        },
+        {
+            "tarih": "27-10-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "28-10-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "31-10-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "01-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "02-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "03-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "04-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "07-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "08-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "09-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "10-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "11-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "14-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "15-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "16-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "17-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "18-11-2022",
+            "politika": 10.53
+        },
+        {
+            "tarih": "21-11-2022",
+            "politika": 10.56
+        },
+        {
+            "tarih": "22-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "23-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "24-11-2022",
+            "politika": 10.5
+        },
+        {
+            "tarih": "25-11-2022",
+            "politika": 10.23
+        },
+        {
+            "tarih": "28-11-2022",
+            "politika": 9.96
+        },
+        {
+            "tarih": "29-11-2022",
+            "politika": 9.51
+        },
+        {
+            "tarih": "30-11-2022",
+            "politika": 9.27
+        },
+        {
+            "tarih": "01-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "02-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "05-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "06-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "07-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "08-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "09-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "12-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "13-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "14-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "15-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "16-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "19-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "20-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "21-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "22-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "23-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "26-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "27-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "28-12-2022",
+            "politika": 9.0
+        },
+        {
+            "tarih": "29-12-2022",
+            "politika": 9.02
+        },
+        {
+            "tarih": "30-12-2022",
+            "politika": 9.04
+        },
+        {
+            "tarih": "02-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "03-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "04-01-2023",
+            "politika": 9.05
+        },
+        {
+            "tarih": "05-01-2023",
+            "politika": 9.06
+        },
+        {
+            "tarih": "06-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "09-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "10-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "11-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "12-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "13-01-2023",
+            "politika": 9.04
+        },
+        {
+            "tarih": "16-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "17-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "18-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "19-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "20-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "23-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "24-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "25-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "26-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "27-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "30-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "31-01-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "01-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "02-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "03-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "06-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "07-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "08-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "09-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "10-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "13-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "14-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "15-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "16-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "17-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "20-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "21-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "22-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "23-02-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "24-02-2023",
+            "politika": 8.83
+        },
+        {
+            "tarih": "27-02-2023",
+            "politika": 8.82
+        },
+        {
+            "tarih": "28-02-2023",
+            "politika": 8.76
+        },
+        {
+            "tarih": "01-03-2023",
+            "politika": 8.66
+        },
+        {
+            "tarih": "02-03-2023",
+            "politika": 8.59
+        },
+        {
+            "tarih": "03-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "06-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "07-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "08-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "09-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "10-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "13-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "14-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "15-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "16-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "17-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "20-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "21-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "22-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "23-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "24-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "27-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "28-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "29-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "30-03-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "31-03-2023",
+            "politika": 8.56
+        },
+        {
+            "tarih": "03-04-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "04-04-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "05-04-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "06-04-2023",
+            "politika": 8.53
+        },
+        {
+            "tarih": "07-04-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "10-04-2023",
+            "politika": 8.55
+        },
+        {
+            "tarih": "11-04-2023",
+            "politika": 8.51
+        },
+        {
+            "tarih": "12-04-2023",
+            "politika": 8.63
+        },
+        {
+            "tarih": "13-04-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "14-04-2023",
+            "politika": 8.54
+        },
+        {
+            "tarih": "17-04-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "18-04-2023",
+            "politika": 8.56
+        },
+        {
+            "tarih": "19-04-2023",
+            "politika": 8.62
+        },
+        {
+            "tarih": "20-04-2023",
+            "politika": 8.71
+        },
+        {
+            "tarih": "24-04-2023",
+            "politika": 8.7
+        },
+        {
+            "tarih": "25-04-2023",
+            "politika": 8.67
+        },
+        {
+            "tarih": "26-04-2023",
+            "politika": 8.58
+        },
+        {
+            "tarih": "27-04-2023",
+            "politika": 8.62
+        },
+        {
+            "tarih": "28-04-2023",
+            "politika": 8.7
+        },
+        {
+            "tarih": "02-05-2023",
+            "politika": 8.77
+        },
+        {
+            "tarih": "03-05-2023",
+            "politika": 8.61
+        },
+        {
+            "tarih": "04-05-2023",
+            "politika": 8.59
+        },
+        {
+            "tarih": "05-05-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "08-05-2023",
+            "politika": 8.67
+        },
+        {
+            "tarih": "09-05-2023",
+            "politika": 8.82
+        },
+        {
+            "tarih": "10-05-2023",
+            "politika": 8.99
+        },
+        {
+            "tarih": "11-05-2023",
+            "politika": 8.87
+        },
+        {
+            "tarih": "12-05-2023",
+            "politika": 9.05
+        },
+        {
+            "tarih": "15-05-2023",
+            "politika": 8.89
+        },
+        {
+            "tarih": "16-05-2023",
+            "politika": 8.88
+        },
+        {
+            "tarih": "17-05-2023",
+            "politika": 8.89
+        },
+        {
+            "tarih": "18-05-2023",
+            "politika": 8.99
+        },
+        {
+            "tarih": "22-05-2023",
+            "politika": 8.95
+        },
+        {
+            "tarih": "23-05-2023",
+            "politika": 9.04
+        },
+        {
+            "tarih": "24-05-2023",
+            "politika": 9.06
+        },
+        {
+            "tarih": "25-05-2023",
+            "politika": 9.15
+        },
+        {
+            "tarih": "26-05-2023",
+            "politika": 9.09
+        },
+        {
+            "tarih": "29-05-2023",
+            "politika": 8.99
+        },
+        {
+            "tarih": "30-05-2023",
+            "politika": 8.98
+        },
+        {
+            "tarih": "31-05-2023",
+            "politika": 9.09
+        },
+        {
+            "tarih": "01-06-2023",
+            "politika": 9.07
+        },
+        {
+            "tarih": "02-06-2023",
+            "politika": 9.09
+        },
+        {
+            "tarih": "05-06-2023",
+            "politika": 9.06
+        },
+        {
+            "tarih": "06-06-2023",
+            "politika": 9.07
+        },
+        {
+            "tarih": "07-06-2023",
+            "politika": 9.04
+        },
+        {
+            "tarih": "08-06-2023",
+            "politika": 8.94
+        },
+        {
+            "tarih": "09-06-2023",
+            "politika": 9.0
+        },
+        {
+            "tarih": "12-06-2023",
+            "politika": 8.99
+        },
+        {
+            "tarih": "13-06-2023",
+            "politika": 8.85
+        },
+        {
+            "tarih": "14-06-2023",
+            "politika": 8.78
+        },
+        {
+            "tarih": "15-06-2023",
+            "politika": 8.75
+        },
+        {
+            "tarih": "16-06-2023",
+            "politika": 8.7
+        },
+        {
+            "tarih": "19-06-2023",
+            "politika": 8.63
+        },
+        {
+            "tarih": "20-06-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "21-06-2023",
+            "politika": 8.5
+        },
+        {
+            "tarih": "22-06-2023",
+            "politika": 8.74
+        },
+        {
+            "tarih": "23-06-2023",
+            "politika": 10.73
+        },
+        {
+            "tarih": "26-06-2023",
+            "politika": 11.72
+        },
+        {
+            "tarih": "27-06-2023",
+            "politika": 12.84
+        },
+        {
+            "tarih": "03-07-2023",
+            "politika": 12.61
+        },
+        {
+            "tarih": "04-07-2023",
+            "politika": 11.47
+        },
+        {
+            "tarih": "05-07-2023",
+            "politika": 14.95
+        },
+        {
+            "tarih": "06-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "07-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "10-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "11-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "12-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "13-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "14-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "17-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "18-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "19-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "20-07-2023",
+            "politika": 15.0
+        },
+        {
+            "tarih": "21-07-2023",
+            "politika": 15.5
+        },
+        {
+            "tarih": "24-07-2023",
+            "politika": 16.0
+        },
+        {
+            "tarih": "25-07-2023",
+            "politika": 16.5
+        },
+        {
+            "tarih": "26-07-2023",
+            "politika": 17.0
+        },
+        {
+            "tarih": "27-07-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "28-07-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "31-07-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "01-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "02-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "03-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "04-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "07-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "08-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "09-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "10-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "11-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "14-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "15-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "16-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "17-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "18-08-2023",
+            "politika": 17.5
+        },
+        {
+            "tarih": "21-08-2023",
+            "politika": 18.16
+        },
+        {
+            "tarih": "22-08-2023",
+            "politika": 17.97
+        },
+        {
+            "tarih": "23-08-2023",
+            "politika": 17.97
+        },
+        {
+            "tarih": "24-08-2023",
+            "politika": 18.04
+        },
+        {
+            "tarih": "25-08-2023",
+            "politika": 17.58
+        },
+        {
+            "tarih": "28-08-2023",
+            "politika": 17.81
+        },
+        {
+            "tarih": "29-08-2023",
+            "politika": 22.0
+        },
+        {
+            "tarih": "31-08-2023",
+            "politika": 23.5
+        },
+        {
+            "tarih": "01-09-2023",
+            "politika": 24.92
+        },
+        {
+            "tarih": "04-09-2023",
+            "politika": 24.92
+        },
+        {
+            "tarih": "05-09-2023",
+            "politika": 24.94
+        },
+        {
+            "tarih": "06-09-2023",
+            "politika": 25.0
+        },
+        {
+            "tarih": "07-09-2023",
+            "politika": 25.0
+        },
+        {
+            "tarih": "08-09-2023",
+            "politika": 25.11
+        },
+        {
+            "tarih": "11-09-2023",
+            "politika": 25.0
+        },
+        {
+            "tarih": "12-09-2023",
+            "politika": 25.14
+        },
+        {
+            "tarih": "13-09-2023",
+            "politika": 25.0
+        },
+        {
+            "tarih": "14-09-2023",
+            "politika": 25.0
+        },
+        {
+            "tarih": "15-09-2023",
+            "politika": 25.87
+        },
+        {
+            "tarih": "18-09-2023",
+            "politika": 25.8
+        },
+        {
+            "tarih": "19-09-2023",
+            "politika": 25.82
+        },
+        {
+            "tarih": "20-09-2023",
+            "politika": 25.76
+        },
+        {
+            "tarih": "21-09-2023",
+            "politika": 26.06
+        },
+        {
+            "tarih": "22-09-2023",
+            "politika": 25.21
+        },
+        {
+            "tarih": "25-09-2023",
+            "politika": 27.0
+        },
+        {
+            "tarih": "26-09-2023",
+            "politika": 28.0
+        },
+        {
+            "tarih": "27-09-2023",
+            "politika": 29.0
+        },
+        {
+            "tarih": "28-09-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "29-09-2023",
+            "politika": 31.0
+        },
+        {
+            "tarih": "02-10-2023",
+            "politika": 30.03
+        },
+        {
+            "tarih": "03-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "04-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "05-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "06-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "09-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "10-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "11-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "12-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "13-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "16-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "17-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "18-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "19-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "20-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "23-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "24-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "25-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "26-10-2023",
+            "politika": 30.0
+        },
+        {
+            "tarih": "27-10-2023",
+            "politika": 31.0
+        },
+        {
+            "tarih": "30-10-2023",
+            "politika": 32.0
+        },
+        {
+            "tarih": "31-10-2023",
+            "politika": 33.0
+        },
+        {
+            "tarih": "01-11-2023",
+            "politika": 34.0
+        },
+        {
+            "tarih": "02-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "03-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "06-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "07-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "08-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "09-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "10-11-2023",
+            "politika": 35.48
+        },
+        {
+            "tarih": "13-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "14-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "15-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "16-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "17-11-2023",
+            "politika": 35.58
+        },
+        {
+            "tarih": "20-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "21-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "22-11-2023",
+            "politika": 35.0
+        },
+        {
+            "tarih": "23-11-2023",
+            "politika": 35.16
+        },
+        {
+            "tarih": "24-11-2023",
+            "politika": 36.0
+        },
+        {
+            "tarih": "27-11-2023",
+            "politika": 37.0
+        },
+        {
+            "tarih": "28-11-2023",
+            "politika": 38.0
+        },
+        {
+            "tarih": "29-11-2023",
+            "politika": 39.56
+        },
+        {
+            "tarih": "30-11-2023",
+            "politika": 41.09
+        },
+        {
+            "tarih": "01-12-2023",
+            "politika": 40.79
+        },
+        {
+            "tarih": "04-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "05-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "06-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "07-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "08-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "11-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "12-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "13-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "14-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "15-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "18-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "19-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "20-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "21-12-2023",
+            "politika": 40.0
+        },
+        {
+            "tarih": "22-12-2023",
+            "politika": 40.5
+        },
+        {
+            "tarih": "25-12-2023",
+            "politika": 41.0
+        },
+        {
+            "tarih": "26-12-2023",
+            "politika": 41.5
+        },
+        {
+            "tarih": "27-12-2023",
+            "politika": 42.0
+        },
+        {
+            "tarih": "28-12-2023",
+            "politika": 42.5
+        },
+        {
+            "tarih": "29-12-2023",
+            "politika": 42.5
+        },
+        {
+            "tarih": "02-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "03-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "04-01-2024",
+            "politika": 42.54
+        },
+        {
+            "tarih": "05-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "08-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "09-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "10-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "11-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "12-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "15-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "16-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "17-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "18-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "19-01-2024",
+            "politika": 43.03
+        },
+        {
+            "tarih": "22-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "23-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "24-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "25-01-2024",
+            "politika": 42.5
+        },
+        {
+            "tarih": "26-01-2024",
+            "politika": 43.0
+        },
+        {
+            "tarih": "29-01-2024",
+            "politika": 43.33
+        },
+        {
+            "tarih": "30-01-2024",
+            "politika": 43.57
+        },
+        {
+            "tarih": "31-01-2024",
+            "politika": 44.0
+        },
+        {
+            "tarih": "01-02-2024",
+            "politika": 46.4
+        },
+        {
+            "tarih": "02-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "05-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "06-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "07-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "08-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "09-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "12-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "13-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "14-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "15-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "16-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "19-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "20-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "21-02-2024",
+            "politika": 46.02
+        },
+        {
+            "tarih": "22-02-2024",
+            "politika": 46.23
+        },
+        {
+            "tarih": "23-02-2024",
+            "politika": 46.36
+        },
+        {
+            "tarih": "26-02-2024",
+            "politika": 45.02
+        },
+        {
+            "tarih": "27-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "28-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "29-02-2024",
+            "politika": 45.0
+        },
+        {
+            "tarih": "01-03-2024",
+            "politika": 46.16
+        },
+        {
+            "tarih": "04-03-2024",
+            "politika": 46.31
+        },
+        {
+            "tarih": "05-03-2024",
+            "politika": 46.27
+        },
+        {
+            "tarih": "06-03-2024",
+            "politika": 46.27
+        },
+        {
+            "tarih": "07-03-2024",
+            "politika": 46.25
+        },
+        {
+            "tarih": "08-03-2024",
+            "politika": 46.28
+        },
+        {
+            "tarih": "11-03-2024",
+            "politika": 46.2
+        },
+        {
+            "tarih": "12-03-2024",
+            "politika": 46.24
+        },
+        {
+            "tarih": "13-03-2024",
+            "politika": 46.26
+        },
+        {
+            "tarih": "14-03-2024",
+            "politika": 46.35
+        },
+        {
+            "tarih": "15-03-2024",
+            "politika": 46.06
+        },
+        {
+            "tarih": "18-03-2024",
+            "politika": 46.18
+        },
+        {
+            "tarih": "19-03-2024",
+            "politika": 46.26
+        },
+        {
+            "tarih": "20-03-2024",
+            "politika": 46.32
+        },
+        {
+            "tarih": "21-03-2024",
+            "politika": 46.37
+        },
+        {
+            "tarih": "22-03-2024",
+            "politika": 48.57
+        },
+        {
+            "tarih": "25-03-2024",
+            "politika": 48.94
+        },
+        {
+            "tarih": "26-03-2024",
+            "politika": 49.47
+        },
+        {
+            "tarih": "27-03-2024",
+            "politika": 49.91
+        },
+        {
+            "tarih": "28-03-2024",
+            "politika": 51.15
+        },
+        {
+            "tarih": "29-03-2024",
+            "politika": 51.22
+        },
+        {
+            "tarih": "01-04-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "02-04-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "03-04-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "04-04-2024",
+            "politika": 50.19
+        },
+        {
+            "tarih": "05-04-2024",
+            "politika": 51.95
+        },
+        {
+            "tarih": "08-04-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "09-04-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "15-04-2024",
+            "politika": 50.87
+        },
+        {
+            "tarih": "16-04-2024",
+            "politika": 51.62
+        },
+        {
+            "tarih": "17-04-2024",
+            "politika": 52.5
+        },
+        {
+            "tarih": "18-04-2024",
+            "politika": 52.54
+        },
+        {
+            "tarih": "19-04-2024",
+            "politika": 52.27
+        },
+        {
+            "tarih": "22-04-2024",
+            "politika": 51.78
+        },
+        {
+            "tarih": "24-04-2024",
+            "politika": 51.63
+        },
+        {
+            "tarih": "25-04-2024",
+            "politika": 52.4
+        },
+        {
+            "tarih": "26-04-2024",
+            "politika": 52.46
+        },
+        {
+            "tarih": "29-04-2024",
+            "politika": 51.98
+        },
+        {
+            "tarih": "30-04-2024",
+            "politika": 52.24
+        },
+        {
+            "tarih": "02-05-2024",
+            "politika": 51.84
+        },
+        {
+            "tarih": "03-05-2024",
+            "politika": 52.45
+        },
+        {
+            "tarih": "06-05-2024",
+            "politika": 50.87
+        },
+        {
+            "tarih": "07-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "08-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "09-05-2024",
+            "politika": 52.57
+        },
+        {
+            "tarih": "10-05-2024",
+            "politika": 52.74
+        },
+        {
+            "tarih": "13-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "14-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "15-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "16-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "17-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "20-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "21-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "22-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "23-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "24-05-2024",
+            "politika": 51.51
+        },
+        {
+            "tarih": "27-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "28-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "29-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "30-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "31-05-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "03-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "04-06-2024",
+            "politika": 50.04
+        },
+        {
+            "tarih": "05-06-2024",
+            "politika": 50.4
+        },
+        {
+            "tarih": "06-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "07-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "10-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "11-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "12-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "13-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "14-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "20-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "21-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "24-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "25-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "26-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "27-06-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "28-06-2024",
+            "politika": 51.37
+        },
+        {
+            "tarih": "01-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "02-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "03-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "04-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "05-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "08-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "09-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "10-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "11-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "12-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "16-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "17-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "18-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "19-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "22-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "23-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "24-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "25-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "26-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "29-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "30-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "31-07-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "01-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "02-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "05-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "06-08-2024",
+            "politika": 51.6
+        },
+        {
+            "tarih": "07-08-2024",
+            "politika": 51.4
+        },
+        {
+            "tarih": "08-08-2024",
+            "politika": 51.3
+        },
+        {
+            "tarih": "09-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "12-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "13-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "14-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "15-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "16-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "19-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "20-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "21-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "22-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "23-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "26-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "27-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "28-08-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "29-08-2024",
+            "politika": 52.79
+        },
+        {
+            "tarih": "02-09-2024",
+            "politika": 52.49
+        },
+        {
+            "tarih": "03-09-2024",
+            "politika": 52.74
+        },
+        {
+            "tarih": "04-09-2024",
+            "politika": 52.64
+        },
+        {
+            "tarih": "05-09-2024",
+            "politika": 52.59
+        },
+        {
+            "tarih": "06-09-2024",
+            "politika": 52.51
+        },
+        {
+            "tarih": "09-09-2024",
+            "politika": 52.09
+        },
+        {
+            "tarih": "10-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "11-09-2024",
+            "politika": 50.04
+        },
+        {
+            "tarih": "12-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "13-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "16-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "17-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "18-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "19-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "20-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "23-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "24-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "25-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "26-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "27-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "30-09-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "01-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "02-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "03-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "04-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "07-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "08-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "09-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "10-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "11-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "14-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "15-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "16-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "17-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "18-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "21-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "22-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "23-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "24-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "25-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "28-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "30-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "31-10-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "01-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "04-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "05-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "06-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "07-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "08-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "11-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "12-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "13-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "14-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "15-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "18-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "19-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "20-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "21-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "22-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "25-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "26-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "27-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "28-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "29-11-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "02-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "03-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "04-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "05-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "06-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "09-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "10-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "11-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "12-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "13-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "16-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "17-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "18-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "19-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "20-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "23-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "24-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "25-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "26-12-2024",
+            "politika": 50.0
+        },
+        {
+            "tarih": "27-12-2024",
+            "politika": 49.38
+        },
+        {
+            "tarih": "30-12-2024",
+            "politika": 48.75
+        },
+        {
+            "tarih": "31-12-2024",
+            "politika": 48.13
+        }
+    ]
+}
