@@ -11,113 +11,263 @@
             color: #1d1d1f;
             margin: 0;
             padding: 20px;
+            /* İçeriği dikeyde ortalamak istersen bu satırları açabilirsin:
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            align-items: center; 
+            */
         }
 
-        .dashboard-container { width: 100%; max-width: 600px; }
+        /* ANA KONTEYNER: YAN YANA DİZME MANTIĞI */
+        .dashboard-container { 
+            width: 100%; 
+            max-width: 1600px; /* Geniş ekranlara izin ver */
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap; /* Sığmayan aşağı kaysın */
+            justify-content: center; /* Ortala (Alttaki 3'lü ortada dursun) */
+            gap: 15px; /* Kutular arası boşluk */
+        }
 
+        /* HER BİR GÖSTERGE GRUBU (KUTU + GRAFİK) */
+        .item-group {
+            /* 4 tane sığdırmak için %25'ten biraz az veriyoruz (boşluk payı) */
+            width: calc(25% - 20px); 
+            min-width: 280px; /* Çok küçülürse alt satıra geçsin */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* KUTU STİLİ (BİRAZ DAHA KOMPAKT) */
         .highlight-box {
             background: white;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            margin-bottom: 15px;
+            padding: 15px 20px; /* Daha az boşluk */
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
             cursor: pointer;
             transition: all 0.2s ease;
             border: 1px solid rgba(0,0,0,0.05);
+            flex-grow: 1; /* Yükseklikleri eşitlemeye çalış */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .highlight-box:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .highlight-box:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
         .highlight-box:active { transform: scale(0.98); }
 
-        .box-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .box-title { font-size: 18px; font-weight: 700; color: #333; margin: 0; }
-        .status-badge { font-size: 11px; background: #e1f5fe; color: #0288d1; padding: 4px 8px; border-radius: 6px; }
+        /* BAŞLIK VE METİNLER (DAHA KÜÇÜK FONTLAR) */
+        .box-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .box-title { font-size: 16px; font-weight: 700; color: #333; margin: 0; }
+        .status-badge { font-size: 10px; background: #e1f5fe; color: #0288d1; padding: 3px 6px; border-radius: 4px; white-space: nowrap; }
 
-        .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+        .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #f5f5f5; }
         .metric-row:last-of-type { border-bottom: none; }
-        /* Fontlama maliyeti yazısı uzun olduğu için mobilde taşmasın diye biraz küçülttüm */
-        .label { font-size: 14px; color: #666; font-weight: 500;} 
-        .value { font-size: 18px; font-weight: 600; color: #333; }
+        .label { font-size: 13px; color: #666; font-weight: 500;}
+        .value { font-size: 16px; font-weight: 600; color: #333; }
 
-        .trend-up { color: #d63031; }
-        .trend-down { color: #00b894; }
-        .hint-text { text-align: center; font-size: 12px; color: #0071e3; margin-top: 10px; font-weight: 500; }
+        /* RENKLER */
+        .color-red { color: #d63031; }   
+        .color-green { color: #00b894; } 
+        .trend-up { color: #d63031; } 
+        .trend-down { color: #00b894; } 
 
+        .hint-text { text-align: center; font-size: 11px; color: #0071e3; margin-top: 8px; font-weight: 500; opacity: 0.8; }
+
+        /* GRAFİK ALANI (AÇILINCA KUTUNUN ALTINA GELİR) */
         .chart-wrapper {
             display: none;
             background: white;
-            padding: 15px;
-            border-radius: 0 0 16px 16px;
-            margin-top: -20px;
-            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 0 0 12px 12px;
+            margin-top: -5px; /* Kutuyla birleşsin */
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            height: 300px;
+            height: 250px; /* Grafik yüksekliği */
             animation: slideDown 0.3s ease-out;
+            z-index: 10;
+            position: relative; /* Üstte kalsın */
         }
         @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* MOBİL UYUMLULUK */
+        @media (max-width: 1200px) {
+            .item-group { width: calc(33.33% - 20px); } /* Tablette 3'lü */
+        }
+        @media (max-width: 900px) {
+            .item-group { width: calc(50% - 15px); } /* Küçük ekranda 2'li */
+        }
+        @media (max-width: 600px) {
+            .item-group { width: 100%; } /* Telefondan tek sütun */
+        }
     </style>
 </head>
 <body>
 
 <div class="dashboard-container">
     
-    <div class="highlight-box" onclick="toggleGrafik('chart-tufe', this)">
-        <div class="box-header">
-            <h2 class="box-title">TÜFE (Enflasyon)</h2>
-            <span class="status-badge" id="date-tufe">Veri Yok</span>
+    <div class="item-group">
+        <div class="highlight-box" onclick="toggleGrafik('chart-tufe', this)">
+            <div class="box-header">
+                <h2 class="box-title">TÜFE (Enflasyon)</h2>
+                <span class="status-badge" id="date-tufe">Veri Yok</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Aylık Değişim:</span>
+                <span class="value" id="val-aylik">...</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Yıllık Değişim:</span>
+                <span class="value" id="val-yillik">...</span>
+            </div>
+            <div class="hint-text">Grafik ▼</div>
         </div>
-        <div class="metric-row">
-            <span class="label">Aylık Değişim:</span>
-            <span class="value" id="val-aylik">...</span>
+        <div class="chart-wrapper" id="chart-tufe">
+            <canvas id="canvas-tufe"></canvas>
         </div>
-        <div class="metric-row">
-            <span class="label">Yıllık Değişim:</span>
-            <span class="value" id="val-yillik">...</span>
-        </div>
-        <div class="hint-text">Grafik için dokunun ▼</div>
-    </div>
-    <div class="chart-wrapper" id="chart-tufe">
-        <canvas id="canvas-tufe"></canvas>
     </div>
 
 
-    <div class="highlight-box" onclick="toggleGrafik('chart-faiz', this)">
-        <div class="box-header">
-            <h2 class="box-title">TCMB Fonlama</h2>
-            <span class="status-badge" id="date-faiz">Veri Yok</span>
+    <div class="item-group">
+        <div class="highlight-box" onclick="toggleGrafik('chart-faiz', this)">
+            <div class="box-header">
+                <h2 class="box-title">TCMB Fonlama</h2>
+                <span class="status-badge" id="date-faiz">Veri Yok</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Ağırlıklı Ort. Fonlama:</span>
+                <span class="value" id="val-fonlama">...</span>
+            </div>
+            <div class="hint-text">Grafik ▼</div>
         </div>
-        
-        <div class="metric-row">
-            <span class="label">Ağırlıklı Ortalama Fonlama Maliyeti:</span>
-            <span class="value" id="val-fonlama">...</span>
+        <div class="chart-wrapper" id="chart-faiz">
+            <canvas id="canvas-faiz"></canvas>
         </div>
-        
-        <div class="hint-text">Grafik için dokunun ▼</div>
     </div>
-    <div class="chart-wrapper" id="chart-faiz">
-        <canvas id="canvas-faiz"></canvas>
+
+    <div class="item-group">
+        <div class="highlight-box" onclick="toggleGrafik('chart-gsyh', this)">
+            <div class="box-header">
+                <h2 class="box-title">GSYH</h2>
+                <span class="status-badge" id="date-gsyh">Veri Yok</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Yıllık Büyüme:</span>
+                <span class="value" id="val-buyume">...</span>
+            </div>
+            <div class="hint-text">Grafik ▼</div>
+        </div>
+        <div class="chart-wrapper" id="chart-gsyh">
+            <canvas id="canvas-gsyh"></canvas>
+        </div>
+    </div>
+
+    <div class="item-group">
+        <div class="highlight-box" onclick="toggleGrafik('chart-isgucu', this)">
+            <div class="box-header">
+                <h2 class="box-title">İşgücü</h2>
+                <span class="status-badge" id="date-isgucu">Veri Yok</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">İşsizlik Oranı:</span>
+                <span class="value" id="val-issizlik">...</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Katılım Oranı:</span>
+                <span class="value" id="val-katilim">...</span>
+            </div>
+            <div class="hint-text">Grafik ▼</div>
+        </div>
+        <div class="chart-wrapper" id="chart-isgucu">
+            <canvas id="canvas-isgucu"></canvas>
+        </div>
+    </div>
+
+    <div class="item-group">
+        <div class="highlight-box" onclick="toggleGrafik('chart-cari', this)">
+            <div class="box-header">
+                <h2 class="box-title">Cari Denge</h2>
+                <span class="status-badge" id="date-cari">Veri Yok</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Cari Denge:</span>
+                <span class="value" id="val-cari">...</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Çekirdek Denge:</span>
+                <span class="value" id="val-cekirdek">...</span>
+            </div>
+            <div class="hint-text">Grafik ▼</div>
+        </div>
+        <div class="chart-wrapper" id="chart-cari">
+            <canvas id="canvas-cari"></canvas>
+        </div>
+    </div>
+
+    <div class="item-group">
+        <div class="highlight-box" onclick="toggleGrafik('chart-butce', this)">
+            <div class="box-header">
+                <h2 class="box-title">Bütçe Dengesi</h2>
+                <span class="status-badge" id="date-butce">Veri Yok</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Bütçe (Yıllık):</span>
+                <span class="value" id="val-butce-yillik">...</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Faiz Dışı (Yıllık):</span>
+                <span class="value" id="val-faizdisi-yillik">...</span>
+            </div>
+            <div class="hint-text">Grafik ▼</div>
+        </div>
+        <div class="chart-wrapper" id="chart-butce">
+            <canvas id="canvas-butce"></canvas>
+        </div>
+    </div>
+
+    <div class="item-group">
+        <div class="highlight-box" onclick="toggleGrafik('chart-nakit', this)">
+            <div class="box-header">
+                <h2 class="box-title">Nakit Dengesi</h2>
+                <span class="status-badge" id="date-nakit">Veri Yok</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Nakit (Yıllık):</span>
+                <span class="value" id="val-nakit-yillik">...</span>
+            </div>
+            <div class="metric-row">
+                <span class="label">Faiz Dışı (Aylık):</span>
+                <span class="value" id="val-nakit-faizdisi">...</span>
+            </div>
+            <div class="hint-text">Grafik ▼</div>
+        </div>
+        <div class="chart-wrapper" id="chart-nakit">
+            <canvas id="canvas-nakit"></canvas>
+        </div>
     </div>
 
 </div>
 
 <script>
+    function formatNumber(num) {
+        if (num === null || num === undefined) return "...";
+        return Number(num).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+
     function toggleGrafik(chartId, boxElement) {
-        const chartDiv = document.getElementById(chartId);
-        const hint = boxElement.querySelector('.hint-text');
+        const chartWrapper = document.getElementById(chartId);
+        const parentBox = boxElement; // Tıklanan kutu
         
-        if (chartDiv.style.display === 'block') {
-            chartDiv.style.display = 'none';
-            hint.innerText = "Grafik için dokunun ▼";
-            boxElement.style.borderRadius = "16px";
+        // Eğer zaten açıksa kapat
+        if (chartWrapper.style.display === 'block') {
+            chartWrapper.style.display = 'none';
+            parentBox.style.borderRadius = "12px"; // Köşeleri eski haline getir
         } else {
+            // Önce tüm diğer grafikleri kapat (Opsiyonel: kalabalık olmasın diye)
             document.querySelectorAll('.chart-wrapper').forEach(el => el.style.display = 'none');
-            document.querySelectorAll('.hint-text').forEach(el => el.innerText = "Grafik için dokunun ▼");
-            
-            chartDiv.style.display = 'block';
-            hint.innerText = "Kapatmak için dokunun ▲";
-            boxElement.style.borderRadius = "16px 16px 0 0";
+            document.querySelectorAll('.highlight-box').forEach(el => el.style.borderRadius = '12px');
+
+            // Sadece tıklananı aç
+            chartWrapper.style.display = 'block';
+            parentBox.style.borderRadius = "12px 12px 0 0"; // Alt köşeleri düzleştir
         }
     }
 
@@ -125,61 +275,111 @@
         .then(res => res.json())
         .then(data => {
             
-            // ENFLASYON
-            const tufeData = data.enflasyon;
-            if (tufeData && tufeData.length > 0) {
-                const sonTufe = tufeData[tufeData.length - 1];
-                document.getElementById('date-tufe').innerText = sonTufe.tarih;
-                document.getElementById('val-aylik').innerText = "%" + sonTufe.aylik;
-                document.getElementById('val-yillik').innerText = "%" + sonTufe.yillik;
-                document.getElementById('val-aylik').className = sonTufe.aylik > 0 ? "value trend-up" : "value trend-down";
-
+            // 1. ENFLASYON
+            if (data.enflasyon && data.enflasyon.length > 0) {
+                const son = data.enflasyon[data.enflasyon.length - 1];
+                document.getElementById('date-tufe').innerText = son.tarih;
+                document.getElementById('val-aylik').innerText = "%" + son.aylik;
+                document.getElementById('val-yillik').innerText = "%" + son.yillik;
+                document.getElementById('val-aylik').className = son.aylik > 0 ? "value trend-up" : "value trend-down";
                 new Chart(document.getElementById('canvas-tufe'), {
                     type: 'line',
-                    data: {
-                        labels: tufeData.map(d => d.tarih),
-                        datasets: [{
-                            label: 'Yıllık Enflasyon (%)',
-                            data: tufeData.map(d => d.yillik),
-                            borderColor: '#e17055',
-                            backgroundColor: 'rgba(225, 112, 85, 0.1)',
-                            borderWidth: 3,
-                            tension: 0.3,
-                            fill: true
-                        }]
-                    },
-                    options: { responsive: true, maintainAspectRatio: false }
+                    data: { labels: data.enflasyon.map(d => d.tarih), datasets: [{ label: 'Yıllık Enflasyon', data: data.enflasyon.map(d => d.yillik), borderColor: '#e17055', borderWidth: 2, tension: 0.3 }] },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
                 });
             }
 
-            // TCMB FONLAMA (GÜNCELLENDİ)
-            const faizData = data.faiz;
-            if (faizData && faizData.length > 0) {
-                const sonFaiz = faizData[faizData.length - 1];
-                document.getElementById('date-faiz').innerText = sonFaiz.tarih;
-                
-                // --- KRİTİK DEĞİŞİKLİK BURADA ---
-                // Number(x).toFixed(2) kullanarak her zaman 2 ondalık (örn: 39.47) gösteriyoruz.
-                document.getElementById('val-fonlama').innerText = "%" + Number(sonFaiz.fonlama).toFixed(2);
-
+            // 2. FAİZ
+            if (data.faiz && data.faiz.length > 0) {
+                const son = data.faiz[data.faiz.length - 1];
+                document.getElementById('date-faiz').innerText = son.tarih;
+                document.getElementById('val-fonlama').innerText = "%" + Number(son.fonlama).toFixed(2);
                 new Chart(document.getElementById('canvas-faiz'), {
                     type: 'line',
-                    data: {
-                        labels: faizData.map(d => d.tarih),
-                        datasets: [{
-                            label: 'AOFM (%)',
-                            data: faizData.map(d => d.fonlama),
-                            borderColor: '#6c5ce7', 
-                            backgroundColor: 'rgba(108, 92, 231, 0.1)',
-                            borderWidth: 3,
-                            pointRadius: 3,
-                            tension: 0.1,
-                            fill: true
-                        }]
-                    },
-                    options: { responsive: true, maintainAspectRatio: false }
+                    data: { labels: data.faiz.map(d => d.tarih), datasets: [{ label: 'AOFM', data: data.faiz.map(d => d.fonlama), borderColor: '#6c5ce7', borderWidth: 2, tension: 0.1 }] },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
                 });
             }
+
+            // 3. GSYH
+            if (data.gsyh && data.gsyh.length > 0) {
+                const son = data.gsyh[data.gsyh.length - 1];
+                document.getElementById('date-gsyh').innerText = son.tarih;
+                document.getElementById('val-buyume').innerText = "%" + Number(son.buyume).toFixed(1);
+                document.getElementById('val-buyume').className = son.buyume > 0 ? "value color-green" : "value color-red";
+                new Chart(document.getElementById('canvas-gsyh'), {
+                    type: 'bar',
+                    data: { labels: data.gsyh.map(d => d.tarih), datasets: [{ label: 'Büyüme', data: data.gsyh.map(d => d.buyume), backgroundColor: data.gsyh.map(d => d.buyume > 0 ? 'rgba(0,184,148,0.6)' : 'rgba(214,48,49,0.6)') }] },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+                });
+            }
+
+            // 4. İŞGÜCÜ
+            if (data.isgucu && data.isgucu.length > 0) {
+                const son = data.isgucu[data.isgucu.length - 1];
+                document.getElementById('date-isgucu').innerText = son.tarih;
+                document.getElementById('val-issizlik').innerText = "%" + Number(son.issizlik).toFixed(1);
+                document.getElementById('val-katilim').innerText = "%" + Number(son.katilim).toFixed(1);
+                document.getElementById('val-issizlik').className = "value color-red";
+                new Chart(document.getElementById('canvas-isgucu'), {
+                    type: 'line',
+                    data: { labels: data.isgucu.map(d => d.tarih), datasets: [{ label: 'İşsizlik', data: data.isgucu.map(d => d.issizlik), borderColor: '#d63031', backgroundColor: 'rgba(214, 48, 49, 0.1)', borderWidth: 2, fill: true }] },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+                });
+            }
+
+            // 5. CARİ
+            if (data.cari && data.cari.length > 0) {
+                const son = data.cari[data.cari.length - 1];
+                document.getElementById('date-cari').innerText = son.tarih;
+                document.getElementById('val-cari').innerText = formatNumber(son.cari_denge);
+                document.getElementById('val-cekirdek').innerText = formatNumber(son.cekirdek_denge);
+                document.getElementById('val-cari').className = son.cari_denge >= 0 ? "value color-green" : "value color-red";
+                new Chart(document.getElementById('canvas-cari'), {
+                    type: 'line',
+                    data: {
+                        labels: data.cari.map(d => d.tarih),
+                        datasets: [
+                            { label: 'Cari', data: data.cari.map(d => d.cari_denge), borderColor: '#d63031', borderWidth: 2, fill: false },
+                            { label: 'Çekirdek', data: data.cari.map(d => d.cekirdek_denge), borderColor: '#00b894', borderWidth: 2, borderDash:[5,5], fill: false }
+                        ]
+                    }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+                });
+            }
+
+            // 6. BÜTÇE
+            if (data.butce && data.butce.length > 0) {
+                const son = data.butce[data.butce.length - 1];
+                document.getElementById('date-butce').innerText = son.tarih;
+                document.getElementById('val-butce-yillik').innerText = formatNumber(son.butce_yillik);
+                document.getElementById('val-faizdisi-yillik').innerText = formatNumber(son.faiz_disi_yillik);
+                document.getElementById('val-butce-yillik').className = son.butce_yillik >= 0 ? "value color-green" : "value color-red";
+                new Chart(document.getElementById('canvas-butce'), {
+                    type: 'line',
+                    data: {
+                        labels: data.butce.map(d => d.tarih),
+                        datasets: [
+                            { label: 'Bütçe (Yıllık)', data: data.butce.map(d => d.butce_yillik), borderColor: '#e17055', borderWidth: 2 },
+                            { label: 'Faiz Dışı (Yıllık)', data: data.butce.map(d => d.faiz_disi_yillik), borderColor: '#0984e3', borderWidth: 2 }
+                        ]
+                    }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+                });
+            }
+
+            // 7. NAKİT
+            if (data.nakit && data.nakit.length > 0) {
+                const son = data.nakit[data.nakit.length - 1];
+                document.getElementById('date-nakit').innerText = son.tarih;
+                document.getElementById('val-nakit-yillik').innerText = formatNumber(son.nakit_yillik);
+                document.getElementById('val-nakit-faizdisi').innerText = formatNumber(son.faiz_disi_nakit_aylik);
+                document.getElementById('val-nakit-yillik').className = son.nakit_yillik >= 0 ? "value color-green" : "value color-red";
+                new Chart(document.getElementById('canvas-nakit'), {
+                    type: 'line',
+                    data: { labels: data.nakit.map(d => d.tarih), datasets: [{ label: 'Nakit (Yıllık)', data: data.nakit.map(d => d.nakit_yillik), borderColor: '#00b894', borderWidth: 2, fill: true, backgroundColor: 'rgba(0,184,148,0.1)' }] },
+                    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+                });
+            }
+
         })
         .catch(err => console.error("Veri okuma hatası:", err));
 </script>

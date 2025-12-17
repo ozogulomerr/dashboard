@@ -178,54 +178,6 @@
     ],
     "faiz": [
         {
-            "tarih": "2022-1",
-            "fonlama": 14.0
-        },
-        {
-            "tarih": "2022-2",
-            "fonlama": 14.0
-        },
-        {
-            "tarih": "2022-3",
-            "fonlama": 14.0
-        },
-        {
-            "tarih": "2022-4",
-            "fonlama": 14.00095238095238
-        },
-        {
-            "tarih": "2022-5",
-            "fonlama": 14.0
-        },
-        {
-            "tarih": "2022-6",
-            "fonlama": 14.005
-        },
-        {
-            "tarih": "2022-7",
-            "fonlama": 14.000555555555556
-        },
-        {
-            "tarih": "2022-8",
-            "fonlama": 13.71
-        },
-        {
-            "tarih": "2022-9",
-            "fonlama": 12.809545454545455
-        },
-        {
-            "tarih": "2022-10",
-            "fonlama": 11.646190476190476
-        },
-        {
-            "tarih": "2022-11",
-            "fonlama": 10.366363636363637
-        },
-        {
-            "tarih": "2022-12",
-            "fonlama": 9.002727272727272
-        },
-        {
             "tarih": "2023-1",
             "fonlama": 9.006818181818183
         },
@@ -368,6 +320,855 @@
         {
             "tarih": "2025-12",
             "fonlama": 39.125
+        }
+    ],
+    "gsyh": [
+        {
+            "tarih": "2023-Q1",
+            "buyume": 4.0
+        },
+        {
+            "tarih": "2023-Q2",
+            "buyume": 4.6
+        },
+        {
+            "tarih": "2023-Q3",
+            "buyume": 6.5
+        },
+        {
+            "tarih": "2023-Q4",
+            "buyume": 4.9
+        },
+        {
+            "tarih": "2024-Q1",
+            "buyume": 5.3
+        },
+        {
+            "tarih": "2024-Q2",
+            "buyume": 2.3
+        },
+        {
+            "tarih": "2024-Q3",
+            "buyume": 2.8
+        },
+        {
+            "tarih": "2024-Q4",
+            "buyume": 3.2
+        },
+        {
+            "tarih": "2025-Q1",
+            "buyume": 2.5
+        },
+        {
+            "tarih": "2025-Q2",
+            "buyume": 4.9
+        },
+        {
+            "tarih": "2025-Q3",
+            "buyume": 3.7
+        }
+    ],
+    "cari": [
+        {
+            "tarih": "2023-1",
+            "cari_denge": -9933.0,
+            "cekirdek_denge": 2514.36
+        },
+        {
+            "tarih": "2023-2",
+            "cari_denge": -8852.0,
+            "cekirdek_denge": 758.41
+        },
+        {
+            "tarih": "2023-3",
+            "cari_denge": -4989.0,
+            "cekirdek_denge": 853.0
+        },
+        {
+            "tarih": "2023-4",
+            "cari_denge": -4793.0,
+            "cekirdek_denge": 76.01
+        },
+        {
+            "tarih": "2023-5",
+            "cari_denge": -7458.0,
+            "cekirdek_denge": -896.08
+        },
+        {
+            "tarih": "2023-6",
+            "cari_denge": 1077.0,
+            "cekirdek_denge": 5975.09
+        },
+        {
+            "tarih": "2023-7",
+            "cari_denge": -5118.0,
+            "cekirdek_denge": 1034.47
+        },
+        {
+            "tarih": "2023-8",
+            "cari_denge": 453.0,
+            "cekirdek_denge": 7198.22
+        },
+        {
+            "tarih": "2023-9",
+            "cari_denge": 2732.0,
+            "cekirdek_denge": 8021.89
+        },
+        {
+            "tarih": "2023-10",
+            "cari_denge": -42.0,
+            "cekirdek_denge": 4844.96
+        },
+        {
+            "tarih": "2023-11",
+            "cari_denge": -2683.0,
+            "cekirdek_denge": 2180.5
+        },
+        {
+            "tarih": "2023-12",
+            "cari_denge": -1863.0,
+            "cekirdek_denge": 4380.73
+        },
+        {
+            "tarih": "2024-1",
+            "cari_denge": -2221.0,
+            "cekirdek_denge": 3885.83
+        },
+        {
+            "tarih": "2024-2",
+            "cari_denge": -3302.0,
+            "cekirdek_denge": 2046.73
+        },
+        {
+            "tarih": "2024-3",
+            "cari_denge": -4055.0,
+            "cekirdek_denge": 1239.09
+        },
+        {
+            "tarih": "2024-4",
+            "cari_denge": -4822.0,
+            "cekirdek_denge": -11.34
+        },
+        {
+            "tarih": "2024-5",
+            "cari_denge": -664.0,
+            "cekirdek_denge": 3837.98
+        },
+        {
+            "tarih": "2024-6",
+            "cari_denge": 794.0,
+            "cekirdek_denge": 4926.17
+        },
+        {
+            "tarih": "2024-7",
+            "cari_denge": 1397.0,
+            "cekirdek_denge": 5711.94
+        },
+        {
+            "tarih": "2024-8",
+            "cari_denge": 4883.0,
+            "cekirdek_denge": 9595.83
+        },
+        {
+            "tarih": "2024-9",
+            "cari_denge": 2831.0,
+            "cekirdek_denge": 7572.66
+        },
+        {
+            "tarih": "2024-10",
+            "cari_denge": 2225.0,
+            "cekirdek_denge": 7505.61
+        },
+        {
+            "tarih": "2024-11",
+            "cari_denge": -2761.0,
+            "cekirdek_denge": 3557.84
+        },
+        {
+            "tarih": "2024-12",
+            "cari_denge": -4716.0,
+            "cekirdek_denge": 2378.92
+        },
+        {
+            "tarih": "2025-1",
+            "cari_denge": -3875.0,
+            "cekirdek_denge": 2309.43
+        },
+        {
+            "tarih": "2025-2",
+            "cari_denge": -4372.0,
+            "cekirdek_denge": 2195.05
+        },
+        {
+            "tarih": "2025-3",
+            "cari_denge": -4310.0,
+            "cekirdek_denge": 1233.1
+        },
+        {
+            "tarih": "2025-4",
+            "cari_denge": -7865.0,
+            "cekirdek_denge": -1941.15
+        },
+        {
+            "tarih": "2025-5",
+            "cari_denge": -773.0,
+            "cekirdek_denge": 3951.84
+        },
+        {
+            "tarih": "2025-6",
+            "cari_denge": -2001.0,
+            "cekirdek_denge": 2582.98
+        },
+        {
+            "tarih": "2025-7",
+            "cari_denge": 1713.0,
+            "cekirdek_denge": 5974.71
+        },
+        {
+            "tarih": "2025-8",
+            "cari_denge": 5405.0,
+            "cekirdek_denge": 9960.46
+        },
+        {
+            "tarih": "2025-9",
+            "cari_denge": 1078.0,
+            "cekirdek_denge": 6769.1
+        },
+        {
+            "tarih": "2025-10",
+            "cari_denge": 457.0,
+            "cekirdek_denge": 7027.58
+        }
+    ],
+    "isgucu": [
+        {
+            "tarih": "2023-1",
+            "issizlik": 9.7,
+            "katilim": 53.8
+        },
+        {
+            "tarih": "2023-2",
+            "issizlik": 9.9,
+            "katilim": 53.1
+        },
+        {
+            "tarih": "2023-3",
+            "issizlik": 10.1,
+            "katilim": 53.3
+        },
+        {
+            "tarih": "2023-4",
+            "issizlik": 10.1,
+            "katilim": 53.6
+        },
+        {
+            "tarih": "2023-5",
+            "issizlik": 9.5,
+            "katilim": 53.6
+        },
+        {
+            "tarih": "2023-6",
+            "issizlik": 9.3,
+            "katilim": 52.9
+        },
+        {
+            "tarih": "2023-7",
+            "issizlik": 9.4,
+            "katilim": 53.5
+        },
+        {
+            "tarih": "2023-8",
+            "issizlik": 9.2,
+            "katilim": 53.3
+        },
+        {
+            "tarih": "2023-9",
+            "issizlik": 9.0,
+            "katilim": 53.2
+        },
+        {
+            "tarih": "2023-10",
+            "issizlik": 8.5,
+            "katilim": 53.0
+        },
+        {
+            "tarih": "2023-11",
+            "issizlik": 8.9,
+            "katilim": 53.1
+        },
+        {
+            "tarih": "2023-12",
+            "issizlik": 8.8,
+            "katilim": 53.9
+        },
+        {
+            "tarih": "2024-1",
+            "issizlik": 9.1,
+            "katilim": 53.6
+        },
+        {
+            "tarih": "2024-2",
+            "issizlik": 8.6,
+            "katilim": 54.5
+        },
+        {
+            "tarih": "2024-3",
+            "issizlik": 8.8,
+            "katilim": 54.5
+        },
+        {
+            "tarih": "2024-4",
+            "issizlik": 8.6,
+            "katilim": 53.9
+        },
+        {
+            "tarih": "2024-5",
+            "issizlik": 8.4,
+            "katilim": 54.7
+        },
+        {
+            "tarih": "2024-6",
+            "issizlik": 9.1,
+            "katilim": 54.0
+        },
+        {
+            "tarih": "2024-7",
+            "issizlik": 9.0,
+            "katilim": 53.9
+        },
+        {
+            "tarih": "2024-8",
+            "issizlik": 8.5,
+            "katilim": 54.1
+        },
+        {
+            "tarih": "2024-9",
+            "issizlik": 8.6,
+            "katilim": 54.2
+        },
+        {
+            "tarih": "2024-10",
+            "issizlik": 8.8,
+            "katilim": 54.2
+        },
+        {
+            "tarih": "2024-11",
+            "issizlik": 8.5,
+            "katilim": 54.1
+        },
+        {
+            "tarih": "2024-12",
+            "issizlik": 8.5,
+            "katilim": 54.0
+        },
+        {
+            "tarih": "2025-1",
+            "issizlik": 8.5,
+            "katilim": 53.6
+        },
+        {
+            "tarih": "2025-2",
+            "issizlik": 8.2,
+            "katilim": 53.2
+        },
+        {
+            "tarih": "2025-3",
+            "issizlik": 8.0,
+            "katilim": 53.8
+        },
+        {
+            "tarih": "2025-4",
+            "issizlik": 8.6,
+            "katilim": 53.6
+        },
+        {
+            "tarih": "2025-5",
+            "issizlik": 8.4,
+            "katilim": 53.6
+        },
+        {
+            "tarih": "2025-6",
+            "issizlik": 8.5,
+            "katilim": 53.7
+        },
+        {
+            "tarih": "2025-7",
+            "issizlik": 8.1,
+            "katilim": 53.3
+        },
+        {
+            "tarih": "2025-8",
+            "issizlik": 8.5,
+            "katilim": 53.9
+        },
+        {
+            "tarih": "2025-9",
+            "issizlik": 8.6,
+            "katilim": 53.6
+        },
+        {
+            "tarih": "2025-10",
+            "issizlik": 8.5,
+            "katilim": 53.8
+        }
+    ],
+    "butce": [
+        {
+            "tarih": "05-01-2023",
+            "butce_aylik": -32243.0,
+            "butce_yillik": -201353.306,
+            "faiz_disi_aylik": -10883.0,
+            "faiz_disi_yillik": 116678.49799999999
+        },
+        {
+            "tarih": "06-02-2023",
+            "butce_aylik": -170560.0,
+            "butce_yillik": -441650.306,
+            "faiz_disi_aylik": -136337.0,
+            "faiz_disi_yillik": -133064.502
+        },
+        {
+            "tarih": "10-03-2023",
+            "butce_aylik": -47223.0,
+            "butce_yillik": -419901.306,
+            "faiz_disi_aylik": -2148.0,
+            "faiz_disi_yillik": -93178.50200000001
+        },
+        {
+            "tarih": "11-04-2023",
+            "butce_aylik": -132471.0,
+            "butce_yillik": -502205.306,
+            "faiz_disi_aylik": -97974.0,
+            "faiz_disi_yillik": -160119.502
+        },
+        {
+            "tarih": "13-05-2023",
+            "butce_aylik": 118906.0,
+            "butce_yillik": -527276.0,
+            "faiz_disi_aylik": 221620.0,
+            "faiz_disi_yillik": -100388.0
+        },
+        {
+            "tarih": "14-06-2023",
+            "butce_aylik": -219637.0,
+            "butce_yillik": -715854.0,
+            "faiz_disi_aylik": -182263.0,
+            "faiz_disi_yillik": -264361.0
+        },
+        {
+            "tarih": "16-07-2023",
+            "butce_aylik": 48574.0,
+            "butce_yillik": -603261.0,
+            "faiz_disi_aylik": 86281.0,
+            "faiz_disi_yillik": -130755.0
+        },
+        {
+            "tarih": "17-08-2023",
+            "butce_aylik": 51270.0,
+            "butce_yillik": -555577.0,
+            "faiz_disi_aylik": 138419.0,
+            "faiz_disi_yillik": -18569.0
+        },
+        {
+            "tarih": "18-09-2023",
+            "butce_aylik": -129218.0,
+            "butce_yillik": -606168.0,
+            "faiz_disi_aylik": -58454.0,
+            "faiz_disi_yillik": -31512.0
+        },
+        {
+            "tarih": "18-10-2023",
+            "butce_aylik": -95461.0,
+            "butce_yillik": -618375.0,
+            "faiz_disi_aylik": -28651.0,
+            "faiz_disi_yillik": -38053.0
+        },
+        {
+            "tarih": "20-11-2023",
+            "butce_aylik": 75627.0,
+            "butce_yillik": -651053.0,
+            "faiz_disi_aylik": 170235.0,
+            "faiz_disi_yillik": -526.0
+        },
+        {
+            "tarih": "23-12-2023",
+            "butce_aylik": -842532.0,
+            "butce_yillik": -1374968.0,
+            "faiz_disi_aylik": -800199.0,
+            "faiz_disi_yillik": -700354.0
+        },
+        {
+            "tarih": "25-01-2024",
+            "butce_aylik": -150719.0,
+            "butce_yillik": -1493444.0,
+            "faiz_disi_aylik": -29626.0,
+            "faiz_disi_yillik": -719097.0
+        },
+        {
+            "tarih": "27-02-2024",
+            "butce_aylik": -153798.0,
+            "butce_yillik": -1476682.0,
+            "faiz_disi_aylik": -98968.0,
+            "faiz_disi_yillik": -681728.0
+        },
+        {
+            "tarih": "31-03-2024",
+            "butce_aylik": -208965.0,
+            "butce_yillik": -1638424.0,
+            "faiz_disi_aylik": -134412.0,
+            "faiz_disi_yillik": -813992.0
+        },
+        {
+            "tarih": "30-04-2024",
+            "butce_aylik": -177830.0,
+            "butce_yillik": -1683783.0,
+            "faiz_disi_aylik": -63802.0,
+            "faiz_disi_yillik": -779820.0
+        },
+        {
+            "tarih": "31-05-2024",
+            "butce_aylik": 219409.0,
+            "butce_yillik": -1583280.0,
+            "faiz_disi_aylik": 330052.0,
+            "faiz_disi_yillik": -671388.0
+        },
+        {
+            "tarih": "30-06-2024",
+            "butce_aylik": -275280.0,
+            "butce_yillik": -1638923.0,
+            "faiz_disi_aylik": -176004.0,
+            "faiz_disi_yillik": -665129.0
+        },
+        {
+            "tarih": "31-07-2024",
+            "butce_aylik": -96776.0,
+            "butce_yillik": -1784273.0,
+            "faiz_disi_aylik": -4238.0,
+            "faiz_disi_yillik": -755648.0
+        },
+        {
+            "tarih": "31-08-2024",
+            "butce_aylik": -129594.0,
+            "butce_yillik": -1965137.0,
+            "faiz_disi_aylik": -32548.0,
+            "faiz_disi_yillik": -926615.0
+        },
+        {
+            "tarih": "30-09-2024",
+            "butce_aylik": -100464.0,
+            "butce_yillik": -1936383.0,
+            "faiz_disi_aylik": 48213.0,
+            "faiz_disi_yillik": -819948.0
+        },
+        {
+            "tarih": "31-10-2024",
+            "butce_aylik": -186271.0,
+            "butce_yillik": -2027193.0,
+            "faiz_disi_aylik": -50053.0,
+            "faiz_disi_yillik": -841350.0
+        },
+        {
+            "tarih": "30-11-2024",
+            "butce_aylik": -16646.0,
+            "butce_yillik": -2119466.0,
+            "faiz_disi_aylik": 129652.0,
+            "faiz_disi_yillik": -881933.0
+        },
+        {
+            "tarih": "31-12-2024",
+            "butce_aylik": -829211.0,
+            "butce_yillik": -2106145.0,
+            "faiz_disi_aylik": -753958.0,
+            "faiz_disi_yillik": -835692.0
+        },
+        {
+            "tarih": "31-01-2025",
+            "butce_aylik": -139259.0,
+            "butce_yillik": -2094685.0,
+            "faiz_disi_aylik": 23759.0,
+            "faiz_disi_yillik": -782307.0
+        },
+        {
+            "tarih": "28-02-2025",
+            "butce_aylik": -310092.0,
+            "butce_yillik": -2250979.0,
+            "faiz_disi_aylik": -170403.0,
+            "faiz_disi_yillik": -853742.0
+        },
+        {
+            "tarih": "31-03-2025",
+            "butce_aylik": -261466.0,
+            "butce_yillik": -2303480.0,
+            "faiz_disi_aylik": -100223.0,
+            "faiz_disi_yillik": -819553.0
+        },
+        {
+            "tarih": "30-04-2025",
+            "butce_aylik": -174714.0,
+            "butce_yillik": -2300364.0,
+            "faiz_disi_aylik": 85945.0,
+            "faiz_disi_yillik": -669806.0
+        },
+        {
+            "tarih": "31-05-2025",
+            "butce_aylik": 235229.0,
+            "butce_yillik": -2284544.0,
+            "faiz_disi_aylik": 346385.0,
+            "faiz_disi_yillik": -653473.0
+        },
+        {
+            "tarih": "30-06-2025",
+            "butce_aylik": -330176.0,
+            "butce_yillik": -2339440.0,
+            "faiz_disi_aylik": -54501.0,
+            "faiz_disi_yillik": -531970.0
+        },
+        {
+            "tarih": "31-07-2025",
+            "butce_aylik": -23862.0,
+            "butce_yillik": -2266526.0,
+            "faiz_disi_aylik": 110726.0,
+            "faiz_disi_yillik": -417006.0
+        },
+        {
+            "tarih": "31-08-2025",
+            "butce_aylik": 96705.0,
+            "butce_yillik": -2040227.0,
+            "faiz_disi_aylik": 276436.0,
+            "faiz_disi_yillik": -108022.0
+        },
+        {
+            "tarih": "30-09-2025",
+            "butce_aylik": -309643.0,
+            "butce_yillik": -2249406.0,
+            "faiz_disi_aylik": -73022.0,
+            "faiz_disi_yillik": -229257.0
+        },
+        {
+            "tarih": "31-10-2025",
+            "butce_aylik": -223199.0,
+            "butce_yillik": -2286334.0,
+            "faiz_disi_aylik": -65790.0,
+            "faiz_disi_yillik": -244994.0
+        },
+        {
+            "tarih": "30-11-2025",
+            "butce_aylik": 169486.862648,
+            "butce_yillik": -2100201.137352,
+            "faiz_disi_aylik": 287408.935978,
+            "faiz_disi_yillik": -87237.064022
+        }
+    ],
+    "nakit": [
+        {
+            "tarih": "05-01-2023",
+            "nakit_aylik": -54300.18,
+            "nakit_yillik": -185671.94,
+            "faiz_disi_nakit_aylik": -34582.5
+        },
+        {
+            "tarih": "06-02-2023",
+            "nakit_aylik": -171480.74,
+            "nakit_yillik": -412666.00999999995,
+            "faiz_disi_nakit_aylik": -140178.32
+        },
+        {
+            "tarih": "10-03-2023",
+            "nakit_aylik": -32142.58,
+            "nakit_yillik": -404202.08999999997,
+            "faiz_disi_nakit_aylik": 1831.74
+        },
+        {
+            "tarih": "11-04-2023",
+            "nakit_aylik": -159061.88,
+            "nakit_yillik": -519592.69,
+            "faiz_disi_nakit_aylik": -132224.97
+        },
+        {
+            "tarih": "13-05-2023",
+            "nakit_aylik": 169778.89,
+            "nakit_yillik": -499043.48,
+            "faiz_disi_nakit_aylik": 265627.93
+        },
+        {
+            "tarih": "14-06-2023",
+            "nakit_aylik": -206369.32,
+            "nakit_yillik": -678777.19,
+            "faiz_disi_nakit_aylik": -184962.28
+        },
+        {
+            "tarih": "16-07-2023",
+            "nakit_aylik": 19161.63,
+            "nakit_yillik": -566570.68,
+            "faiz_disi_nakit_aylik": 53218.02
+        },
+        {
+            "tarih": "17-08-2023",
+            "nakit_aylik": 61908.5,
+            "nakit_yillik": -533231.7099999998,
+            "faiz_disi_nakit_aylik": 140479.47
+        },
+        {
+            "tarih": "18-09-2023",
+            "nakit_aylik": -69061.87,
+            "nakit_yillik": -522817.77,
+            "faiz_disi_nakit_aylik": -22651.15
+        },
+        {
+            "tarih": "18-10-2023",
+            "nakit_aylik": -82239.88,
+            "nakit_yillik": -532641.97,
+            "faiz_disi_nakit_aylik": -26003.22
+        },
+        {
+            "tarih": "20-11-2023",
+            "nakit_aylik": 95279.59,
+            "nakit_yillik": -536825.46,
+            "faiz_disi_nakit_aylik": 177135.89
+        },
+        {
+            "tarih": "23-12-2023",
+            "nakit_aylik": -197256.02,
+            "nakit_yillik": -625783.86,
+            "faiz_disi_nakit_aylik": -169357.5
+        },
+        {
+            "tarih": "25-01-2024",
+            "nakit_aylik": -201465.74,
+            "nakit_yillik": -772949.42,
+            "faiz_disi_nakit_aylik": -94510.87
+        },
+        {
+            "tarih": "27-02-2024",
+            "nakit_aylik": -202008.13,
+            "nakit_yillik": -803476.8099999999,
+            "faiz_disi_nakit_aylik": -147654.6
+        },
+        {
+            "tarih": "31-03-2024",
+            "nakit_aylik": -166946.8,
+            "nakit_yillik": -938281.03,
+            "faiz_disi_nakit_aylik": -103770.53
+        },
+        {
+            "tarih": "30-04-2024",
+            "nakit_aylik": -237071.41,
+            "nakit_yillik": -1016290.5599999999,
+            "faiz_disi_nakit_aylik": -132149.61
+        },
+        {
+            "tarih": "31-05-2024",
+            "nakit_aylik": 234743.2,
+            "nakit_yillik": -951326.25,
+            "faiz_disi_nakit_aylik": 337263.04
+        },
+        {
+            "tarih": "30-06-2024",
+            "nakit_aylik": -430739.44,
+            "nakit_yillik": -1175696.3699999999,
+            "faiz_disi_nakit_aylik": -334491.47
+        },
+        {
+            "tarih": "31-07-2024",
+            "nakit_aylik": -136535.53,
+            "nakit_yillik": -1331393.53,
+            "faiz_disi_nakit_aylik": -47860.45
+        },
+        {
+            "tarih": "31-08-2024",
+            "nakit_aylik": -194617.83,
+            "nakit_yillik": -1587919.86,
+            "faiz_disi_nakit_aylik": -108554.5
+        },
+        {
+            "tarih": "30-09-2024",
+            "nakit_aylik": -201732.82,
+            "nakit_yillik": -1720590.81,
+            "faiz_disi_nakit_aylik": -61901.12
+        },
+        {
+            "tarih": "31-10-2024",
+            "nakit_aylik": -170017.84,
+            "nakit_yillik": -1808368.7700000003,
+            "faiz_disi_nakit_aylik": -44054.54
+        },
+        {
+            "tarih": "30-11-2024",
+            "nakit_aylik": -62220.22,
+            "nakit_yillik": -1965868.58,
+            "faiz_disi_nakit_aylik": 67739.89
+        },
+        {
+            "tarih": "31-12-2024",
+            "nakit_aylik": -323904.46,
+            "nakit_yillik": -2092517.02,
+            "faiz_disi_nakit_aylik": -259299.62
+        },
+        {
+            "tarih": "31-01-2025",
+            "nakit_aylik": -205018.03,
+            "nakit_yillik": -2096069.31,
+            "faiz_disi_nakit_aylik": -54589.08
+        },
+        {
+            "tarih": "28-02-2025",
+            "nakit_aylik": -397603.03,
+            "nakit_yillik": -2291664.21,
+            "faiz_disi_nakit_aylik": -266226.44
+        },
+        {
+            "tarih": "31-03-2025",
+            "nakit_aylik": -298984.93,
+            "nakit_yillik": -2423702.3400000003,
+            "faiz_disi_nakit_aylik": -163882.89
+        },
+        {
+            "tarih": "30-04-2025",
+            "nakit_aylik": -183591.87,
+            "nakit_yillik": -2370222.8000000003,
+            "faiz_disi_nakit_aylik": 73078.93
+        },
+        {
+            "tarih": "31-05-2025",
+            "nakit_aylik": 247124.64,
+            "nakit_yillik": -2357841.3600000003,
+            "faiz_disi_nakit_aylik": 348137.61
+        },
+        {
+            "tarih": "30-06-2025",
+            "nakit_aylik": -455736.92,
+            "nakit_yillik": -2382838.84,
+            "faiz_disi_nakit_aylik": -207035.67
+        },
+        {
+            "tarih": "31-07-2025",
+            "nakit_aylik": -68525.73,
+            "nakit_yillik": -2314829.0399999996,
+            "faiz_disi_nakit_aylik": 54108.08
+        },
+        {
+            "tarih": "31-08-2025",
+            "nakit_aylik": 84213.69,
+            "nakit_yillik": -2035997.52,
+            "faiz_disi_nakit_aylik": 249284.64
+        },
+        {
+            "tarih": "30-09-2025",
+            "nakit_aylik": -360138.47,
+            "nakit_yillik": -2194403.17,
+            "faiz_disi_nakit_aylik": -134009.67
+        },
+        {
+            "tarih": "31-10-2025",
+            "nakit_aylik": -195969.58,
+            "nakit_yillik": -2220354.9099999997,
+            "faiz_disi_nakit_aylik": -36669.8
+        },
+        {
+            "tarih": "30-11-2025",
+            "nakit_aylik": 56393.42,
+            "nakit_yillik": -2101741.2699999996,
+            "faiz_disi_nakit_aylik": 173883.82
         }
     ]
 }
