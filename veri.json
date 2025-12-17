@@ -712,253 +712,7 @@
             "katilim": 53.8
         }
     ],
-    "butce": [
-        {
-            "tarih": "05-01-2023",
-            "butce_aylik": -32243.0,
-            "butce_yillik": -201353.306,
-            "faiz_disi_aylik": -10883.0,
-            "faiz_disi_yillik": 116678.49799999999
-        },
-        {
-            "tarih": "06-02-2023",
-            "butce_aylik": -170560.0,
-            "butce_yillik": -441650.306,
-            "faiz_disi_aylik": -136337.0,
-            "faiz_disi_yillik": -133064.502
-        },
-        {
-            "tarih": "10-03-2023",
-            "butce_aylik": -47223.0,
-            "butce_yillik": -419901.306,
-            "faiz_disi_aylik": -2148.0,
-            "faiz_disi_yillik": -93178.50200000001
-        },
-        {
-            "tarih": "11-04-2023",
-            "butce_aylik": -132471.0,
-            "butce_yillik": -502205.306,
-            "faiz_disi_aylik": -97974.0,
-            "faiz_disi_yillik": -160119.502
-        },
-        {
-            "tarih": "13-05-2023",
-            "butce_aylik": 118906.0,
-            "butce_yillik": -527276.0,
-            "faiz_disi_aylik": 221620.0,
-            "faiz_disi_yillik": -100388.0
-        },
-        {
-            "tarih": "14-06-2023",
-            "butce_aylik": -219637.0,
-            "butce_yillik": -715854.0,
-            "faiz_disi_aylik": -182263.0,
-            "faiz_disi_yillik": -264361.0
-        },
-        {
-            "tarih": "16-07-2023",
-            "butce_aylik": 48574.0,
-            "butce_yillik": -603261.0,
-            "faiz_disi_aylik": 86281.0,
-            "faiz_disi_yillik": -130755.0
-        },
-        {
-            "tarih": "17-08-2023",
-            "butce_aylik": 51270.0,
-            "butce_yillik": -555577.0,
-            "faiz_disi_aylik": 138419.0,
-            "faiz_disi_yillik": -18569.0
-        },
-        {
-            "tarih": "18-09-2023",
-            "butce_aylik": -129218.0,
-            "butce_yillik": -606168.0,
-            "faiz_disi_aylik": -58454.0,
-            "faiz_disi_yillik": -31512.0
-        },
-        {
-            "tarih": "18-10-2023",
-            "butce_aylik": -95461.0,
-            "butce_yillik": -618375.0,
-            "faiz_disi_aylik": -28651.0,
-            "faiz_disi_yillik": -38053.0
-        },
-        {
-            "tarih": "20-11-2023",
-            "butce_aylik": 75627.0,
-            "butce_yillik": -651053.0,
-            "faiz_disi_aylik": 170235.0,
-            "faiz_disi_yillik": -526.0
-        },
-        {
-            "tarih": "23-12-2023",
-            "butce_aylik": -842532.0,
-            "butce_yillik": -1374968.0,
-            "faiz_disi_aylik": -800199.0,
-            "faiz_disi_yillik": -700354.0
-        },
-        {
-            "tarih": "25-01-2024",
-            "butce_aylik": -150719.0,
-            "butce_yillik": -1493444.0,
-            "faiz_disi_aylik": -29626.0,
-            "faiz_disi_yillik": -719097.0
-        },
-        {
-            "tarih": "27-02-2024",
-            "butce_aylik": -153798.0,
-            "butce_yillik": -1476682.0,
-            "faiz_disi_aylik": -98968.0,
-            "faiz_disi_yillik": -681728.0
-        },
-        {
-            "tarih": "31-03-2024",
-            "butce_aylik": -208965.0,
-            "butce_yillik": -1638424.0,
-            "faiz_disi_aylik": -134412.0,
-            "faiz_disi_yillik": -813992.0
-        },
-        {
-            "tarih": "30-04-2024",
-            "butce_aylik": -177830.0,
-            "butce_yillik": -1683783.0,
-            "faiz_disi_aylik": -63802.0,
-            "faiz_disi_yillik": -779820.0
-        },
-        {
-            "tarih": "31-05-2024",
-            "butce_aylik": 219409.0,
-            "butce_yillik": -1583280.0,
-            "faiz_disi_aylik": 330052.0,
-            "faiz_disi_yillik": -671388.0
-        },
-        {
-            "tarih": "30-06-2024",
-            "butce_aylik": -275280.0,
-            "butce_yillik": -1638923.0,
-            "faiz_disi_aylik": -176004.0,
-            "faiz_disi_yillik": -665129.0
-        },
-        {
-            "tarih": "31-07-2024",
-            "butce_aylik": -96776.0,
-            "butce_yillik": -1784273.0,
-            "faiz_disi_aylik": -4238.0,
-            "faiz_disi_yillik": -755648.0
-        },
-        {
-            "tarih": "31-08-2024",
-            "butce_aylik": -129594.0,
-            "butce_yillik": -1965137.0,
-            "faiz_disi_aylik": -32548.0,
-            "faiz_disi_yillik": -926615.0
-        },
-        {
-            "tarih": "30-09-2024",
-            "butce_aylik": -100464.0,
-            "butce_yillik": -1936383.0,
-            "faiz_disi_aylik": 48213.0,
-            "faiz_disi_yillik": -819948.0
-        },
-        {
-            "tarih": "31-10-2024",
-            "butce_aylik": -186271.0,
-            "butce_yillik": -2027193.0,
-            "faiz_disi_aylik": -50053.0,
-            "faiz_disi_yillik": -841350.0
-        },
-        {
-            "tarih": "30-11-2024",
-            "butce_aylik": -16646.0,
-            "butce_yillik": -2119466.0,
-            "faiz_disi_aylik": 129652.0,
-            "faiz_disi_yillik": -881933.0
-        },
-        {
-            "tarih": "31-12-2024",
-            "butce_aylik": -829211.0,
-            "butce_yillik": -2106145.0,
-            "faiz_disi_aylik": -753958.0,
-            "faiz_disi_yillik": -835692.0
-        },
-        {
-            "tarih": "31-01-2025",
-            "butce_aylik": -139259.0,
-            "butce_yillik": -2094685.0,
-            "faiz_disi_aylik": 23759.0,
-            "faiz_disi_yillik": -782307.0
-        },
-        {
-            "tarih": "28-02-2025",
-            "butce_aylik": -310092.0,
-            "butce_yillik": -2250979.0,
-            "faiz_disi_aylik": -170403.0,
-            "faiz_disi_yillik": -853742.0
-        },
-        {
-            "tarih": "31-03-2025",
-            "butce_aylik": -261466.0,
-            "butce_yillik": -2303480.0,
-            "faiz_disi_aylik": -100223.0,
-            "faiz_disi_yillik": -819553.0
-        },
-        {
-            "tarih": "30-04-2025",
-            "butce_aylik": -174714.0,
-            "butce_yillik": -2300364.0,
-            "faiz_disi_aylik": 85945.0,
-            "faiz_disi_yillik": -669806.0
-        },
-        {
-            "tarih": "31-05-2025",
-            "butce_aylik": 235229.0,
-            "butce_yillik": -2284544.0,
-            "faiz_disi_aylik": 346385.0,
-            "faiz_disi_yillik": -653473.0
-        },
-        {
-            "tarih": "30-06-2025",
-            "butce_aylik": -330176.0,
-            "butce_yillik": -2339440.0,
-            "faiz_disi_aylik": -54501.0,
-            "faiz_disi_yillik": -531970.0
-        },
-        {
-            "tarih": "31-07-2025",
-            "butce_aylik": -23862.0,
-            "butce_yillik": -2266526.0,
-            "faiz_disi_aylik": 110726.0,
-            "faiz_disi_yillik": -417006.0
-        },
-        {
-            "tarih": "31-08-2025",
-            "butce_aylik": 96705.0,
-            "butce_yillik": -2040227.0,
-            "faiz_disi_aylik": 276436.0,
-            "faiz_disi_yillik": -108022.0
-        },
-        {
-            "tarih": "30-09-2025",
-            "butce_aylik": -309643.0,
-            "butce_yillik": -2249406.0,
-            "faiz_disi_aylik": -73022.0,
-            "faiz_disi_yillik": -229257.0
-        },
-        {
-            "tarih": "31-10-2025",
-            "butce_aylik": -223199.0,
-            "butce_yillik": -2286334.0,
-            "faiz_disi_aylik": -65790.0,
-            "faiz_disi_yillik": -244994.0
-        },
-        {
-            "tarih": "30-11-2025",
-            "butce_aylik": 169486.862648,
-            "butce_yillik": -2100201.137352,
-            "faiz_disi_aylik": 287408.935978,
-            "faiz_disi_yillik": -87237.064022
-        }
-    ],
+    "butce": [],
     "nakit": [
         {
             "tarih": "05-01-2023",
@@ -1169,6 +923,290 @@
             "nakit_aylik": 56393.42,
             "nakit_yillik": -2101741.2699999996,
             "faiz_disi_nakit_aylik": 173883.82
+        }
+    ],
+    "guven": [
+        {
+            "tarih": "2023-1",
+            "deger": 79
+        },
+        {
+            "tarih": "2023-2",
+            "deger": 82
+        },
+        {
+            "tarih": "2023-3",
+            "deger": 80
+        },
+        {
+            "tarih": "2023-4",
+            "deger": 87
+        },
+        {
+            "tarih": "2023-5",
+            "deger": 91
+        },
+        {
+            "tarih": "2023-6",
+            "deger": 85
+        },
+        {
+            "tarih": "2023-7",
+            "deger": 80
+        },
+        {
+            "tarih": "2023-8",
+            "deger": 68
+        },
+        {
+            "tarih": "2023-9",
+            "deger": 71
+        },
+        {
+            "tarih": "2023-10",
+            "deger": 74
+        },
+        {
+            "tarih": "2023-11",
+            "deger": 75
+        },
+        {
+            "tarih": "2023-12",
+            "deger": 77
+        },
+        {
+            "tarih": "2024-1",
+            "deger": 80
+        },
+        {
+            "tarih": "2024-2",
+            "deger": 79
+        },
+        {
+            "tarih": "2024-3",
+            "deger": 79
+        },
+        {
+            "tarih": "2024-4",
+            "deger": 80
+        },
+        {
+            "tarih": "2024-5",
+            "deger": 80
+        },
+        {
+            "tarih": "2024-6",
+            "deger": 78
+        },
+        {
+            "tarih": "2024-7",
+            "deger": 75
+        },
+        {
+            "tarih": "2024-8",
+            "deger": 76
+        },
+        {
+            "tarih": "2024-9",
+            "deger": 78
+        },
+        {
+            "tarih": "2024-10",
+            "deger": 80
+        },
+        {
+            "tarih": "2024-11",
+            "deger": 79
+        },
+        {
+            "tarih": "2024-12",
+            "deger": 81
+        },
+        {
+            "tarih": "2025-1",
+            "deger": 80
+        },
+        {
+            "tarih": "2025-2",
+            "deger": 82
+        },
+        {
+            "tarih": "2025-3",
+            "deger": 85
+        },
+        {
+            "tarih": "2025-4",
+            "deger": 83
+        },
+        {
+            "tarih": "2025-5",
+            "deger": 84
+        },
+        {
+            "tarih": "2025-6",
+            "deger": 85
+        },
+        {
+            "tarih": "2025-7",
+            "deger": 83
+        },
+        {
+            "tarih": "2025-8",
+            "deger": 84
+        },
+        {
+            "tarih": "2025-9",
+            "deger": 83
+        },
+        {
+            "tarih": "2025-10",
+            "deger": 83
+        },
+        {
+            "tarih": "2025-11",
+            "deger": 84
+        }
+    ],
+    "fed": [
+        {
+            "tarih": "01-01-2023",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-02-2023",
+            "oran": 4.57
+        },
+        {
+            "tarih": "01-03-2023",
+            "oran": 4.65
+        },
+        {
+            "tarih": "01-04-2023",
+            "oran": 4.83
+        },
+        {
+            "tarih": "01-05-2023",
+            "oran": 5.06
+        },
+        {
+            "tarih": "01-06-2023",
+            "oran": 5.08
+        },
+        {
+            "tarih": "01-07-2023",
+            "oran": 5.12
+        },
+        {
+            "tarih": "01-08-2023",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-09-2023",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-10-2023",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-11-2023",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-12-2023",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-01-2024",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-02-2024",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-03-2024",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-04-2024",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-05-2024",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-06-2024",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-07-2024",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-08-2024",
+            "oran": 5.33
+        },
+        {
+            "tarih": "01-09-2024",
+            "oran": 5.13
+        },
+        {
+            "tarih": "01-10-2024",
+            "oran": 4.83
+        },
+        {
+            "tarih": "01-11-2024",
+            "oran": 4.64
+        },
+        {
+            "tarih": "01-12-2024",
+            "oran": 4.48
+        },
+        {
+            "tarih": "01-01-2025",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-02-2025",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-03-2025",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-04-2025",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-05-2025",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-06-2025",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-07-2025",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-08-2025",
+            "oran": 4.33
+        },
+        {
+            "tarih": "01-09-2025",
+            "oran": 4.22
+        },
+        {
+            "tarih": "01-10-2025",
+            "oran": 4.09
+        },
+        {
+            "tarih": "01-11-2025",
+            "oran": 3.88
         }
     ]
 }
