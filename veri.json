@@ -5731,6 +5731,120 @@
             "aofm": 39.5,
             "tlref": 39.414,
             "net_fonlama": -435014
+        },
+        {
+            "tarih": "02-12-2025",
+            "aofm": 39.5,
+            "tlref": 39.3994,
+            "net_fonlama": -444643
+        },
+        {
+            "tarih": "03-12-2025",
+            "aofm": 39.5,
+            "tlref": 39.3847,
+            "net_fonlama": -419848
+        },
+        {
+            "tarih": "04-12-2025",
+            "aofm": 39.5,
+            "tlref": 39.3461,
+            "net_fonlama": -464351
+        },
+        {
+            "tarih": "05-12-2025",
+            "aofm": 39.5,
+            "tlref": 39.3702,
+            "net_fonlama": -331942
+        },
+        {
+            "tarih": "08-12-2025",
+            "aofm": 39.5,
+            "tlref": 39.2329,
+            "net_fonlama": -624455
+        },
+        {
+            "tarih": "09-12-2025",
+            "aofm": 39.5,
+            "tlref": 39.2683,
+            "net_fonlama": -617994
+        },
+        {
+            "tarih": "10-12-2025",
+            "aofm": 39.5,
+            "tlref": 39.3589,
+            "net_fonlama": -592188
+        },
+        {
+            "tarih": "11-12-2025",
+            "aofm": 39.5,
+            "tlref": 39.3703,
+            "net_fonlama": -865276
+        },
+        {
+            "tarih": "12-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.8497,
+            "net_fonlama": -300459
+        },
+        {
+            "tarih": "15-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.744,
+            "net_fonlama": -353099
+        },
+        {
+            "tarih": "16-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.7181,
+            "net_fonlama": -583641
+        },
+        {
+            "tarih": "17-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.7264,
+            "net_fonlama": -597470
+        },
+        {
+            "tarih": "18-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.7092,
+            "net_fonlama": -693372
+        },
+        {
+            "tarih": "19-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.7681,
+            "net_fonlama": -676399
+        },
+        {
+            "tarih": "22-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.7485,
+            "net_fonlama": -733606
+        },
+        {
+            "tarih": "23-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.7719,
+            "net_fonlama": -763027
+        },
+        {
+            "tarih": "24-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.7752,
+            "net_fonlama": -780470
+        },
+        {
+            "tarih": "25-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.8143,
+            "net_fonlama": -932080
+        },
+        {
+            "tarih": "26-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.8657,
+            "net_fonlama": -738141
         }
     ],
     "imalat": [
@@ -6089,7 +6203,7 @@
         {
             "tarih": "2025-12",
             "tuketici": 83,
-            "reel": 0
+            "reel": 103.7
         }
     ],
     "fed": [
@@ -10739,6 +10853,24 @@
         },
         {
             "tarih": "19-12-2025",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "22-12-2025",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "23-12-2025",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "24-12-2025",
             "ust": 3.75,
             "efektif": 3.64,
             "alt": 3.5
@@ -17440,6 +17572,12 @@
         },
         {
             "tarih": "22-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "23-12-2025",
             "mevduat": 2.0,
             "refinans": 2.15,
             "marjinal": 2.4

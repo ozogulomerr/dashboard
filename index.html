@@ -98,7 +98,7 @@
         .mini-date { font-size: 10px; color: #b2bec3; }
         .mini-chart-box { height: 60px; width: 100%; margin-top: 5px; }
 
-        /* TCMB Çift Grafik */
+        /* TCMB ve İmalat Çift Grafik Yapısı */
         .double-chart-row { display: flex; gap: 20px; height: 350px; }
         .chart-half { flex: 1; position: relative; }
 
@@ -140,14 +140,14 @@
                 <div class="card-header"><h3 class="card-title">TÜFE</h3><span class="card-date" id="d-tufe">...</span></div>
                 <div class="metric"><span class="metric-label">Aylık:</span><span class="metric-value" id="v-tufe-ay">...</span></div>
                 <div class="metric"><span class="metric-label">Yıllık:</span><span class="metric-value" id="v-tufe-yil">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
 
             <div class="card" onclick="togglePanel('panel-ufe', this)">
                 <div class="card-header"><h3 class="card-title">Yİ-ÜFE</h3><span class="card-date" id="d-ufe">...</span></div>
                 <div class="metric"><span class="metric-label">Aylık:</span><span class="metric-value" id="v-ufe-ay">...</span></div>
                 <div class="metric"><span class="metric-label">Yıllık:</span><span class="metric-value" id="v-ufe-yil">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
 
             <div class="card" onclick="togglePanel('panel-cari', this)">
@@ -156,7 +156,7 @@
                 <div class="metric"><span class="metric-label">Yıllık:</span><span class="metric-value" id="v-cari-yil">...</span></div>
                 <div class="metric"><span class="metric-label">Altın&Enerji Hariç (Aylık):</span><span class="metric-value" id="v-cari-cek-ay">...</span></div>
                 <div class="metric"><span class="metric-label">Altın&Enerji Hariç (Yıllık):</span><span class="metric-value" id="v-cari-cek-yil">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
         </div>
 
@@ -203,7 +203,7 @@
                 <div class="metric"><span class="metric-label">Bütçe (Yıllık):</span><span class="metric-value" id="v-butce-yil">...</span></div>
                 <div class="metric"><span class="metric-label">Faiz Dışı (Aylık):</span><span class="metric-value" id="v-butce-fd-ay">...</span></div>
                 <div class="metric"><span class="metric-label">Faiz Dışı (Yıllık):</span><span class="metric-value" id="v-butce-fd-yil">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
 
             <div class="card" onclick="togglePanel('panel-nakit', this)">
@@ -212,14 +212,14 @@
                 <div class="metric"><span class="metric-label">Nakit (Yıllık):</span><span class="metric-value" id="v-nakit-yil">...</span></div>
                 <div class="metric"><span class="metric-label">Faiz Dışı (Aylık):</span><span class="metric-value" id="v-nakit-fd-ay">...</span></div>
                 <div class="metric"><span class="metric-label">Faiz Dışı (Yıllık):</span><span class="metric-value" id="v-nakit-fd-yil">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
 
             <div class="card" onclick="togglePanel('panel-isgucu', this)">
                 <div class="card-header"><h3 class="card-title">İşgücü</h3><span class="card-date" id="d-isgucu">...</span></div>
                 <div class="metric"><span class="metric-label">İşsizlik:</span><span class="metric-value" id="v-issiz">...</span></div>
                 <div class="metric"><span class="metric-label">Atıl İşgücü:</span><span class="metric-value" id="v-atil">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
 
             <div class="card" onclick="togglePanel('panel-fon', this)">
@@ -257,11 +257,11 @@
                 <div class="panel-top"><span class="panel-title">TCMB Fonlama ve Likidite (Son 30 Gün)</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div>
                 <div class="double-chart-row">
                     <div class="chart-half">
-                        <h5 style="text-align:center; color:#636e72;">Faiz Oranları (%)</h5>
+                        <h5 style="text-align:center; color:#636e72; margin-top:0;">Faiz Oranları (%)</h5>
                         <canvas id="ch-fon-rates"></canvas>
                     </div>
                     <div class="chart-half">
-                        <h5 style="text-align:center; color:#636e72;">Net Fonlama (Milyar TL)</h5>
+                        <h5 style="text-align:center; color:#636e72; margin-top:0;">Net Fonlama (Milyar TL)</h5>
                         <canvas id="ch-fon-net"></canvas>
                     </div>
                 </div>
@@ -277,7 +277,7 @@
                     <div class="card-header"><h3 class="card-title">İmalat Sanayi</h3><span class="card-date" id="d-imalat">...</span></div>
                     <div class="metric"><span class="metric-label">PMI:</span><span class="metric-value" id="v-pmi">...</span></div>
                     <div class="metric"><span class="metric-label">KKO:</span><span class="metric-value" id="v-kko">...</span></div>
-                    <div class="hint">Büyük Grafik ▼</div>
+                    <div class="hint">Detaylı Grafikler ▼</div>
                 </div>
             </div>
             <div class="flex-item">
@@ -285,16 +285,27 @@
                     <div class="card-header"><h3 class="card-title">Güven Endeksleri</h3><span class="card-date" id="d-guven">...</span></div>
                     <div class="metric"><span class="metric-label">Tüketici:</span><span class="metric-value" id="v-guven-tuk">...</span></div>
                     <div class="metric"><span class="metric-label">Reel Kesim:</span><span class="metric-value" id="v-guven-reel">...</span></div>
-                    <div class="hint">Büyük Grafik ▼</div>
+                    <div class="hint">Grafiği Göster ▼</div>
                 </div>
             </div>
         </div>
+
         <div id="panel-imalat" class="full-panel-container" style="margin-top:20px;">
             <div class="panel-content">
                 <div class="panel-top"><span class="panel-title">İmalat Sanayi Görünümü</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div>
-                <div class="big-chart-box"><canvas id="ch-imalat"></canvas></div>
+                <div class="double-chart-row">
+                    <div class="chart-half">
+                        <h5 style="text-align:center; color:#636e72; margin-top:0;">İmalat Sanayi PMI</h5>
+                        <canvas id="ch-pmi"></canvas>
+                    </div>
+                    <div class="chart-half">
+                        <h5 style="text-align:center; color:#636e72; margin-top:0;">İmalat Sanayi KKO (%)</h5>
+                        <canvas id="ch-kko"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div id="panel-guven" class="full-panel-container" style="margin-top:20px;">
             <div class="panel-content">
                 <div class="panel-top"><span class="panel-title">Güven Endeksleri (1 Ay Gecikmeli)</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div>
@@ -309,14 +320,14 @@
                 <div class="card-header"><h3 class="card-title">FED Faiz Oranları</h3><span class="card-date" id="d-fed">...</span></div>
                 <div class="metric"><span class="metric-label">Üst Limit:</span><span class="metric-value" id="v-fed-ust">...</span></div>
                 <div class="metric"><span class="metric-label">Efektif:</span><span class="metric-value" id="v-fed-eff">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
         
             <div class="card" onclick="togglePanel('panel-uscpi', this)">
                 <div class="card-header"><h3 class="card-title">ABD TÜFE</h3><span class="card-date" id="d-uscpi">...</span></div>
                 <div class="metric"><span class="metric-label">Aylık:</span><span class="metric-value" id="v-uscpi-ay">...</span></div>
                 <div class="metric"><span class="metric-label">Yıllık:</span><span class="metric-value" id="v-uscpi-yil">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
         </div>
         
@@ -332,22 +343,23 @@
                 <div class="panel-top"><span class="panel-title">ABD Tüketici Fiyat Endeksi (Yıllık Değişim)</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div>
                 <div class="big-chart-box"><canvas id="ch-uscpi"></canvas></div>
             </div>
+        </div>
     </div>
-</div>
-<div id="tab4" class="tab-content">
+    
+    <div id="tab4" class="tab-content">
         <div class="row-grid">
             <div class="card" onclick="togglePanel('panel-ecb', this)">
                 <div class="card-header"><h3 class="card-title">ECB Faiz Oranları</h3><span class="card-date" id="d-ecb">...</span></div>
                 <div class="metric"><span class="metric-label">Mevduat:</span><span class="metric-value" id="v-ecb-mev">...</span></div>
                 <div class="metric"><span class="metric-label">Refinansman:</span><span class="metric-value" id="v-ecb-ref">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
             
             <div class="card" onclick="togglePanel('panel-eurocpi', this)">
                 <div class="card-header"><h3 class="card-title">Euro Bölgesi TÜFE</h3><span class="card-date" id="d-eurocpi">...</span></div>
                 <div class="metric"><span class="metric-label">Aylık:</span><span class="metric-value" id="v-eurocpi-ay">...</span></div>
                 <div class="metric"><span class="metric-label">Yıllık:</span><span class="metric-value" id="v-eurocpi-yil">...</span></div>
-                <div class="hint">Büyük Grafik ▼</div>
+                <div class="hint">Grafiği Göster ▼</div>
             </div>
         </div>
         
@@ -365,6 +377,7 @@
             </div>
         </div>
     </div> 
+    
     <div id="tab5" class="tab-content">
         <div style="text-align:center; padding:50px; color:#aaa;">
             <h3>Veri Bekleniyor...</h3>
@@ -480,13 +493,12 @@
             drawChart('ch-ufe', 'line', d.ufe.map(x=>x.tarih), [{label:'Yıllık Yİ-ÜFE', data:d.ufe.map(x=>x.yillik), borderColor:'#e17055'}]);
         }
 
-        // 4. CARİ (GÜNCELLENDİ)
+        // 4. CARİ 
         if(d.cari && d.cari.length){
             const s = d.cari[d.cari.length-1];
             if(document.getElementById('d-cari')) document.getElementById('d-cari').innerText = s.tarih;
             if(document.getElementById('v-cari-ay')) document.getElementById('v-cari-ay').innerText = fmtMUSD(s.cari_aylik);
             if(document.getElementById('v-cari-yil')) document.getElementById('v-cari-yil').innerText = fmtMUSD(s.cari_yillik);
-            // Yeni Eklenenler
             if(document.getElementById('v-cari-cek-ay')) document.getElementById('v-cari-cek-ay').innerText = fmtMUSD(s.cekirdek_aylik);
             if(document.getElementById('v-cari-cek-yil')) document.getElementById('v-cari-cek-yil').innerText = fmtMUSD(s.cekirdek_yillik);
 
@@ -496,13 +508,12 @@
             ]);
         }
 
-        // 5. BÜTÇE (GÜNCELLENDİ)
+        // 5. BÜTÇE
         if(d.butce && d.butce.length){
             const s = d.butce[d.butce.length-1];
             if(document.getElementById('d-butce')) document.getElementById('d-butce').innerText = s.tarih;
             if(document.getElementById('v-butce-ay')) document.getElementById('v-butce-ay').innerText = fmtThous(s.butce_aylik);
             if(document.getElementById('v-butce-yil')) document.getElementById('v-butce-yil').innerText = fmtThous(s.butce_yillik);
-            // Yeni Eklenenler
             if(document.getElementById('v-butce-fd-ay')) document.getElementById('v-butce-fd-ay').innerText = fmtThous(s.faizdisi_aylik);
             if(document.getElementById('v-butce-fd-yil')) document.getElementById('v-butce-fd-yil').innerText = fmtThous(s.faizdisi_yillik);
 
@@ -512,13 +523,12 @@
             ]);
         }
 
-        // 6. NAKİT (GÜNCELLENDİ)
+        // 6. NAKİT
         if(d.nakit && d.nakit.length){
             const s = d.nakit[d.nakit.length-1];
             if(document.getElementById('d-nakit')) document.getElementById('d-nakit').innerText = s.tarih;
             if(document.getElementById('v-nakit-ay')) document.getElementById('v-nakit-ay').innerText = fmtThous(s.nakit_aylik);
             if(document.getElementById('v-nakit-yil')) document.getElementById('v-nakit-yil').innerText = fmtThous(s.nakit_yillik);
-             // Yeni Eklenenler
              if(document.getElementById('v-nakit-fd-ay')) document.getElementById('v-nakit-fd-ay').innerText = fmtThous(s.faizdisi_aylik);
             if(document.getElementById('v-nakit-fd-yil')) document.getElementById('v-nakit-fd-yil').innerText = fmtThous(s.faizdisi_yillik);
 
@@ -555,37 +565,49 @@
             ]);
         }
 
-        // 9. İMALAT
+        // 9. İMALAT - GÜNCELLENDİ (AYRI GRAFİKLER)
         if(d.imalat && d.imalat.length){
             const s = d.imalat[d.imalat.length-1];
             if(document.getElementById('d-imalat')) document.getElementById('d-imalat').innerText = s.tarih;
             if(document.getElementById('v-pmi')) document.getElementById('v-pmi').innerText = Number(s.pmi).toFixed(1);
             if(document.getElementById('v-kko')) document.getElementById('v-kko').innerText = fmtDec1(s.kko);
             
-            drawChart('ch-imalat', 'line', d.imalat.map(x=>x.tarih), [
-                {label:'PMI', data:d.imalat.map(x=>x.pmi), borderColor:'#0984e3', yAxisID:'y'},
-                {label:'KKO', data:d.imalat.map(x=>x.kko), borderColor:'#e17055', yAxisID:'y1'}
-            ], {scales:{y:{position:'left'}, y1:{position:'right'}}});
+            // 1. GRAFİK: PMI
+            drawChart('ch-pmi', 'line', d.imalat.map(x=>x.tarih), [
+                {
+                    label:'PMI', 
+                    data:d.imalat.map(x=>x.pmi), 
+                    borderColor:'#0984e3', 
+                    backgroundColor: 'rgba(9, 132, 227, 0.1)',
+                    fill: true
+                }
+            ]);
+
+            // 2. GRAFİK: KKO
+            drawChart('ch-kko', 'line', d.imalat.map(x=>x.tarih), [
+                {
+                    label:'KKO', 
+                    data:d.imalat.map(x=>x.kko), 
+                    borderColor:'#e17055',
+                    backgroundColor: 'rgba(225, 112, 85, 0.1)',
+                    fill: true
+                }
+            ]);
         }
 
-        // 10. GÜVEN (GÜNCELLENDİ - 1 AY GECİKMELİ)
+        // 10. GÜVEN
         if(d.guven && d.guven.length > 1){
-            // Son veriyi değil, sondan bir öncekini alıyoruz (t-1)
             const s = d.guven[d.guven.length-2];
-            
             if(document.getElementById('d-guven')) document.getElementById('d-guven').innerText = s.tarih;
             if(document.getElementById('v-guven-tuk')) document.getElementById('v-guven-tuk').innerText = Math.round(s.tuketici);
             if(document.getElementById('v-guven-reel')) document.getElementById('v-guven-reel').innerText = Math.round(s.reel);
             
-            // Grafikte de son veriyi göstermemek için array'i kesiyoruz
             const guvenData = d.guven.slice(0, -1); 
-
             drawChart('ch-guven', 'line', guvenData.map(x=>x.tarih), [
                 {label:'Tüketici', data:guvenData.map(x=>x.tuketici), borderColor:'#636e72'},
                 {label:'Reel Kesim', data:guvenData.map(x=>x.reel), borderColor:'#00b894'}
             ]);
         } else if (d.guven && d.guven.length === 1) {
-             // Veri tek ise mecbur onu göster
              const s = d.guven[0];
              if(document.getElementById('d-guven')) document.getElementById('d-guven').innerText = s.tarih;
              if(document.getElementById('v-guven-tuk')) document.getElementById('v-guven-tuk').innerText = Math.round(s.tuketici);
