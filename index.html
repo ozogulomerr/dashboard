@@ -484,27 +484,38 @@
             drawChart('ch-gsyh', 'bar', d.gsyh.map(x => x.tarih), [{ label: 'Yıllık Büyüme', data: d.gsyh.map(x => x.yillik), backgroundColor: '#00b894' }]);
         }
 
-        // 1.1 GSYH ÖNCÜ GÖSTERGELER (Yükseliş İyi -> false)
+// 1.1 GSYH ÖNCÜ GÖSTERGELER (GÜNCELLENDİ)
         if (d.gsyh_oncu) {
             d.gsyh_oncu.forEach(item => {
                 const tur = item.tur;
                 const veri = item.data;
+                
                 if (veri && veri.length > 0) {
-                    const son = veri[veri.length - 1];
-                    const onceki = veri.length > 1 ? veri[veri.length - 2] : null;
+                    // DEĞİŞİKLİK BURADA: 
+                    // Sadece son elemanı almak yerine, değeri null/boş olmayanları filtreliyoruz.
+                    const doluVeriler = veri.filter(x => x.yillik !== null && x.yillik !== "" && x.yillik !== undefined);
 
-                    const valId = `v-sub-${tur}`;
-                    const chId = `ch-sub-${tur}`;
-                    
-                    if (document.getElementById(valId)) 
-                        document.getElementById(valId).innerHTML = fmtDec1(son.yillik) + (onceki ? getTrend(son.yillik, onceki.yillik, false) : "");
+                    // Eğer elinizde geçerli veri varsa işlemi yap
+                    if (doluVeriler.length > 0) {
+                        const son = doluVeriler[doluVeriler.length - 1]; // Dolu olanların en sonuncusu
+                        const onceki = doluVeriler.length > 1 ? doluVeriler[doluVeriler.length - 2] : null;
 
-                    const miniData = veri.slice(-12);
-                    drawChart(chId, 'mini', miniData.map(x => x.tarih), [{
-                        data: miniData.map(x => x.yillik),
-                        borderColor: son.yillik >= 0 ? '#00b894' : '#d63031',
-                        borderWidth: 2, tension: 0.3
-                    }]);
+                        const valId = `v-sub-${tur}`;
+                        const chId = `ch-sub-${tur}`;
+                        
+                        if (document.getElementById(valId)) 
+                            document.getElementById(valId).innerHTML = fmtDec1(son.yillik) + (onceki ? getTrend(son.yillik, onceki.yillik, false) : "");
+
+                        // Grafiği çizerken de boş verileri dahil etmeyelim ki grafik sonda yere çakılmasın
+                        const miniData = doluVeriler.slice(-12); 
+                        
+                        drawChart(chId, 'mini', miniData.map(x => x.tarih), [{
+                            data: miniData.map(x => x.yillik),
+                            // Rengi belirlerken "son" değişkeni artık en güncel dolu veriyi temsil ediyor
+                            borderColor: son.yillik >= 0 ? '#00b894' : '#d63031',
+                            borderWidth: 2, tension: 0.3
+                        }]);
+                    }
                 }
             });
         }
