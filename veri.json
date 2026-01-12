@@ -220,6 +220,11 @@
             "tarih": "2025-11",
             "aylik": 0.87,
             "yillik": 31.07
+        },
+        {
+            "tarih": "2025-12",
+            "aylik": 0.89,
+            "yillik": 30.89
         }
     ],
     "ufe": [
@@ -397,6 +402,11 @@
             "tarih": "2025-11",
             "aylik": 0.84,
             "yillik": 27.23
+        },
+        {
+            "tarih": "2025-12",
+            "aylik": 0.75,
+            "yillik": 27.67
         }
     ],
     "cari": [
@@ -1127,10 +1137,17 @@
         },
         {
             "tarih": "30-11-2025",
-            "nakit_aylik": 56393.42,
-            "nakit_yillik": -2101741.2699999996,
-            "faizdisi_aylik": 173883.82,
-            "faizdisi_yillik": -223220.09000000008
+            "nakit_aylik": 56197.0,
+            "nakit_yillik": -2101937.6899999995,
+            "faizdisi_aylik": 173213.0,
+            "faizdisi_yillik": -223890.9100000001
+        },
+        {
+            "tarih": "31-12-2025",
+            "nakit_aylik": 333150.0,
+            "nakit_yillik": -1444883.23,
+            "faizdisi_aylik": -216923.0,
+            "faizdisi_yillik": -181514.29000000004
         }
     ],
     "isgucu": [
@@ -1167,7 +1184,7 @@
         {
             "tarih": "2023-6",
             "issizlik": 9.3,
-            "katilim": 52.9,
+            "katilim": 53.0,
             "atil": 23.6
         },
         {
@@ -1197,7 +1214,7 @@
         {
             "tarih": "2023-11",
             "issizlik": 8.9,
-            "katilim": 53.1,
+            "katilim": 53.0,
             "atil": 22.4
         },
         {
@@ -1269,12 +1286,12 @@
         {
             "tarih": "2024-11",
             "issizlik": 8.5,
-            "katilim": 54.1,
+            "katilim": 54.2,
             "atil": 28.000000000000004
         },
         {
             "tarih": "2024-12",
-            "issizlik": 8.5,
+            "issizlik": 8.4,
             "katilim": 54.0,
             "atil": 28.6
         },
@@ -1299,7 +1316,7 @@
         {
             "tarih": "2025-4",
             "issizlik": 8.6,
-            "katilim": 53.6,
+            "katilim": 53.5,
             "atil": 32.1
         },
         {
@@ -1310,33 +1327,39 @@
         },
         {
             "tarih": "2025-6",
-            "issizlik": 8.5,
-            "katilim": 53.7,
+            "issizlik": 8.6,
+            "katilim": 53.6,
             "atil": 32.6
         },
         {
             "tarih": "2025-7",
-            "issizlik": 8.1,
+            "issizlik": 8.2,
             "katilim": 53.3,
             "atil": 29.4
         },
         {
             "tarih": "2025-8",
-            "issizlik": 8.5,
-            "katilim": 53.9,
+            "issizlik": 8.6,
+            "katilim": 53.8,
             "atil": 29.100000000000005
         },
         {
             "tarih": "2025-9",
             "issizlik": 8.6,
-            "katilim": 53.6,
+            "katilim": 53.5,
             "atil": 28.000000000000004
         },
         {
             "tarih": "2025-10",
             "issizlik": 8.5,
-            "katilim": 53.8,
+            "katilim": 53.7,
             "atil": 28.999999999999996
+        },
+        {
+            "tarih": "2025-11",
+            "issizlik": 8.6,
+            "katilim": 53.8,
+            "atil": 28.9
         }
     ],
     "fonlama": [
@@ -5845,6 +5868,60 @@
             "aofm": 38.0,
             "tlref": 37.8657,
             "net_fonlama": -738141
+        },
+        {
+            "tarih": "29-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.838,
+            "net_fonlama": -801980
+        },
+        {
+            "tarih": "30-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.8739,
+            "net_fonlama": -661093
+        },
+        {
+            "tarih": "31-12-2025",
+            "aofm": 38.0,
+            "tlref": 37.9629,
+            "net_fonlama": -461376
+        },
+        {
+            "tarih": "02-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.7455,
+            "net_fonlama": -465180
+        },
+        {
+            "tarih": "05-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.7951,
+            "net_fonlama": -523816
+        },
+        {
+            "tarih": "06-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.8222,
+            "net_fonlama": -553951
+        },
+        {
+            "tarih": "07-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.8456,
+            "net_fonlama": -495904
+        },
+        {
+            "tarih": "08-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.8857,
+            "net_fonlama": -514619
+        },
+        {
+            "tarih": "09-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.8932,
+            "net_fonlama": -622835
         }
     ],
     "imalat": [
@@ -6022,6 +6099,11 @@
             "tarih": "2025-11-01",
             "kko": 74.4,
             "pmi": 48.0
+        },
+        {
+            "tarih": "2025-12-01",
+            "kko": 74.4,
+            "pmi": 48.9
         }
     ],
     "guven": [
@@ -10871,6 +10953,72 @@
         },
         {
             "tarih": "24-12-2025",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "25-12-2025",
+            "ust": 3.75,
+            "efektif": null,
+            "alt": 3.5
+        },
+        {
+            "tarih": "26-12-2025",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "29-12-2025",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "30-12-2025",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "31-12-2025",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "01-01-2026",
+            "ust": 3.75,
+            "efektif": null,
+            "alt": 3.5
+        },
+        {
+            "tarih": "02-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "05-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "06-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "07-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "08-01-2026",
             "ust": 3.75,
             "efektif": 3.64,
             "alt": 3.5
@@ -17581,6 +17729,108 @@
             "mevduat": 2.0,
             "refinans": 2.15,
             "marjinal": 2.4
+        },
+        {
+            "tarih": "24-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "25-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "26-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "27-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "28-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "29-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "30-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "31-12-2025",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "01-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "02-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "03-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "04-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "05-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "06-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "07-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "08-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "09-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
         }
     ],
     "eurocpi": [
@@ -17766,173 +18016,178 @@
             "data": [
                 {
                     "tarih": "2023-1",
-                    "deger": 106.2358438432,
-                    "yillik": 3.9
+                    "deger": 106.2345220585,
+                    "yillik": 4.0
                 },
                 {
                     "tarih": "2023-2",
-                    "deger": 99.3900409449,
+                    "deger": 99.3862863105,
                     "yillik": -8.2
                 },
                 {
                     "tarih": "2023-3",
-                    "deger": 104.9359223247,
+                    "deger": 104.9303332858,
                     "yillik": 1.1
                 },
                 {
                     "tarih": "2023-4",
-                    "deger": 105.7773428755,
+                    "deger": 105.7738138171,
                     "yillik": -0.6
                 },
                 {
                     "tarih": "2023-5",
-                    "deger": 106.6557438858,
+                    "deger": 106.65983964,
                     "yillik": 0.9
                 },
                 {
                     "tarih": "2023-6",
-                    "deger": 109.1149010302,
+                    "deger": 109.1129789249,
                     "yillik": 1.3
                 },
                 {
                     "tarih": "2023-7",
-                    "deger": 108.6200455031,
+                    "deger": 108.6209325896,
                     "yillik": 8.6
                 },
                 {
                     "tarih": "2023-8",
-                    "deger": 107.8294669558,
+                    "deger": 107.8434317193,
                     "yillik": 3.9
                 },
                 {
                     "tarih": "2023-9",
-                    "deger": 107.6433460394,
+                    "deger": 107.651529835,
                     "yillik": 6.2
                 },
                 {
                     "tarih": "2023-10",
-                    "deger": 107.0290847932,
+                    "deger": 107.0447126287,
                     "yillik": 2.0
                 },
                 {
                     "tarih": "2023-11",
-                    "deger": 105.0549773521,
+                    "deger": 105.0311872376,
                     "yillik": 1.4
                 },
                 {
                     "tarih": "2023-12",
-                    "deger": 107.3701925067,
+                    "deger": 107.3570004778,
                     "yillik": 2.3
                 },
                 {
                     "tarih": "2024-1",
-                    "deger": 107.7494431975,
+                    "deger": 107.7519342979,
                     "yillik": 1.4
                 },
                 {
                     "tarih": "2024-2",
-                    "deger": 110.9298257362,
+                    "deger": 110.9298246363,
                     "yillik": 11.6
                 },
                 {
                     "tarih": "2024-3",
-                    "deger": 109.3353798477,
+                    "deger": 109.3196932679,
                     "yillik": 4.2
                 },
                 {
                     "tarih": "2024-4",
-                    "deger": 104.7594634295,
+                    "deger": 104.7560586089,
                     "yillik": -1.0
                 },
                 {
                     "tarih": "2024-5",
-                    "deger": 106.3974076373,
+                    "deger": 106.4128880913,
                     "yillik": -0.2
                 },
                 {
                     "tarih": "2024-6",
-                    "deger": 104.0272111683,
+                    "deger": 104.02263072,
                     "yillik": -4.7
                 },
                 {
                     "tarih": "2024-7",
-                    "deger": 104.8448253023,
+                    "deger": 104.8529297524,
                     "yillik": -3.5
                 },
                 {
                     "tarih": "2024-8",
-                    "deger": 103.2381249143,
+                    "deger": 103.2593430139,
                     "yillik": -4.3
                 },
                 {
                     "tarih": "2024-9",
-                    "deger": 104.9892000672,
+                    "deger": 104.9950041729,
                     "yillik": -2.5
                 },
                 {
                     "tarih": "2024-10",
-                    "deger": 104.1837763096,
-                    "yillik": -2.7
+                    "deger": 104.2168281913,
+                    "yillik": -2.6
                 },
                 {
                     "tarih": "2024-11",
-                    "deger": 107.0589069363,
+                    "deger": 107.02485615,
                     "yillik": 1.9
                 },
                 {
                     "tarih": "2024-12",
-                    "deger": 112.5347490141,
+                    "deger": 112.4916181094,
                     "yillik": 4.8
                 },
                 {
                     "tarih": "2025-1",
-                    "deger": 109.5276646033,
-                    "yillik": 1.7
+                    "deger": 109.5237517401,
+                    "yillik": 1.6
                 },
                 {
                     "tarih": "2025-2",
-                    "deger": 107.6710163427,
+                    "deger": 107.6630716811,
                     "yillik": -2.9
                 },
                 {
                     "tarih": "2025-3",
-                    "deger": 111.3654889968,
+                    "deger": 111.3431347839,
                     "yillik": 1.9
                 },
                 {
                     "tarih": "2025-4",
-                    "deger": 107.659442778,
+                    "deger": 107.667568037,
                     "yillik": 2.8
                 },
                 {
                     "tarih": "2025-5",
-                    "deger": 111.0299847282,
+                    "deger": 111.0511925876,
                     "yillik": 4.4
                 },
                 {
                     "tarih": "2025-6",
-                    "deger": 111.8347362692,
+                    "deger": 111.8376126731,
                     "yillik": 7.5
                 },
                 {
                     "tarih": "2025-7",
-                    "deger": 109.9199823287,
-                    "yillik": 4.8
+                    "deger": 109.9518313971,
+                    "yillik": 4.9
                 },
                 {
                     "tarih": "2025-8",
-                    "deger": 110.4673336146,
+                    "deger": 110.5036653516,
                     "yillik": 7.0
                 },
                 {
                     "tarih": "2025-9",
-                    "deger": 108.1657892007,
-                    "yillik": 3.0
+                    "deger": 108.2091036196,
+                    "yillik": 3.1
                 },
                 {
                     "tarih": "2025-10",
-                    "deger": 107.3206071012,
-                    "yillik": 3.0
+                    "deger": 107.4086836652,
+                    "yillik": 3.1
+                },
+                {
+                    "tarih": "2025-11",
+                    "deger": 110.0672345709,
+                    "yillik": 2.8
                 }
             ]
         },
