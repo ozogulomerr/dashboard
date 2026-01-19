@@ -580,73 +580,80 @@
         },
         {
             "tarih": "2025-1",
-            "cari_aylik": -3875,
-            "cari_yillik": -12065,
-            "cekirdek_aylik": 2309,
-            "cekirdek_yillik": 50670
+            "cari_aylik": -3870,
+            "cari_yillik": -12060,
+            "cekirdek_aylik": 2314,
+            "cekirdek_yillik": 50675
         },
         {
             "tarih": "2025-2",
-            "cari_aylik": -4372,
-            "cari_yillik": -13135,
-            "cekirdek_aylik": 2195,
-            "cekirdek_yillik": 50819
+            "cari_aylik": -4368,
+            "cari_yillik": -13126,
+            "cekirdek_aylik": 2199,
+            "cekirdek_yillik": 50828
         },
         {
             "tarih": "2025-3",
-            "cari_aylik": -4310,
-            "cari_yillik": -13390,
-            "cekirdek_aylik": 1233,
-            "cekirdek_yillik": 50813
+            "cari_aylik": -4304,
+            "cari_yillik": -13375,
+            "cekirdek_aylik": 1239,
+            "cekirdek_yillik": 50828
         },
         {
             "tarih": "2025-4",
-            "cari_aylik": -7865,
-            "cari_yillik": -16433,
-            "cekirdek_aylik": -1941,
-            "cekirdek_yillik": 48883
+            "cari_aylik": -7863,
+            "cari_yillik": -16416,
+            "cekirdek_aylik": -1939,
+            "cekirdek_yillik": 48900
         },
         {
             "tarih": "2025-5",
-            "cari_aylik": -773,
-            "cari_yillik": -16542,
-            "cekirdek_aylik": 3951,
-            "cekirdek_yillik": 48997
+            "cari_aylik": -770,
+            "cari_yillik": -16522,
+            "cekirdek_aylik": 3954,
+            "cekirdek_yillik": 49017
         },
         {
             "tarih": "2025-6",
-            "cari_aylik": -2001,
-            "cari_yillik": -19337,
-            "cekirdek_aylik": 2582,
-            "cekirdek_yillik": 46654
+            "cari_aylik": -1996,
+            "cari_yillik": -19312,
+            "cekirdek_aylik": 2587,
+            "cekirdek_yillik": 46679
         },
         {
             "tarih": "2025-7",
-            "cari_aylik": 1713,
-            "cari_yillik": -19021,
-            "cekirdek_aylik": 5974,
-            "cekirdek_yillik": 46916
+            "cari_aylik": 1720,
+            "cari_yillik": -18989,
+            "cekirdek_aylik": 5981,
+            "cekirdek_yillik": 46948
         },
         {
             "tarih": "2025-8",
-            "cari_aylik": 5405,
-            "cari_yillik": -18499,
-            "cekirdek_aylik": 9960,
-            "cekirdek_yillik": 47281
+            "cari_aylik": 5368,
+            "cari_yillik": -18504,
+            "cekirdek_aylik": 9923,
+            "cekirdek_yillik": 47276
         },
         {
             "tarih": "2025-9",
-            "cari_aylik": 1078,
-            "cari_yillik": -20252,
-            "cekirdek_aylik": 6769,
-            "cekirdek_yillik": 46477
+            "cari_aylik": 1082,
+            "cari_yillik": -20253,
+            "cekirdek_aylik": 6774,
+            "cekirdek_yillik": 46478
         },
         {
             "tarih": "2025-10",
-            "cari_aylik": 457,
-            "cari_yillik": -22020,
-            "cekirdek_aylik": 7027,
-            "cekirdek_yillik": 45999
+            "cari_aylik": 487,
+            "cari_yillik": -21991,
+            "cekirdek_aylik": 7040,
+            "cekirdek_yillik": 46013
+        },
+        {
+            "tarih": "2025-11",
+            "cari_aylik": -3996,
+            "cari_yillik": -23226,
+            "cekirdek_aylik": 2132,
+            "cekirdek_yillik": 44587
         }
     ],
     "butce": [
@@ -894,6 +901,13 @@
             "butce_yillik": -2100201.137352,
             "faizdisi_aylik": 287408.935978,
             "faizdisi_yillik": -87237.064022
+        },
+        {
+            "tarih": "31-12-2025",
+            "butce_aylik": -528139.0,
+            "butce_yillik": -1799129.137352,
+            "faizdisi_aylik": -411468.0,
+            "faizdisi_yillik": 255252.93597800005
         }
     ],
     "nakit": [
@@ -5922,6 +5936,36 @@
             "aofm": 38.0,
             "tlref": 37.8932,
             "net_fonlama": -622835
+        },
+        {
+            "tarih": "12-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.8034,
+            "net_fonlama": -739897
+        },
+        {
+            "tarih": "13-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.7354,
+            "net_fonlama": -1054157
+        },
+        {
+            "tarih": "14-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.6511,
+            "net_fonlama": -1354003
+        },
+        {
+            "tarih": "15-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.615,
+            "net_fonlama": -1475123
+        },
+        {
+            "tarih": "16-01-2026",
+            "aofm": 38.0,
+            "tlref": 37.6272,
+            "net_fonlama": -1418362
         }
     ],
     "imalat": [
@@ -11022,6 +11066,36 @@
             "ust": 3.75,
             "efektif": 3.64,
             "alt": 3.5
+        },
+        {
+            "tarih": "09-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "12-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "13-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "14-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
+        },
+        {
+            "tarih": "15-01-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
         }
     ],
     "uscpi": [
@@ -11198,6 +11272,11 @@
         {
             "tarih": "01-11-2025",
             "aylik": 0.2,
+            "yillik": 2.7
+        },
+        {
+            "tarih": "01-12-2025",
+            "aylik": 0.3,
             "yillik": 2.7
         }
     ],
@@ -17831,6 +17910,48 @@
             "mevduat": 2.0,
             "refinans": 2.15,
             "marjinal": 2.4
+        },
+        {
+            "tarih": "10-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "11-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "12-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "13-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "14-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "15-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "16-01-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
         }
     ],
     "eurocpi": [
@@ -18016,178 +18137,178 @@
             "data": [
                 {
                     "tarih": "01-01-2023",
-                    "deger": 103.96920929250399,
-                    "yillik": 16.2
+                    "deger": 125.986908577704,
+                    "yillik": 14.5
                 },
                 {
                     "tarih": "01-02-2023",
-                    "deger": 95.6163180207051,
-                    "yillik": 4.8
+                    "deger": 118.35428247499,
+                    "yillik": 6.2
                 },
                 {
                     "tarih": "01-03-2023",
-                    "deger": 115.72162301915,
-                    "yillik": 4.9
+                    "deger": 123.795934705192,
+                    "yillik": 6.6
                 },
                 {
                     "tarih": "01-04-2023",
-                    "deger": 116.02751377839701,
-                    "yillik": 7.6
+                    "deger": 126.97306459780201,
+                    "yillik": 7.7
                 },
                 {
                     "tarih": "01-05-2023",
-                    "deger": 125.933371809779,
-                    "yillik": 8.4
+                    "deger": 130.471336285192,
+                    "yillik": 7.7
                 },
                 {
                     "tarih": "01-06-2023",
-                    "deger": 131.996539212627,
-                    "yillik": 2.5
+                    "deger": 127.03953738464901,
+                    "yillik": 2.0
                 },
                 {
                     "tarih": "01-07-2023",
-                    "deger": 134.835699824583,
-                    "yillik": 8.3
+                    "deger": 128.444381449569,
+                    "yillik": 6.8
                 },
                 {
                     "tarih": "01-08-2023",
-                    "deger": 133.828359495947,
-                    "yillik": 5.3
+                    "deger": 128.0983304946,
+                    "yillik": 4.9
                 },
                 {
                     "tarih": "01-09-2023",
-                    "deger": 136.509502663145,
-                    "yillik": 3.8
+                    "deger": 127.96438328568101,
+                    "yillik": 3.7
                 },
                 {
                     "tarih": "01-10-2023",
-                    "deger": 136.05505169697,
-                    "yillik": 6.3
+                    "deger": 130.481461953073,
+                    "yillik": 6.0
                 },
                 {
                     "tarih": "01-11-2023",
-                    "deger": 125.690718570791,
-                    "yillik": 1.8
-                },
-                {
-                    "tarih": "01-12-2023",
-                    "deger": 164.701121817159,
-                    "yillik": 0.6
-                },
-                {
-                    "tarih": "01-01-2024",
-                    "deger": 105.892350305599,
-                    "yillik": 1.8
-                },
-                {
-                    "tarih": "01-02-2024",
-                    "deger": 109.72207978129401,
-                    "yillik": 14.8
-                },
-                {
-                    "tarih": "01-03-2024",
-                    "deger": 124.307808652412,
-                    "yillik": 7.4
-                },
-                {
-                    "tarih": "01-04-2024",
-                    "deger": 119.405260806323,
-                    "yillik": 2.9
-                },
-                {
-                    "tarih": "01-05-2024",
-                    "deger": 127.86897414028401,
-                    "yillik": 1.5
-                },
-                {
-                    "tarih": "01-06-2024",
-                    "deger": 134.736394315341,
-                    "yillik": 2.1
-                },
-                {
-                    "tarih": "01-07-2024",
-                    "deger": 134.692785312734,
-                    "yillik": -0.1
-                },
-                {
-                    "tarih": "01-08-2024",
-                    "deger": 133.751875324739,
-                    "yillik": -0.1
-                },
-                {
-                    "tarih": "01-09-2024",
-                    "deger": 137.30399343615,
-                    "yillik": 0.6
-                },
-                {
-                    "tarih": "01-10-2024",
-                    "deger": 134.666504155132,
-                    "yillik": -1.0
-                },
-                {
-                    "tarih": "01-11-2024",
-                    "deger": 126.844252049251,
-                    "yillik": 0.9
-                },
-                {
-                    "tarih": "01-12-2024",
-                    "deger": 168.30442758339402,
-                    "yillik": 2.2
-                },
-                {
-                    "tarih": "01-01-2025",
-                    "deger": 113.409885839705,
-                    "yillik": 7.1
-                },
-                {
-                    "tarih": "01-02-2025",
-                    "deger": 111.117068047626,
-                    "yillik": 1.3
-                },
-                {
-                    "tarih": "01-03-2025",
-                    "deger": 125.892069211621,
-                    "yillik": 1.3
-                },
-                {
-                    "tarih": "01-04-2025",
-                    "deger": 124.654103218639,
-                    "yillik": 4.4
-                },
-                {
-                    "tarih": "01-05-2025",
-                    "deger": 133.281158164438,
-                    "yillik": 4.2
-                },
-                {
-                    "tarih": "01-06-2025",
-                    "deger": 140.221226122254,
-                    "yillik": 4.1
-                },
-                {
-                    "tarih": "01-07-2025",
-                    "deger": 138.29689648575,
-                    "yillik": 2.7
-                },
-                {
-                    "tarih": "01-08-2025",
-                    "deger": 139.189931900822,
-                    "yillik": 4.1
-                },
-                {
-                    "tarih": "01-09-2025",
-                    "deger": 142.08858777035002,
-                    "yillik": 3.5
-                },
-                {
-                    "tarih": "01-10-2025",
-                    "deger": 139.26765628370302,
+                    "deger": 128.222534051701,
                     "yillik": 3.4
                 },
                 {
+                    "tarih": "01-12-2023",
+                    "deger": 129.852059443134,
+                    "yillik": 2.0
+                },
+                {
+                    "tarih": "01-01-2024",
+                    "deger": 128.86194457624902,
+                    "yillik": 2.3
+                },
+                {
+                    "tarih": "01-02-2024",
+                    "deger": 132.326324280713,
+                    "yillik": 11.8
+                },
+                {
+                    "tarih": "01-03-2024",
+                    "deger": 132.445422488965,
+                    "yillik": 7.0
+                },
+                {
+                    "tarih": "01-04-2024",
+                    "deger": 129.36377167664298,
+                    "yillik": 1.9
+                },
+                {
+                    "tarih": "01-05-2024",
+                    "deger": 130.881350575584,
+                    "yillik": 0.3
+                },
+                {
+                    "tarih": "01-06-2024",
+                    "deger": 129.55579435683399,
+                    "yillik": 2.0
+                },
+                {
+                    "tarih": "01-07-2024",
+                    "deger": 129.53403644708902,
+                    "yillik": 0.8
+                },
+                {
+                    "tarih": "01-08-2024",
+                    "deger": 129.220913073785,
+                    "yillik": 0.9
+                },
+                {
+                    "tarih": "01-09-2024",
+                    "deger": 130.304372207383,
+                    "yillik": 1.8
+                },
+                {
+                    "tarih": "01-10-2024",
+                    "deger": 130.46389205792002,
+                    "yillik": -0.0
+                },
+                {
+                    "tarih": "01-11-2024",
+                    "deger": 130.63763244261202,
+                    "yillik": 1.9
+                },
+                {
+                    "tarih": "01-12-2024",
+                    "deger": 131.704875995349,
+                    "yillik": 1.4
+                },
+                {
+                    "tarih": "01-01-2025",
+                    "deger": 136.24539514084202,
+                    "yillik": 5.7
+                },
+                {
+                    "tarih": "01-02-2025",
+                    "deger": 133.83765126476902,
+                    "yillik": 1.1
+                },
+                {
+                    "tarih": "01-03-2025",
+                    "deger": 134.80008390310502,
+                    "yillik": 1.8
+                },
+                {
+                    "tarih": "01-04-2025",
+                    "deger": 133.92495010003802,
+                    "yillik": 3.5
+                },
+                {
+                    "tarih": "01-05-2025",
+                    "deger": 135.72483520381402,
+                    "yillik": 3.7
+                },
+                {
+                    "tarih": "01-06-2025",
+                    "deger": 135.22235343858802,
+                    "yillik": 4.4
+                },
+                {
+                    "tarih": "01-07-2025",
+                    "deger": 134.700684192557,
+                    "yillik": 4.0
+                },
+                {
+                    "tarih": "01-08-2025",
+                    "deger": 135.520290889626,
+                    "yillik": 4.9
+                },
+                {
+                    "tarih": "01-09-2025",
+                    "deger": 135.44909239901,
+                    "yillik": 3.9
+                },
+                {
+                    "tarih": "01-10-2025",
+                    "deger": 135.067198978768,
+                    "yillik": 3.5
+                },
+                {
                     "tarih": "01-11-2025",
-                    "deger": null,
-                    "yillik": null
+                    "deger": 135.284446395221,
+                    "yillik": 3.6
                 }
             ]
         },
@@ -18361,13 +18482,13 @@
                 },
                 {
                     "tarih": "01-10-2025",
-                    "deger": 141.78106868013,
-                    "yillik": 7.5
+                    "deger": 141.9,
+                    "yillik": 7.6
                 },
                 {
                     "tarih": "01-11-2025",
-                    "deger": null,
-                    "yillik": null
+                    "deger": 142.7,
+                    "yillik": 7.4
                 }
             ]
         },
@@ -18546,8 +18667,8 @@
                 },
                 {
                     "tarih": "01-11-2025",
-                    "deger": null,
-                    "yillik": null
+                    "deger": 190.81,
+                    "yillik": 14.0
                 }
             ]
         },
@@ -18556,178 +18677,178 @@
             "data": [
                 {
                     "tarih": "01-01-2023",
-                    "deger": 93.5346333734227,
-                    "yillik": 0.3
+                    "deger": 93.5787768296723,
+                    "yillik": 0.5
                 },
                 {
                     "tarih": "01-02-2023",
-                    "deger": 93.1027691392951,
-                    "yillik": 0.6
+                    "deger": 93.1262725720274,
+                    "yillik": 0.8
                 },
                 {
                     "tarih": "01-03-2023",
-                    "deger": 98.0871005639649,
-                    "yillik": 4.9
+                    "deger": 98.2157189449196,
+                    "yillik": 5.2
                 },
                 {
                     "tarih": "01-04-2023",
-                    "deger": 99.132698309699,
-                    "yillik": 1.7
+                    "deger": 99.2859256095509,
+                    "yillik": 1.8
                 },
                 {
                     "tarih": "01-05-2023",
-                    "deger": 101.722109844099,
-                    "yillik": 4.7
+                    "deger": 101.839764332137,
+                    "yillik": 4.8
                 },
                 {
                     "tarih": "01-06-2023",
-                    "deger": 103.441438049666,
-                    "yillik": 7.2
+                    "deger": 103.52413376198,
+                    "yillik": 7.3
                 },
                 {
                     "tarih": "01-07-2023",
-                    "deger": 101.723437591549,
+                    "deger": 101.613788155163,
                     "yillik": 9.9
                 },
                 {
                     "tarih": "01-08-2023",
-                    "deger": 101.58475501073,
-                    "yillik": 8.1
+                    "deger": 101.336140136505,
+                    "yillik": 7.9
                 },
                 {
                     "tarih": "01-09-2023",
-                    "deger": 102.865328455715,
-                    "yillik": 14.4
+                    "deger": 102.535167669305,
+                    "yillik": 14.3
                 },
                 {
                     "tarih": "01-10-2023",
-                    "deger": 105.267141200178,
-                    "yillik": 12.8
+                    "deger": 104.989190112816,
+                    "yillik": 12.4
                 },
                 {
                     "tarih": "01-11-2023",
-                    "deger": 105.159981695554,
-                    "yillik": 12.8
+                    "deger": 104.960014003251,
+                    "yillik": 12.5
                 },
                 {
                     "tarih": "01-12-2023",
-                    "deger": 106.618533890776,
-                    "yillik": 14.0
+                    "deger": 106.646590352332,
+                    "yillik": 13.9
                 },
                 {
                     "tarih": "01-01-2024",
-                    "deger": 111.674101929767,
-                    "yillik": 19.4
+                    "deger": 112.086941911087,
+                    "yillik": 19.8
                 },
                 {
                     "tarih": "01-02-2024",
-                    "deger": 115.227447967293,
-                    "yillik": 23.8
+                    "deger": 115.709827263928,
+                    "yillik": 24.3
                 },
                 {
                     "tarih": "01-03-2024",
-                    "deger": 115.201916464086,
-                    "yillik": 17.4
+                    "deger": 115.617834756364,
+                    "yillik": 17.7
                 },
                 {
                     "tarih": "01-04-2024",
-                    "deger": 115.40974692445,
+                    "deger": 115.607364804078,
                     "yillik": 16.4
                 },
                 {
                     "tarih": "01-05-2024",
-                    "deger": 111.452072079688,
-                    "yillik": 9.6
+                    "deger": 111.499425167528,
+                    "yillik": 9.5
                 },
                 {
                     "tarih": "01-06-2024",
-                    "deger": 111.453535690952,
+                    "deger": 111.461061960566,
                     "yillik": 7.7
                 },
                 {
                     "tarih": "01-07-2024",
-                    "deger": 114.055129980964,
+                    "deger": 113.939787748366,
                     "yillik": 12.1
                 },
                 {
                     "tarih": "01-08-2024",
-                    "deger": 113.921737348937,
+                    "deger": 113.561463837585,
                     "yillik": 12.1
                 },
                 {
                     "tarih": "01-09-2024",
-                    "deger": 114.587481634781,
+                    "deger": 114.226311548479,
                     "yillik": 11.4
                 },
                 {
                     "tarih": "01-10-2024",
-                    "deger": 114.73426983871,
-                    "yillik": 9.0
+                    "deger": 114.155748208607,
+                    "yillik": 8.7
                 },
                 {
                     "tarih": "01-11-2024",
-                    "deger": 118.887618685117,
-                    "yillik": 13.1
+                    "deger": 118.573393637998,
+                    "yillik": 13.0
                 },
                 {
                     "tarih": "01-12-2024",
-                    "deger": 124.072683877968,
+                    "deger": 124.182566361818,
                     "yillik": 16.4
                 },
                 {
                     "tarih": "01-01-2025",
-                    "deger": 128.60126523493,
-                    "yillik": 15.2
+                    "deger": 129.295073839856,
+                    "yillik": 15.4
                 },
                 {
                     "tarih": "01-02-2025",
-                    "deger": 129.094349303802,
-                    "yillik": 12.0
+                    "deger": 129.784878933871,
+                    "yillik": 12.2
                 },
                 {
                     "tarih": "01-03-2025",
-                    "deger": 128.434032328838,
-                    "yillik": 11.5
+                    "deger": 128.846628775036,
+                    "yillik": 11.4
                 },
                 {
                     "tarih": "01-04-2025",
-                    "deger": 128.416512268437,
-                    "yillik": 11.3
+                    "deger": 128.466350823316,
+                    "yillik": 11.1
                 },
                 {
                     "tarih": "01-05-2025",
-                    "deger": 134.407323976534,
-                    "yillik": 20.6
+                    "deger": 134.395555968696,
+                    "yillik": 20.5
                 },
                 {
                     "tarih": "01-06-2025",
-                    "deger": 137.864592246051,
+                    "deger": 137.851093814137,
                     "yillik": 23.7
                 },
                 {
                     "tarih": "01-07-2025",
-                    "deger": 140.581357255285,
-                    "yillik": 23.3
+                    "deger": 140.350338843707,
+                    "yillik": 23.2
                 },
                 {
                     "tarih": "01-08-2025",
-                    "deger": 141.507861539204,
-                    "yillik": 24.2
+                    "deger": 140.830996378522,
+                    "yillik": 24.0
                 },
                 {
                     "tarih": "01-09-2025",
-                    "deger": 146.951665458039,
-                    "yillik": 28.2
+                    "deger": 146.340536606643,
+                    "yillik": 28.1
                 },
                 {
                     "tarih": "01-10-2025",
-                    "deger": 146.807380751749,
-                    "yillik": 28.0
+                    "deger": 146.016166909976,
+                    "yillik": 27.9
                 },
                 {
                     "tarih": "01-11-2025",
-                    "deger": null,
-                    "yillik": null
+                    "deger": 145.8729283401,
+                    "yillik": 23.0
                 }
             ]
         },
