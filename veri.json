@@ -656,7 +656,260 @@
             "cekirdek_yillik": 44587
         }
     ],
-    "butce": [],
+    "butce": [
+        {
+            "tarih": "05-01-2023",
+            "butce_aylik": -32243.0,
+            "butce_yillik": -201353.306,
+            "faizdisi_aylik": -10883.0,
+            "faizdisi_yillik": 116678.49799999999
+        },
+        {
+            "tarih": "06-02-2023",
+            "butce_aylik": -170560.0,
+            "butce_yillik": -441650.306,
+            "faizdisi_aylik": -136337.0,
+            "faizdisi_yillik": -133064.502
+        },
+        {
+            "tarih": "10-03-2023",
+            "butce_aylik": -47223.0,
+            "butce_yillik": -419901.306,
+            "faizdisi_aylik": -2148.0,
+            "faizdisi_yillik": -93178.50200000001
+        },
+        {
+            "tarih": "11-04-2023",
+            "butce_aylik": -132471.0,
+            "butce_yillik": -502205.306,
+            "faizdisi_aylik": -97974.0,
+            "faizdisi_yillik": -160119.502
+        },
+        {
+            "tarih": "13-05-2023",
+            "butce_aylik": 118906.0,
+            "butce_yillik": -527276.0,
+            "faizdisi_aylik": 221620.0,
+            "faizdisi_yillik": -100388.0
+        },
+        {
+            "tarih": "14-06-2023",
+            "butce_aylik": -219637.0,
+            "butce_yillik": -715854.0,
+            "faizdisi_aylik": -182263.0,
+            "faizdisi_yillik": -264361.0
+        },
+        {
+            "tarih": "16-07-2023",
+            "butce_aylik": 48574.0,
+            "butce_yillik": -603261.0,
+            "faizdisi_aylik": 86281.0,
+            "faizdisi_yillik": -130755.0
+        },
+        {
+            "tarih": "17-08-2023",
+            "butce_aylik": 51270.0,
+            "butce_yillik": -555577.0,
+            "faizdisi_aylik": 138419.0,
+            "faizdisi_yillik": -18569.0
+        },
+        {
+            "tarih": "18-09-2023",
+            "butce_aylik": -129218.0,
+            "butce_yillik": -606168.0,
+            "faizdisi_aylik": -58454.0,
+            "faizdisi_yillik": -31512.0
+        },
+        {
+            "tarih": "18-10-2023",
+            "butce_aylik": -95461.0,
+            "butce_yillik": -618375.0,
+            "faizdisi_aylik": -28651.0,
+            "faizdisi_yillik": -38053.0
+        },
+        {
+            "tarih": "20-11-2023",
+            "butce_aylik": 75627.0,
+            "butce_yillik": -651053.0,
+            "faizdisi_aylik": 170235.0,
+            "faizdisi_yillik": -526.0
+        },
+        {
+            "tarih": "23-12-2023",
+            "butce_aylik": -842532.0,
+            "butce_yillik": -1374968.0,
+            "faizdisi_aylik": -800199.0,
+            "faizdisi_yillik": -700354.0
+        },
+        {
+            "tarih": "25-01-2024",
+            "butce_aylik": -150719.0,
+            "butce_yillik": -1493444.0,
+            "faizdisi_aylik": -29626.0,
+            "faizdisi_yillik": -719097.0
+        },
+        {
+            "tarih": "27-02-2024",
+            "butce_aylik": -153798.0,
+            "butce_yillik": -1476682.0,
+            "faizdisi_aylik": -98968.0,
+            "faizdisi_yillik": -681728.0
+        },
+        {
+            "tarih": "31-03-2024",
+            "butce_aylik": -208965.0,
+            "butce_yillik": -1638424.0,
+            "faizdisi_aylik": -134412.0,
+            "faizdisi_yillik": -813992.0
+        },
+        {
+            "tarih": "30-04-2024",
+            "butce_aylik": -177830.0,
+            "butce_yillik": -1683783.0,
+            "faizdisi_aylik": -63802.0,
+            "faizdisi_yillik": -779820.0
+        },
+        {
+            "tarih": "31-05-2024",
+            "butce_aylik": 219409.0,
+            "butce_yillik": -1583280.0,
+            "faizdisi_aylik": 330052.0,
+            "faizdisi_yillik": -671388.0
+        },
+        {
+            "tarih": "30-06-2024",
+            "butce_aylik": -275280.0,
+            "butce_yillik": -1638923.0,
+            "faizdisi_aylik": -176004.0,
+            "faizdisi_yillik": -665129.0
+        },
+        {
+            "tarih": "31-07-2024",
+            "butce_aylik": -96776.0,
+            "butce_yillik": -1784273.0,
+            "faizdisi_aylik": -4238.0,
+            "faizdisi_yillik": -755648.0
+        },
+        {
+            "tarih": "31-08-2024",
+            "butce_aylik": -129594.0,
+            "butce_yillik": -1965137.0,
+            "faizdisi_aylik": -32548.0,
+            "faizdisi_yillik": -926615.0
+        },
+        {
+            "tarih": "30-09-2024",
+            "butce_aylik": -100464.0,
+            "butce_yillik": -1936383.0,
+            "faizdisi_aylik": 48213.0,
+            "faizdisi_yillik": -819948.0
+        },
+        {
+            "tarih": "31-10-2024",
+            "butce_aylik": -186271.0,
+            "butce_yillik": -2027193.0,
+            "faizdisi_aylik": -50053.0,
+            "faizdisi_yillik": -841350.0
+        },
+        {
+            "tarih": "30-11-2024",
+            "butce_aylik": -16646.0,
+            "butce_yillik": -2119466.0,
+            "faizdisi_aylik": 129652.0,
+            "faizdisi_yillik": -881933.0
+        },
+        {
+            "tarih": "31-12-2024",
+            "butce_aylik": -829211.0,
+            "butce_yillik": -2106145.0,
+            "faizdisi_aylik": -753958.0,
+            "faizdisi_yillik": -835692.0
+        },
+        {
+            "tarih": "31-01-2025",
+            "butce_aylik": -139259.0,
+            "butce_yillik": -2094685.0,
+            "faizdisi_aylik": 23759.0,
+            "faizdisi_yillik": -782307.0
+        },
+        {
+            "tarih": "28-02-2025",
+            "butce_aylik": -310092.0,
+            "butce_yillik": -2250979.0,
+            "faizdisi_aylik": -170403.0,
+            "faizdisi_yillik": -853742.0
+        },
+        {
+            "tarih": "31-03-2025",
+            "butce_aylik": -261466.0,
+            "butce_yillik": -2303480.0,
+            "faizdisi_aylik": -100223.0,
+            "faizdisi_yillik": -819553.0
+        },
+        {
+            "tarih": "30-04-2025",
+            "butce_aylik": -174714.0,
+            "butce_yillik": -2300364.0,
+            "faizdisi_aylik": 85945.0,
+            "faizdisi_yillik": -669806.0
+        },
+        {
+            "tarih": "31-05-2025",
+            "butce_aylik": 235229.0,
+            "butce_yillik": -2284544.0,
+            "faizdisi_aylik": 346385.0,
+            "faizdisi_yillik": -653473.0
+        },
+        {
+            "tarih": "30-06-2025",
+            "butce_aylik": -330176.0,
+            "butce_yillik": -2339440.0,
+            "faizdisi_aylik": -54501.0,
+            "faizdisi_yillik": -531970.0
+        },
+        {
+            "tarih": "31-07-2025",
+            "butce_aylik": -23862.0,
+            "butce_yillik": -2266526.0,
+            "faizdisi_aylik": 110726.0,
+            "faizdisi_yillik": -417006.0
+        },
+        {
+            "tarih": "31-08-2025",
+            "butce_aylik": 96705.0,
+            "butce_yillik": -2040227.0,
+            "faizdisi_aylik": 276436.0,
+            "faizdisi_yillik": -108022.0
+        },
+        {
+            "tarih": "30-09-2025",
+            "butce_aylik": -309643.0,
+            "butce_yillik": -2249406.0,
+            "faizdisi_aylik": -73022.0,
+            "faizdisi_yillik": -229257.0
+        },
+        {
+            "tarih": "31-10-2025",
+            "butce_aylik": -223199.0,
+            "butce_yillik": -2286334.0,
+            "faizdisi_aylik": -65790.0,
+            "faizdisi_yillik": -244994.0
+        },
+        {
+            "tarih": "30-11-2025",
+            "butce_aylik": 169486.862648,
+            "butce_yillik": -2100201.137352,
+            "faizdisi_aylik": 287408.935978,
+            "faizdisi_yillik": -87237.064022
+        },
+        {
+            "tarih": "31-12-2025",
+            "butce_aylik": -528139.0,
+            "butce_yillik": -1799129.137352,
+            "faizdisi_aylik": -411468.0,
+            "faizdisi_yillik": 255252.93597800005
+        }
+    ],
     "nakit": [
         {
             "tarih": "05-01-2023",
