@@ -15,7 +15,7 @@ START_DATE = "01-01-2021"
 END_DATE = datetime.now().strftime("%d-%m-%Y")
 
 # EXCEL DOSYA YOLLARI (Direkt ana dizinden okuyacak)
-PATH_BUTCE = "Merkezi Yönetim Bütçe Dengesi.xlsx"
+PATH_BUTCE = "butce.xlsx"
 PATH_NAKIT = "Nakit Dengesi.xlsx"
 PATH_ATIL = "atılisgucu.xlsx"
 PATH_PMI = "imalat sanayi pmi.xlsx"
