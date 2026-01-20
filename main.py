@@ -478,11 +478,83 @@ if not df_eu.empty and 'DATE' in df_eu.columns:
                 "yillik": round(r["YoY"],1)
             })
 
+# ... (Üst kısımdaki importlar ve veri çekme işlemleri AYNI kalacak) ...
+
 # ==========================================
-# KAYDET VE TEMİZLE
+# KAYDET VE META VERİ (GÜNCELLEME TARİHİ) OLUŞTUR
 # ==========================================
 
+# 1. Eski veriyi oku (Kıyaslama yapmak için)
+eski_veri = {}
+eski_meta = {}
+
+if os.path.exists('veri.json'):
+    try:
+        with open('veri.json', 'r', encoding='utf-8') as f:
+            eski_veri = json.load(f)
+            # Eğer json içinde 'meta' varsa onu al
+            if "meta" in eski_veri:
+                eski_meta = eski_veri["meta"]
+    except:
+        pass
+
+# Bugünün tarihi (Update tarihi olarak kullanılacak)
+bugun_str = datetime.now().strftime("%Y-%m-%d")
+
+# 2. Yardımcı Fonksiyon: Veri değişti mi kontrol et
+def get_update_date(key_name, new_list):
+    """
+    Yeni listenin son elemanının tarihi ile eski listenin son elemanının tarihini kıyaslar.
+    Farklıysa 'bugun', aynıysa 'eski tarih' döner.
+    """
+    # Yeni veri boşsa işlem yapma
+    if not new_list:
+        return eski_meta.get(key_name, "2000-01-01")
+
+    try:
+        # Yeni verinin son tarihi
+        new_last_date = new_list[-1]["tarih"]
+        
+        # Eski verinin son tarihini bulmaya çalış
+        old_list = eski_veri.get(key_name, [])
+        if old_list:
+            old_last_date = old_list[-1]["tarih"]
+        else:
+            old_last_date = None
+            
+        # Kıyaslama: Eğer tarih değiştiyse -> BUGÜNÜ bas. Değişmediyse -> ESKİ update tarihini koru.
+        if new_last_date != old_last_date:
+            return bugun_str
+        else:
+            return eski_meta.get(key_name, bugun_str) # Eski meta yoksa mecburen bugünü ver
+            
+    except Exception as e:
+        print(f"Meta kontrol hatası ({key_name}): {e}")
+        return bugun_str
+
+# 3. Meta objesini oluştur
+meta_data = {
+    "gsyh": get_update_date("gsyh", gsyh_list),
+    "tufe": get_update_date("tufe", tufe_list),
+    "ufe": get_update_date("ufe", ufe_list),
+    "cari": get_update_date("cari", cari_list),
+    "butce": get_update_date("butce", butce_list),
+    "nakit": get_update_date("nakit", nakit_list),
+    "isgucu": get_update_date("isgucu", isgucu_list),
+    "fonlama": get_update_date("fonlama", fon_list),
+    "imalat": get_update_date("imalat", imalat_list),
+    "guven": get_update_date("guven", guven_list),
+    "fed": get_update_date("fed", fed_list),
+    "uscpi": get_update_date("uscpi", uscpi_list),
+    "ecb": get_update_date("ecb", ecb_list),
+    "eurocpi": get_update_date("eurocpi", eurocpi_list),
+    # Alt kalemler için de ana başlığa bakabiliriz veya ayrı tutabiliriz
+    "gsyh_oncu": get_update_date("gsyh_oncu", oncu_gostergeler_list) 
+}
+
+# 4. Final Veriyi Paketle
 final_data = {
+    "meta": meta_data, # <--- YENİ EKLENEN KISIM
     "gsyh": gsyh_list, 
     "tufe": tufe_list, 
     "ufe": ufe_list, 
@@ -497,7 +569,7 @@ final_data = {
     "uscpi": uscpi_list,
     "ecb": ecb_list, 
     "eurocpi": eurocpi_list,
-    "gsyh_oncu": oncu_gostergeler_list  # <--- BURAYI EKLE
+    "gsyh_oncu": oncu_gostergeler_list
 }
 
 # Recursively clean NaNs in the final structure
@@ -516,4 +588,4 @@ final_clean = sanitize_json(final_data)
 with open('veri.json', 'w', encoding='utf-8') as f:
     json.dump(final_clean, f, ensure_ascii=False, indent=4)
 
-print("✅ GÜNCELLENDİ!")
+print("✅ GÜNCELLENDİ! (Meta veriler işlendi)")
