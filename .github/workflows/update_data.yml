@@ -1,0 +1,39 @@
+name: Verileri Güncelle
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Her sabah 09:00 civarı çalışır
+  workflow_dispatch: # Manuel tetiklemek için
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Depoyu Çek
+        uses: actions/checkout@v3
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Kütüphaneleri Yükle
+        run: |
+          pip install -r requirements.txt
+
+      - name: Python Kodunu Çalıştır
+        env:
+          EVDS_API_KEY: ${{ secrets.EVDS_API_KEY }}
+        run: python main.py
+
+      - name: Değişiklikleri Kaydet
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add veri.json
+          git commit -m "Otomatik Güncelleme" || exit 0
+          git push
