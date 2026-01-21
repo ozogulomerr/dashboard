@@ -63,7 +63,7 @@
         .metric-value { font-weight: 700; color: #2d3436; }
         .hint { margin-top: auto; text-align: center; font-size: 11px; color: #0984e3; padding-top: 10px; font-weight: 500; }
 
-        /* --- YENİ VERİ EFEKTİ (GÜNCELLENDİ) --- */
+        /* --- YENİ VERİ EFEKTİ --- */
         @keyframes greenPulse {
             0% { box-shadow: 0 0 0 0 rgba(0, 184, 148, 0.4); border-color: #00b894; }
             70% { box-shadow: 0 0 0 10px rgba(0, 184, 148, 0); border-color: #00b894; }
@@ -424,16 +424,25 @@
         return html;
     }
 
-    // --- YENİ VERİ KONTROLÜ (7 GÜN) ---
+    // --- YENİ VERİ KONTROLÜ (7 GÜN) - DÜZELTİLDİ ---
     function checkFreshness(dateStr, cardId) {
         if (!dateStr || !document.getElementById(cardId)) return;
 
-        // Gelen format: "DD-MM-YYYY" (Örn: 20-01-2025)
+        let dataDate;
         const parts = dateStr.split('-');
-        // Date(Yıl, Ay(0-11), Gün)
-        const dataDate = new Date(parts[2], parts[1] - 1, parts[0]);
+
+        // Python'dan gelen tarih YYYY-MM-DD olabilir (2025-01-30)
+        // Veya normal veri DD-MM-YYYY olabilir (30-01-2025)
+        // Bunu anlamak için ilk parça 4 haneli mi diye bakıyoruz.
+        if (parts[0].length === 4) {
+             // Format: YYYY-MM-DD
+             dataDate = new Date(parts[0], parts[1] - 1, parts[2]);
+        } else {
+             // Format: DD-MM-YYYY
+             dataDate = new Date(parts[2], parts[1] - 1, parts[0]);
+        }
+
         const today = new Date();
-        
         // Farkı hesapla (Milisaniye)
         const diffTime = Math.abs(today - dataDate);
         // Güne çevir
@@ -507,7 +516,7 @@
             if (document.getElementById('v-gsyh-yil')) 
                 document.getElementById('v-gsyh-yil').innerHTML = fmtDec1(s.yillik) + (prev ? getTrend(s.yillik, prev.yillik, false) : "");
             
-            checkFreshness(meta.gsyh, 'card-gsyh'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.gsyh, 'card-gsyh'); 
 
             drawChart('ch-gsyh', 'bar', d.gsyh.map(x => x.tarih), [{ label: 'Yıllık Büyüme', data: d.gsyh.map(x => x.yillik), backgroundColor: '#00b894' }]);
         }
@@ -549,7 +558,7 @@
             if (document.getElementById('v-tufe-yil')) 
                 document.getElementById('v-tufe-yil').innerHTML = fmtDec2(s.yillik) + (prev ? getTrend(s.yillik, prev.yillik, true) : "");
             
-            checkFreshness(meta.tufe, 'card-tufe'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.tufe, 'card-tufe'); 
 
             drawChart('ch-tufe', 'line', d.tufe.map(x => x.tarih), [{ label: 'Yıllık TÜFE', data: d.tufe.map(x => x.yillik), borderColor: '#d63031', fill: true, backgroundColor: 'rgba(214,48,49,0.1)' }]);
         }
@@ -565,7 +574,7 @@
             if (document.getElementById('v-ufe-yil')) 
                 document.getElementById('v-ufe-yil').innerHTML = fmtDec2(s.yillik) + (prev ? getTrend(s.yillik, prev.yillik, true) : "");
 
-            checkFreshness(meta.ufe, 'card-ufe'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.ufe, 'card-ufe'); 
 
             drawChart('ch-ufe', 'line', d.ufe.map(x => x.tarih), [{ label: 'Yıllık Yİ-ÜFE', data: d.ufe.map(x => x.yillik), borderColor: '#e17055' }]);
         }
@@ -585,7 +594,7 @@
             if (document.getElementById('v-cari-cek-yil')) 
                 document.getElementById('v-cari-cek-yil').innerHTML = fmtMUSD(s.cekirdek_yillik)+ (prev ? getTrend(s.cekirdek_yillik, prev.cekirdek_yillik, false) : "");
 
-            checkFreshness(meta.cari, 'card-cari'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.cari, 'card-cari'); 
 
             drawChart('ch-cari', 'line', d.cari.map(x => x.tarih), [
                 { label: 'Cari Denge (Yıllık)', data: d.cari.map(x => x.cari_yillik), borderColor: '#d63031' },
@@ -608,7 +617,7 @@
             if (document.getElementById('v-butce-fd-yil')) 
                 document.getElementById('v-butce-fd-yil').innerHTML = fmtMTRY(s.faizdisi_yillik) + (prev ? getTrend(s.faizdisi_yillik, prev.faizdisi_yillik, false) : "");
 
-            checkFreshness(meta.butce, 'card-butce'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.butce, 'card-butce'); 
 
             drawChart('ch-butce', 'line', d.butce.map(x => x.tarih), [
                 { label: 'Bütçe (Yıllık)', data: d.butce.map(x => x.butce_yillik), borderColor: '#e17055' },
@@ -631,7 +640,7 @@
             if (document.getElementById('v-nakit-fd-yil')) 
                 document.getElementById('v-nakit-fd-yil').innerHTML = fmtMTRY(s.faizdisi_yillik) + (prev ? getTrend(s.faizdisi_yillik, prev.faizdisi_yillik, false) : "");
 
-            checkFreshness(meta.nakit, 'card-nakit'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.nakit, 'card-nakit'); 
 
             drawChart('ch-nakit', 'line', d.nakit.map(x => x.tarih), [{ label: 'Nakit (Yıllık)', data: d.nakit.map(x => x.nakit_yillik), borderColor: '#00b894' }]);
         }
@@ -647,7 +656,7 @@
             if (document.getElementById('v-atil')) 
                 document.getElementById('v-atil').innerHTML = fmtDec1(s.atil) + (prev ? getTrend(s.atil, prev.atil, true) : "");
             
-            checkFreshness(meta.isgucu, 'card-isgucu'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.isgucu, 'card-isgucu'); 
 
             drawChart('ch-isgucu', 'line', d.isgucu.map(x => x.tarih), [
                 { label: 'İşsizlik', data: d.isgucu.map(x => x.issizlik), borderColor: '#d63031' },
@@ -655,7 +664,7 @@
             ]);
         }
 
-        // 8. TCMB FONLAMA
+        // 8. TCMB FONLAMA (DÜZELTİLDİ: meta.fon -> meta.fonlama)
         if (d.fonlama && d.fonlama.length > 0) {
             const s = d.fonlama[d.fonlama.length - 1];
             const prev = d.fonlama.length > 1 ? d.fonlama[d.fonlama.length - 2] : null;
@@ -668,7 +677,7 @@
             if (document.getElementById('v-netfon')) 
                 document.getElementById('v-netfon').innerHTML = fmtThous(s.net_fonlama) + (prev ? getTrend(s.tlref, prev.tlref, false) : "");
 
-            checkFreshness(meta.fon, 'card-fon'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.fonlama, 'card-fon'); // <--- DÜZELTME BURADA YAPILDI
 
             const son = d.fonlama.slice(-30);
             drawChart('ch-fon-rates', 'line', son.map(x => x.tarih), [
@@ -691,7 +700,7 @@
             if (document.getElementById('v-kko')) 
                 document.getElementById('v-kko').innerHTML = fmtDec1(s.kko) + (prev ? getTrend(s.kko, prev.kko, false) : "");
 
-            checkFreshness(meta.imalat, 'card-imalat'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.imalat, 'card-imalat'); 
 
             drawChart('ch-pmi', 'line', d.imalat.map(x => x.tarih), [
                 {
@@ -724,7 +733,7 @@
             if (document.getElementById('v-guven-reel')) 
                 document.getElementById('v-guven-reel').innerHTML = Math.round(s.reel) + (prev ? getTrend(s.reel, prev.reel, false) : "");
 
-            checkFreshness(meta.guven, 'card-guven'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.guven, 'card-guven'); 
 
             drawChart('ch-guven', 'line', d.guven.map(x => x.tarih), [
                 { label: 'Tüketici', data: d.guven.map(x => x.tuketici), borderColor: '#636e72' },
@@ -743,7 +752,7 @@
             if (document.getElementById('v-fed-eff')) 
                 document.getElementById('v-fed-eff').innerHTML = fmtDec2(s.efektif) + (prev ? getTrend(s.efektif, prev.efektif, false) : "");
 
-            checkFreshness(meta.fed, 'card-fed'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.fed, 'card-fed'); 
 
             drawChart('ch-fed', 'line', d.fed.map(x => x.tarih), [
                 { label: 'Üst Limit', data: d.fed.map(x => x.ust), borderColor: '#74b9ff', borderWidth: 1, borderDash: [5, 5] },
@@ -763,7 +772,7 @@
             if (document.getElementById('v-uscpi-yil')) 
                 document.getElementById('v-uscpi-yil').innerHTML = fmtDec1(s.yillik) + (prev ? getTrend(s.yillik, prev.yillik, true) : "");
 
-            checkFreshness(meta.uscpi, 'card-uscpi'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.uscpi, 'card-uscpi'); 
 
             drawChart('ch-uscpi', 'line', d.uscpi.map(x => x.tarih), [
                 { label: 'ABD TÜFE (Yıllık)', data: d.uscpi.map(x => x.yillik), borderColor: '#d63031', fill: true, backgroundColor: 'rgba(214,48,49,0.1)' }
@@ -781,7 +790,7 @@
             if (document.getElementById('v-ecb-ref')) 
                 document.getElementById('v-ecb-ref').innerHTML = fmtDec2(s.refinans) + (prev ? getTrend(s.refinans, prev.refinans, false) : "");
 
-            checkFreshness(meta.ecb, 'card-ecb'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.ecb, 'card-ecb'); 
 
             drawChart('ch-ecb', 'line', d.ecb.map(x => x.tarih), [
                 { label: 'Marjinal', data: d.ecb.map(x => x.marjinal), borderColor: '#fdcb6e' },
@@ -801,7 +810,7 @@
             if (document.getElementById('v-eurocpi-yil')) 
                 document.getElementById('v-eurocpi-yil').innerHTML = fmtDec1(s.yillik) + (prev ? getTrend(s.yillik, prev.yillik, true) : "");
 
-            checkFreshness(meta.eurocpi, 'card-eurocpi'); // YENİ VERİ KONTROLÜ
+            checkFreshness(meta.eurocpi, 'card-eurocpi'); 
 
             drawChart('ch-eurocpi', 'line', d.eurocpi.map(x => x.tarih), [
                 { label: 'Euro TÜFE (Yıllık)', data: d.eurocpi.map(x => x.yillik), borderColor: '#6c5ce7', fill: true, backgroundColor: 'rgba(108,92,231,0.1)' }
