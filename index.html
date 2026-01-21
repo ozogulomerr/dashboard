@@ -403,7 +403,7 @@
     const fmtDec2 = (n) => n !== null ? "%" + Number(n).toFixed(2) : "...";
     const fmtThous = (n) => n !== null ? Number(n).toLocaleString('tr-TR') : "...";
     const fmtMUSD = (n) => n !== null ? Number(n).toLocaleString('tr-TR') + " M$" : "...";
-    const fmtMTRY = (n) => n !== null ? Math.round(Number(n)).toLocaleString('tr-TR') + " M₺" : "...";
+    const fmtMTRY = (n) => n !== null ? Math.round(Number(n) / 1000).toLocaleString('tr-TR') + " M₺" : "...";
 
     // --- TREND OKU HESAPLAYICI ---
     function getTrend(val, prev, reverse = false) {
