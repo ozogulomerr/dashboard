@@ -493,106 +493,137 @@ if not df_eu.empty and 'DATE' in df_eu.columns:
 # ... (Üst kısımdaki importlar ve veri çekme işlemleri AYNI kalacak) ...
 
 # ==========================================
+# 4. PARA VE BANKA (YENİ EKLENEN KISIM)
+# ==========================================
+banka_list = []
+# İstenen Kodlar:
+# TP.KTF10: İhtiyaç (Net)
+# TP.KTF101: İhtiyaç (KMH Dahil)
+# TP.KTF11: Taşıt
+# TP.KTF12: Konut
+# TP.KTF17: Ticari (Genel)
+# TP.KTF18: Ticari (Tüzel KMH/Kart Hariç) -> "Net" olarak kullanacağız
+# TP.TRY.MT01: 1 Ay Mevduat
+# TP.TRY.MT02: 3 Ay Mevduat
+# TP.TRY.MT06: Toplam Mevduat
+
+# Not: EVDS tek seferde çok fazla seriyi bazen vermeyebilir, ancak bu sayı (9) makul.
+banka_codes = "TP.KTF10-TP.KTF101-TP.KTF11-TP.KTF12-TP.KTF17-TP.KTF18-TP.TRY.MT01-TP.TRY.MT02-TP.TRY.MT06"
+banka_raw = veri_cek_evds(banka_codes)
+
+if banka_raw:
+    for item in banka_raw:
+        # Tarih filtresi: Sadece 2023 ve sonrası (Veri boyutunu küçültmek için)
+        tarih = item["Tarih"]
+        yil = tarih.split("-")[2] if "-" in tarih else "2000" # EVDS dd-mm-yyyy gönderiyor
+        
+        if int(yil) >= 2023:
+            # Verileri güvenli floata çevir (Bin TL cinsinden gelir genelde)
+            try:
+                # Krediler
+                ihtiyac_net = float(item.get("TP_KTF10") or 0)
+                ihtiyac_kmh_dahil = float(item.get("TP_KTF101") or 0)
+                tasit = float(item.get("TP_KTF11") or 0)
+                konut = float(item.get("TP_KTF12") or 0)
+                ticari_genel = float(item.get("TP_KTF17") or 0)
+                ticari_net = float(item.get("TP_KTF18") or 0) # KMH/Kart Hariç
+                
+                # Mevduatlar
+                mev_1ay = float(item.get("TP_TRY_MT01") or 0)
+                mev_3ay = float(item.get("TP_TRY_MT02") or 0)
+                mev_toplam = float(item.get("TP_TRY_MT06") or 0)
+
+                # Sıfır olan satırları atlamayalım, grafik kopuk olmasın ama hepsi 0 ise gereksizdir.
+                if (ihtiyac_net + ticari_genel + mev_toplam) > 0:
+                    banka_list.append({
+                        "tarih": tarih,
+                        "ihtiyac_net": ihtiyac_net,
+                        "ihtiyac_toplam": ihtiyac_kmh_dahil,
+                        "tasit": tasit,
+                        "konut": konut,
+                        "ticari_toplam": ticari_genel,
+                        "ticari_net": ticari_net,
+                        "mev_1ay": mev_1ay,
+                        "mev_3ay": mev_3ay,
+                        "mev_toplam": mev_toplam
+                    })
+            except ValueError:
+                continue
+
+# ==========================================
 # KAYDET VE META VERİ (GÜNCELLEME TARİHİ) OLUŞTUR
 # ==========================================
 
 # 1. Eski veriyi oku (Kıyaslama yapmak için)
 eski_veri = {}
 eski_meta = {}
-
 if os.path.exists('veri.json'):
     try:
         with open('veri.json', 'r', encoding='utf-8') as f:
             eski_veri = json.load(f)
-            # Eğer json içinde 'meta' varsa onu al
-            if "meta" in eski_veri:
-                eski_meta = eski_veri["meta"]
-    except:
-        pass
+            if "meta" in eski_veri: eski_meta = eski_veri["meta"]
+    except: pass
 
-# Bugünün tarihi (Update tarihi olarak kullanılacak)
 bugun_str = datetime.now().strftime("%Y-%m-%d")
 
-# 2. Yardımcı Fonksiyon: Veri değişti mi kontrol et
 def get_update_date(key_name, new_list):
-    """
-    Yeni listenin son elemanının tarihi ile eski listenin son elemanının tarihini kıyaslar.
-    Farklıysa 'bugun', aynıysa 'eski tarih' döner.
-    """
-    # Yeni veri boşsa işlem yapma
-    if not new_list:
-        return eski_meta.get(key_name, "2000-01-01")
-
+    if not new_list: return eski_meta.get(key_name, "2000-01-01")
     try:
-        # Yeni verinin son tarihi
         new_last_date = new_list[-1]["tarih"]
-        
-        # Eski verinin son tarihini bulmaya çalış
         old_list = eski_veri.get(key_name, [])
-        if old_list:
-            old_last_date = old_list[-1]["tarih"]
-        else:
-            old_last_date = None
-            
-        # Kıyaslama: Eğer tarih değiştiyse -> BUGÜNÜ bas. Değişmediyse -> ESKİ update tarihini koru.
-        if new_last_date != old_last_date:
-            return bugun_str
-        else:
-            return eski_meta.get(key_name, bugun_str) # Eski meta yoksa mecburen bugünü ver
-            
-    except Exception as e:
-        print(f"Meta kontrol hatası ({key_name}): {e}")
-        return bugun_str
+        old_last_date = old_list[-1]["tarih"] if old_list else None
+        if new_last_date != old_last_date: return bugun_str
+        else: return eski_meta.get(key_name, bugun_str)
+    except: return bugun_str
 
-# 3. Meta objesini oluştur
+# Meta Data
 meta_data = {
-    "gsyh": get_update_date("gsyh", gsyh_list),
-    "tufe": get_update_date("tufe", tufe_list),
-    "ufe": get_update_date("ufe", ufe_list),
-    "cari": get_update_date("cari", cari_list),
-    "butce": get_update_date("butce", butce_list),
-    "nakit": get_update_date("nakit", nakit_list),
-    "isgucu": get_update_date("isgucu", isgucu_list),
-    "fonlama": get_update_date("fonlama", fon_list),
-    "imalat": get_update_date("imalat", imalat_list),
-    "guven": get_update_date("guven", guven_list),
-    "fed": get_update_date("fed", fed_list),
-    "uscpi": get_update_date("uscpi", uscpi_list),
-    "ecb": get_update_date("ecb", ecb_list),
-    "eurocpi": get_update_date("eurocpi", eurocpi_list),
-    # Alt kalemler için de ana başlığa bakabiliriz veya ayrı tutabiliriz
-    "gsyh_oncu": get_update_date("gsyh_oncu", oncu_gostergeler_list) 
+    # ... Mevcut olanlar ...
+    "gsyh": get_update_date("gsyh", locals().get('gsyh_list', [])),
+    "tufe": get_update_date("tufe", locals().get('tufe_list', [])),
+    "ufe": get_update_date("ufe", locals().get('ufe_list', [])),
+    "cari": get_update_date("cari", locals().get('cari_list', [])),
+    "butce": get_update_date("butce", locals().get('butce_list', [])),
+    "nakit": get_update_date("nakit", locals().get('nakit_list', [])),
+    "isgucu": get_update_date("isgucu", locals().get('isgucu_list', [])),
+    "fonlama": get_update_date("fonlama", locals().get('fon_list', [])),
+    "imalat": get_update_date("imalat", locals().get('imalat_list', [])),
+    "guven": get_update_date("guven", locals().get('guven_list', [])),
+    "fed": get_update_date("fed", locals().get('fed_list', [])),
+    "uscpi": get_update_date("uscpi", locals().get('uscpi_list', [])),
+    "ecb": get_update_date("ecb", locals().get('ecb_list', [])),
+    "eurocpi": get_update_date("eurocpi", locals().get('eurocpi_list', [])),
+    "gsyh_oncu": get_update_date("gsyh_oncu", locals().get('oncu_gostergeler_list', [])),
+    # YENİ
+    "banka": get_update_date("banka", banka_list)
 }
 
-# 4. Final Veriyi Paketle
 final_data = {
-    "meta": meta_data, # <--- YENİ EKLENEN KISIM
-    "gsyh": gsyh_list, 
-    "tufe": tufe_list, 
-    "ufe": ufe_list, 
-    "cari": cari_list,
-    "butce": butce_list, 
-    "nakit": nakit_list, 
-    "isgucu": isgucu_list, 
-    "fonlama": fon_list,
-    "imalat": imalat_list, 
-    "guven": guven_list, 
-    "fed": fed_list, 
-    "uscpi": uscpi_list,
-    "ecb": ecb_list, 
-    "eurocpi": eurocpi_list,
-    "gsyh_oncu": oncu_gostergeler_list
+    "meta": meta_data,
+    "gsyh": locals().get('gsyh_list', []),
+    "tufe": locals().get('tufe_list', []),
+    "ufe": locals().get('ufe_list', []),
+    "cari": locals().get('cari_list', []),
+    "butce": locals().get('butce_list', []),
+    "nakit": locals().get('nakit_list', []),
+    "isgucu": locals().get('isgucu_list', []),
+    "fonlama": locals().get('fon_list', []),
+    "imalat": locals().get('imalat_list', []),
+    "guven": locals().get('guven_list', []),
+    "fed": locals().get('fed_list', []),
+    "uscpi": locals().get('uscpi_list', []),
+    "ecb": locals().get('ecb_list', []),
+    "eurocpi": locals().get('eurocpi_list', []),
+    "gsyh_oncu": locals().get('oncu_gostergeler_list', []),
+    # YENİ
+    "banka": banka_list
 }
 
-# Recursively clean NaNs in the final structure
 def sanitize_json(obj):
-    if isinstance(obj, dict):
-        return {k: sanitize_json(v) for k, v in obj.items()}
-    elif isinstance(obj, list):
-        return [sanitize_json(i) for i in obj]
+    if isinstance(obj, dict): return {k: sanitize_json(v) for k, v in obj.items()}
+    elif isinstance(obj, list): return [sanitize_json(i) for i in obj]
     elif isinstance(obj, float):
-        if math.isnan(obj) or math.isinf(obj):
-            return None
+        if math.isnan(obj) or math.isinf(obj): return None
     return obj
 
 final_clean = sanitize_json(final_data)
@@ -600,4 +631,4 @@ final_clean = sanitize_json(final_data)
 with open('veri.json', 'w', encoding='utf-8') as f:
     json.dump(final_clean, f, ensure_ascii=False, indent=4)
 
-print("✅ GÜNCELLENDİ! (Meta veriler işlendi)")
+print("✅ GÜNCELLENDİ! (Para ve Banka verileri eklendi)")
