@@ -664,28 +664,69 @@
             ]);
         }
 
-        // 8. TCMB FONLAMA (DÜZELTİLDİ: meta.fon -> meta.fonlama)
+        // 8. TCMB FONLAMA (REVİZE EDİLDİ)
         if (d.fonlama && d.fonlama.length > 0) {
-            const s = d.fonlama[d.fonlama.length - 1];
-            const prev = d.fonlama.length > 1 ? d.fonlama[d.fonlama.length - 2] : null;
+            
+            // --- KART İÇİN SON GEÇERLİ VERİYİ BULMA ---
+            // AOFM için sondan başa doğru gidip null olmayan ilk değeri buluyoruz
+            let sonAOFM = null;
+            let sonAOFM_Tarih = null; // Tarihi de alabiliriz isterseniz
+            for (let i = d.fonlama.length - 1; i >= 0; i--) {
+                if (d.fonlama[i].aofm !== null) {
+                    sonAOFM = d.fonlama[i].aofm;
+                    // Eğer AOFM için önceki değeri trend oku için istiyorsak:
+                    // let prevAOFM = (i > 0) ? d.fonlama[i-1].aofm : null;
+                    break;
+                }
+            }
 
-            if (document.getElementById('d-fon')) document.getElementById('d-fon').innerText = s.tarih;
+            // TLREF için sondan başa doğru gidip null olmayan ilk değeri buluyoruz
+            let sonTLREF = null;
+            for (let i = d.fonlama.length - 1; i >= 0; i--) {
+                if (d.fonlama[i].tlref !== null) {
+                    sonTLREF = d.fonlama[i].tlref;
+                    break;
+                }
+            }
+            
+            // Net fonlama genelde her gün olur ama yine de son değeri alalım
+            let sonItem = d.fonlama[d.fonlama.length - 1];
+            
+            // Kart üzerindeki tarih (En son veri tarihi)
+            if (document.getElementById('d-fon')) document.getElementById('d-fon').innerText = sonItem.tarih;
+
+            // Değerleri Yazdırma (Null kontrolü yaparak)
             if (document.getElementById('v-aofm')) 
-                document.getElementById('v-aofm').innerHTML = fmtDec2(s.aofm) + (prev ? getTrend(s.aofm, prev.aofm, false) : "");
+                document.getElementById('v-aofm').innerHTML = fmtDec2(sonAOFM);
+            
             if (document.getElementById('v-tlref')) 
-                document.getElementById('v-tlref').innerHTML = fmtDec2(s.tlref) + (prev ? getTrend(s.tlref, prev.tlref, false) : "");
+                document.getElementById('v-tlref').innerHTML = fmtDec2(sonTLREF);
+
             if (document.getElementById('v-netfon')) 
-                document.getElementById('v-netfon').innerHTML = fmtThous(s.net_fonlama) + (prev ? getTrend(s.tlref, prev.tlref, false) : "");
+                document.getElementById('v-netfon').innerHTML = fmtThous(sonItem.net_fonlama);
 
-            checkFreshness(meta.fonlama, 'card-fon'); // <--- DÜZELTME BURADA YAPILDI
+            checkFreshness(meta.fonlama, 'card-fon');
 
-            const son = d.fonlama.slice(-30);
-            drawChart('ch-fon-rates', 'line', son.map(x => x.tarih), [
-                { label: 'AOFM', data: son.map(x => x.aofm), borderColor: '#6c5ce7' },
-                { label: 'TLREF', data: son.map(x => x.tlref), borderColor: '#00cec9' }
+            // --- GRAFİK AYARLARI ---
+            const son30 = d.fonlama.slice(-30); // Son 30 günü al
+
+            drawChart('ch-fon-rates', 'line', son30.map(x => x.tarih), [
+                { 
+                    label: 'AOFM', 
+                    data: son30.map(x => x.aofm), 
+                    borderColor: '#6c5ce7',
+                    spanGaps: true // <-- ÖNEMLİ: Veri kopuksa (null) çizgiyi birleştir
+                },
+                { 
+                    label: 'TLREF', 
+                    data: son30.map(x => x.tlref), 
+                    borderColor: '#00cec9',
+                    spanGaps: true // <-- ÖNEMLİ: Veri kopuksa çizgiyi birleştir
+                }
             ]);
-            drawChart('ch-fon-net', 'bar', son.map(x => x.tarih), [
-                { label: 'Net Fonlama', data: son.map(x => x.net_fonlama), backgroundColor: '#fab1a0' }
+            
+            drawChart('ch-fon-net', 'bar', son30.map(x => x.tarih), [
+                { label: 'Net Fonlama', data: son30.map(x => x.net_fonlama), backgroundColor: '#fab1a0' }
             ]);
         }
 
