@@ -664,18 +664,15 @@
             ]);
         }
 
-        // 8. TCMB FONLAMA (REVİZE EDİLDİ)
+        // 8. TCMB FONLAMA (GÜNCELLENDİ: M₺ Formatı ve Trend Düzeltmesi)
         if (d.fonlama && d.fonlama.length > 0) {
             
             // --- KART İÇİN SON GEÇERLİ VERİYİ BULMA ---
             // AOFM için sondan başa doğru gidip null olmayan ilk değeri buluyoruz
             let sonAOFM = null;
-            let sonAOFM_Tarih = null; // Tarihi de alabiliriz isterseniz
             for (let i = d.fonlama.length - 1; i >= 0; i--) {
                 if (d.fonlama[i].aofm !== null) {
                     sonAOFM = d.fonlama[i].aofm;
-                    // Eğer AOFM için önceki değeri trend oku için istiyorsak:
-                    // let prevAOFM = (i > 0) ? d.fonlama[i-1].aofm : null;
                     break;
                 }
             }
@@ -689,39 +686,41 @@
                 }
             }
             
-            // Net fonlama genelde her gün olur ama yine de son değeri alalım
+            // Net fonlama ve bir önceki veri (Trend oku için)
             let sonItem = d.fonlama[d.fonlama.length - 1];
+            let prevItem = d.fonlama.length > 1 ? d.fonlama[d.fonlama.length - 2] : null;
             
-            // Kart üzerindeki tarih (En son veri tarihi)
+            // Kart üzerindeki tarih
             if (document.getElementById('d-fon')) document.getElementById('d-fon').innerText = sonItem.tarih;
 
-            // Değerleri Yazdırma (Null kontrolü yaparak)
+            // Değerleri Yazdırma
             if (document.getElementById('v-aofm')) 
                 document.getElementById('v-aofm').innerHTML = fmtDec2(sonAOFM);
             
             if (document.getElementById('v-tlref')) 
                 document.getElementById('v-tlref').innerHTML = fmtDec2(sonTLREF);
 
+            // --- BURASI GÜNCELLENDİ (fmtThous -> fmtMTRY) ---
             if (document.getElementById('v-netfon')) 
-                document.getElementById('v-netfon').innerHTML = fmtThous(sonItem.net_fonlama);
+                document.getElementById('v-netfon').innerHTML = fmtMTRY(sonItem.net_fonlama) + (prevItem ? getTrend(sonItem.net_fonlama, prevItem.net_fonlama, false) : "");
 
             checkFreshness(meta.fonlama, 'card-fon');
 
             // --- GRAFİK AYARLARI ---
-            const son30 = d.fonlama.slice(-30); // Son 30 günü al
+            const son30 = d.fonlama.slice(-30);
 
             drawChart('ch-fon-rates', 'line', son30.map(x => x.tarih), [
                 { 
                     label: 'AOFM', 
                     data: son30.map(x => x.aofm), 
                     borderColor: '#6c5ce7',
-                    spanGaps: true // <-- ÖNEMLİ: Veri kopuksa (null) çizgiyi birleştir
+                    spanGaps: true 
                 },
                 { 
                     label: 'TLREF', 
                     data: son30.map(x => x.tlref), 
                     borderColor: '#00cec9',
-                    spanGaps: true // <-- ÖNEMLİ: Veri kopuksa çizgiyi birleştir
+                    spanGaps: true 
                 }
             ]);
             
