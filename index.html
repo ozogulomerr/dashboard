@@ -706,7 +706,7 @@
 
             // --- BURASI GÜNCELLENDİ (fmtThous -> fmtMTRY) ---
             if (document.getElementById('v-netfon')) 
-                document.getElementById('v-netfon').innerHTML = fmtMTRY(sonItem.net_fonlama) + (prevItem ? getTrend(sonItem.net_fonlama, prevItem.net_fonlama, false) : "");
+                document.getElementById('v-netfon').innerHTML = fmtNetFon(sonItem.net_fonlama) + (prevItem ? getTrend(sonItem.net_fonlama, prevItem.net_fonlama, false) : "");
 
             checkFreshness(meta.fonlama, 'card-fon');
 
