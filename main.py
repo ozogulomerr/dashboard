@@ -209,43 +209,55 @@ if isgucu_raw:
                     })
         except: pass
 
-# --- H) TCMB FONLAMA ---
+# --- H) TCMB FONLAMA (REVİZE EDİLDİ) ---
 fon_list = []
 # Serileri parametre olarak tanımlayalım
 series = "TP.APIFON4-TP.BISTTLREF.ORAN-TP.APIFON3"
 fon_raw = veri_cek_evds(series)
 
-# Hata ayıklama için ilk veriyi kontrol etmekte fayda var (print ile)
-# print(fon_raw[0]) 
+# Gelen veriyi Pandas DataFrame'e çevirmek işi çok kolaylaştırır
+if fon_raw:
+    df_fon = pd.DataFrame(fon_raw)
+    
+    # Sütun isimlerini ve tiplerini düzeltelim
+    df_fon.rename(columns={
+        "Tarih": "tarih",
+        "TP_APIFON4": "aofm",
+        "TP_BISTTLREF_ORAN": "tlref",
+        "TP_APIFON3": "net_fonlama"
+    }, inplace=True)
 
-for item in fon_raw:
-    tarih = item["Tarih"]
+    # Nümerik dönüşüm (Hatalı verileri NaN yapar)
+    cols_to_convert = ["aofm", "tlref", "net_fonlama"]
+    for col in cols_to_convert:
+        df_fon[col] = pd.to_numeric(df_fon[col], errors='coerce')
+
+    # Tarih formatını standartlaştıralım (DD-MM-YYYY -> YYYY-MM-DD)
+    # EVDS genelde DD-MM-YYYY gönderir.
+    df_fon["tarih_dt"] = pd.to_datetime(df_fon["tarih"], dayfirst=True)
+    df_fon = df_fon.sort_values("tarih_dt") # Eskiden yeniye sırala
+
+    # 2023 sonrası verileri al
+    df_fon = df_fon[df_fon["tarih_dt"].dt.year >= 2023]
+
+    # --- KRİTİK NOKTA: NULL KONTROLÜ ---
+    # Eğer bir satırda HEM aofm HEM tlref NaN (boş) ise o satırı listeye eklemeyelim.
+    # Ancak biri var biri yoksa ekleyelim (Chart.js bunu halleder).
     
-    # DÜZELTME 1: Yılı almak için son parçayı alıyoruz (GG-AA-YYYY varsayımıyla)
-    # Eğer veri YYYY-MM-DD geliyorsa senin kodun doğruydu, 
-    # ama boş dönüyorsa %99 ihtimalle format GG-AA-YYYY'dir.
-    yil_str = tarih.split("-")[-1] 
-    
-    # Güvenlik önlemi: Yıl verisi bazen boş gelebilir, kontrol edelim
-    if not yil_str.isdigit():
-        continue
-        
-    yil = int(yil_str)
-    
-    # TP_APIFON4 verisinin None olmadığından emin olalım
-    if yil >= 2023 and item.get("TP_APIFON4") is not None:
-        try:
-            fon_list.append({
-                "tarih": tarih,
-                "aofm": float(item["TP_APIFON4"]),
-                # get kullanırken default değer atamak iyidir
-                "tlref": float(item.get("TP_BISTTLREF_ORAN") or 0), 
-                "net_fonlama": int(float(item.get("TP_APIFON3") or 0))
-            })
-        except ValueError:
-            # Veri bazen boş string "" gelebilir, float'a çevrilemez
-            continue
-            
+    df_fon = df_fon.dropna(subset=["aofm", "tlref"], how="all") # İkisi birden yoksa düşür
+
+    for _, row in df_fon.iterrows():
+        # Veri setine NaN (None) olarak gidecek ki Chart.js boş geçsin
+        aofm_val = row["aofm"] if pd.notnull(row["aofm"]) else None
+        tlref_val = row["tlref"] if pd.notnull(row["tlref"]) else None
+        net_val = row["net_fonlama"] if pd.notnull(row["net_fonlama"]) else 0
+
+        fon_list.append({
+            "tarih": row["tarih"], # Orijinal string tarihi koruyoruz
+            "aofm": aofm_val,
+            "tlref": tlref_val,
+            "net_fonlama": net_val
+        }) 
 # ==========================================
 # I. GSYH ÖNCÜ GÖSTERGELERİ
 # ==========================================
