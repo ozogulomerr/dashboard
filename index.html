@@ -395,7 +395,7 @@
         <div class="row-grid">
             <div class="card" id="card-banka" onclick="togglePanel('panel-banka', this)" style="grid-column: span 2;">
                 <div class="card-header">
-                    <h3 class="card-title">Para ve Banka Göstergeleri</h3>
+                    <h3 class="card-title">TL Kredi ve Mevduat </h3>
                     <span class="card-date" id="d-banka">...</span>
                 </div>
                 <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0;">
@@ -415,7 +415,7 @@
         <div id="panel-banka" class="full-panel-container">
             <div class="panel-content">
                 <div class="panel-top">
-                    <span class="panel-title">Krediler ve Mevduat Gelişimi (Milyar TL)</span>
+                    <span class="panel-title">TL Krediler ve Mevduat Faiz Oranları (Akım, %)</span>
                     <span class="close-btn" onclick="closeAllPanels()">X KAPAT</span>
                 </div>
                 <div class="big-chart-box" style="height: 450px;">
@@ -965,9 +965,6 @@
                             tooltip: {
                                 callbacks: { label: function(c) { return c.dataset.label + ': %' + Number(c.raw).toLocaleString('tr-TR', {minimumFractionDigits: 2}); } }
                             },
-                            // Başlık Güncellendi
-                            title: { display: true, text: 'Krediler ve Mevduat Faiz Oranları (Akım, %)' }
-                        },
                         scales: { 
                             y: { 
                                 // Başlık Kaldırıldı (display: false)
