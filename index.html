@@ -454,31 +454,23 @@
         return html;
     }
 
-    // --- YENİ VERİ KONTROLÜ (7 GÜN) - DÜZELTİLDİ ---
+    // --- YENİ VERİ KONTROLÜ (7 GÜN) ---
     function checkFreshness(dateStr, cardId) {
         if (!dateStr || !document.getElementById(cardId)) return;
 
         let dataDate;
         const parts = dateStr.split('-');
 
-        // Python'dan gelen tarih YYYY-MM-DD olabilir (2025-01-30)
-        // Veya normal veri DD-MM-YYYY olabilir (30-01-2025)
-        // Bunu anlamak için ilk parça 4 haneli mi diye bakıyoruz.
         if (parts[0].length === 4) {
-             // Format: YYYY-MM-DD
              dataDate = new Date(parts[0], parts[1] - 1, parts[2]);
         } else {
-             // Format: DD-MM-YYYY
              dataDate = new Date(parts[2], parts[1] - 1, parts[0]);
         }
 
         const today = new Date();
-        // Farkı hesapla (Milisaniye)
         const diffTime = Math.abs(today - dataDate);
-        // Güne çevir
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
 
-        // 7 gün veya daha az ise
         if (diffDays <= 7) {
             document.getElementById(cardId).classList.add('fresh-data');
         }
@@ -534,7 +526,6 @@
     // --- ANA VERİ ÇEKME VE İŞLEME ---
     fetch('veri.json?t=' + new Date().getTime()).then(r => r.json()).then(d => {
         
-    // Meta verileri kolay erişim için alalım
         const meta = d.meta || {};
         
         // 1. GSYH
@@ -694,11 +685,9 @@
             ]);
         }
 
-        // 8. TCMB FONLAMA (GÜNCELLENDİ: M₺ Formatı ve Trend Düzeltmesi)
+        // 8. TCMB FONLAMA
         if (d.fonlama && d.fonlama.length > 0) {
             
-            // --- KART İÇİN SON GEÇERLİ VERİYİ BULMA ---
-            // AOFM için sondan başa doğru gidip null olmayan ilk değeri buluyoruz
             let sonAOFM = null;
             for (let i = d.fonlama.length - 1; i >= 0; i--) {
                 if (d.fonlama[i].aofm !== null) {
@@ -707,7 +696,6 @@
                 }
             }
 
-            // TLREF için sondan başa doğru gidip null olmayan ilk değeri buluyoruz
             let sonTLREF = null;
             for (let i = d.fonlama.length - 1; i >= 0; i--) {
                 if (d.fonlama[i].tlref !== null) {
@@ -716,27 +704,22 @@
                 }
             }
             
-            // Net fonlama ve bir önceki veri (Trend oku için)
             let sonItem = d.fonlama[d.fonlama.length - 1];
             let prevItem = d.fonlama.length > 1 ? d.fonlama[d.fonlama.length - 2] : null;
             
-            // Kart üzerindeki tarih
             if (document.getElementById('d-fon')) document.getElementById('d-fon').innerText = sonItem.tarih;
 
-            // Değerleri Yazdırma
             if (document.getElementById('v-aofm')) 
                 document.getElementById('v-aofm').innerHTML = fmtDec2(sonAOFM);
             
             if (document.getElementById('v-tlref')) 
                 document.getElementById('v-tlref').innerHTML = fmtDec2(sonTLREF);
 
-            // --- BURASI GÜNCELLENDİ (fmtThous -> fmtMTRY) ---
             if (document.getElementById('v-netfon')) 
                 document.getElementById('v-netfon').innerHTML = fmtNetFon(sonItem.net_fonlama) + (prevItem ? getTrend(sonItem.net_fonlama, prevItem.net_fonlama, false) : "");
 
             checkFreshness(meta.fonlama, 'card-fon');
 
-            // --- GRAFİK AYARLARI ---
             const son30 = d.fonlama.slice(-30);
 
             drawChart('ch-fon-rates', 'line', son30.map(x => x.tarih), [
@@ -888,7 +871,7 @@
         }
 
         // ===============================================
-        // 13. PARA VE BANKA (GÜNCELLENEN KISIM)
+        // 13. PARA VE BANKA (DÜZELTİLEN KISIM)
         // ===============================================
         if (d.banka && d.banka.length > 0) {
             const son = d.banka[d.banka.length - 1];
@@ -923,7 +906,7 @@
             const dataPoints = [d.banka[idxYearEnd], d.banka[d.banka.length-2], d.banka[d.banka.length-1]];
             const labels = ["2025 Sonu", "Önceki Hafta", "Güncel (" + dataPoints[2].tarih + ")"];
 
-            // Convert fonksiyonu: Sayıyı olduğu gibi alıyoruz
+            // Convert fonksiyonu
             const convert = (val) => val ? val : 0; 
 
             const ctx = document.getElementById('ch-banka');
@@ -935,23 +918,16 @@
                     data: {
                         labels: labels,
                         datasets: [
-                            // 1. Bar Grubu: İHTİYAÇ
-                            // Mantık: Toplam Oran'a ulaşmak için, Net'i koyuyoruz, üstüne (Toplam - Net) farkını ekliyoruz.
-                            // Böylece barın en tepesi "Toplam (KMH Dahil)" değerini gösteriyor.
                             { label: 'İhtiyaç (Net)', data: dataPoints.map(p => convert(p.ihtiyac_net)), backgroundColor: '#0984e3', stack: 'Stack 0' },
                             { label: 'KMH Etkisi', data: dataPoints.map(p => convert(p.ihtiyac_toplam - p.ihtiyac_net)), backgroundColor: '#74b9ff', stack: 'Stack 0' },
 
-                            // 2. Bar Grubu: TİCARİ
                             { label: 'Ticari (Kredi Kartsız)', data: dataPoints.map(p => convert(p.ticari_net)), backgroundColor: '#d63031', stack: 'Stack 1' },
                             { label: 'Diğer Ticari', data: dataPoints.map(p => convert(p.ticari_toplam - p.ticari_net)), backgroundColor: '#ff7675', stack: 'Stack 1' },
 
-                            // 3. Bar: KONUT
                             { label: 'Konut', data: dataPoints.map(p => convert(p.konut)), backgroundColor: '#fdcb6e', stack: 'Stack 2' },
                             
-                            // 4. Bar: TAŞIT
                             { label: 'Taşıt', data: dataPoints.map(p => convert(p.tasit)), backgroundColor: '#e17055', stack: 'Stack 3' },
 
-                            // 5,6,7. Bar: MEVDUATLAR
                             { label: '1 Ay Vadeli Mev.', data: dataPoints.map(p => convert(p.mev_1ay)), backgroundColor: '#00b894', stack: 'Stack 4' },
                             { label: '3 Ay Vadeli Mev.', data: dataPoints.map(p => convert(p.mev_3ay)), backgroundColor: '#00cec9', stack: 'Stack 5' },
                             { label: 'Toplam Mevduat', data: dataPoints.map(p => convert(p.mev_toplam)), backgroundColor: '#636e72', stack: 'Stack 6' },
@@ -961,13 +937,13 @@
                         responsive: true, maintainAspectRatio: false,
                         interaction: { mode: 'nearest', intersect: false },
                         plugins: {
-                            // Tooltip'te % işareti gösterimi
                             tooltip: {
                                 callbacks: { label: function(c) { return c.dataset.label + ': %' + Number(c.raw).toLocaleString('tr-TR', {minimumFractionDigits: 2}); } }
                             },
+                            title: { display: true, text: 'Krediler ve Mevduat Faiz Oranları (Akım, %)' }
+                        },
                         scales: { 
                             y: { 
-                                // Başlık Kaldırıldı (display: false)
                                 title: { display: false }, 
                                 beginAtZero: true 
                             } 
