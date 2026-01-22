@@ -433,7 +433,7 @@
     const fmtMUSD = (n) => n !== null ? Number(n).toLocaleString('tr-TR') + " M$" : "...";
     const fmtMTRY = (n) => n !== null ? Math.round(Number(n)).toLocaleString('tr-TR') + " M₺" : "...";
     const fmtNetFon = (n) => n !== null ? Math.round(Number(n) / 1000).toLocaleString('tr-TR') + " M₺" : "...";
-    const fmtRaw = (n) => n !== null ? Number(n).toLocaleString('tr-TR') : "...";
+    const fmtRate = (n) => n !== null ? "%" + Number(n).toLocaleString('tr-TR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) : "...";
     
     // --- TREND OKU HESAPLAYICI ---
     function getTrend(val, prev, reverse = false) {
@@ -887,25 +887,27 @@
             ]);
         }
 
+        // ===============================================
         // 13. PARA VE BANKA (GÜNCELLENEN KISIM)
+        // ===============================================
         if (d.banka && d.banka.length > 0) {
             const son = d.banka[d.banka.length - 1];
             const onceki = d.banka.length > 1 ? d.banka[d.banka.length - 2] : null;
 
             if (document.getElementById('d-banka')) document.getElementById('d-banka').innerText = son.tarih;
             
-            // KART VERİLERİ (Bölme olmadan ham haliyle)
+            // KART VERİLERİ (Yüzdeli Format)
             if (document.getElementById('v-bnk-iht')) 
-                document.getElementById('v-bnk-iht').innerHTML = fmtRaw(son.ihtiyac_net) + (onceki ? getTrend(son.ihtiyac_net, onceki.ihtiyac_net, false) : "");
+                document.getElementById('v-bnk-iht').innerHTML = fmtRate(son.ihtiyac_net) + (onceki ? getTrend(son.ihtiyac_net, onceki.ihtiyac_net, false) : "");
             
             if (document.getElementById('v-bnk-tic')) 
-                document.getElementById('v-bnk-tic').innerHTML = fmtRaw(son.ticari_net) + (onceki ? getTrend(son.ticari_net, onceki.ticari_net, false) : "");
+                document.getElementById('v-bnk-tic').innerHTML = fmtRate(son.ticari_net) + (onceki ? getTrend(son.ticari_net, onceki.ticari_net, false) : "");
 
             if (document.getElementById('v-bnk-kon')) 
-                document.getElementById('v-bnk-kon').innerHTML = fmtRaw(son.konut) + (onceki ? getTrend(son.konut, onceki.konut, false) : "");
+                document.getElementById('v-bnk-kon').innerHTML = fmtRate(son.konut) + (onceki ? getTrend(son.konut, onceki.konut, false) : "");
                 
             if (document.getElementById('v-bnk-mev')) 
-                document.getElementById('v-bnk-mev').innerHTML = fmtRaw(son.mev_toplam) + (onceki ? getTrend(son.mev_toplam, onceki.mev_toplam, false) : "");
+                document.getElementById('v-bnk-mev').innerHTML = fmtRate(son.mev_toplam) + (onceki ? getTrend(son.mev_toplam, onceki.mev_toplam, false) : "");
 
             checkFreshness(meta.banka, 'card-banka');
 
@@ -921,7 +923,7 @@
             const dataPoints = [d.banka[idxYearEnd], d.banka[d.banka.length-2], d.banka[d.banka.length-1]];
             const labels = ["2025 Sonu", "Önceki Hafta", "Güncel (" + dataPoints[2].tarih + ")"];
 
-            // Convert fonksiyonu artık sayıyı bölmüyor, olduğu gibi döndürüyor.
+            // Convert fonksiyonu: Sayıyı olduğu gibi alıyoruz
             const convert = (val) => val ? val : 0; 
 
             const ctx = document.getElementById('ch-banka');
@@ -933,16 +935,23 @@
                     data: {
                         labels: labels,
                         datasets: [
+                            // 1. Bar Grubu: İHTİYAÇ
+                            // Mantık: Toplam Oran'a ulaşmak için, Net'i koyuyoruz, üstüne (Toplam - Net) farkını ekliyoruz.
+                            // Böylece barın en tepesi "Toplam (KMH Dahil)" değerini gösteriyor.
                             { label: 'İhtiyaç (Net)', data: dataPoints.map(p => convert(p.ihtiyac_net)), backgroundColor: '#0984e3', stack: 'Stack 0' },
-                            { label: 'KMH Farkı', data: dataPoints.map(p => convert(p.ihtiyac_toplam - p.ihtiyac_net)), backgroundColor: '#74b9ff', stack: 'Stack 0' },
+                            { label: 'KMH Etkisi', data: dataPoints.map(p => convert(p.ihtiyac_toplam - p.ihtiyac_net)), backgroundColor: '#74b9ff', stack: 'Stack 0' },
 
+                            // 2. Bar Grubu: TİCARİ
                             { label: 'Ticari (Kredi Kartsız)', data: dataPoints.map(p => convert(p.ticari_net)), backgroundColor: '#d63031', stack: 'Stack 1' },
-                            { label: 'Ticari Diğer', data: dataPoints.map(p => convert(p.ticari_toplam - p.ticari_net)), backgroundColor: '#ff7675', stack: 'Stack 1' },
+                            { label: 'Diğer Ticari', data: dataPoints.map(p => convert(p.ticari_toplam - p.ticari_net)), backgroundColor: '#ff7675', stack: 'Stack 1' },
 
+                            // 3. Bar: KONUT
                             { label: 'Konut', data: dataPoints.map(p => convert(p.konut)), backgroundColor: '#fdcb6e', stack: 'Stack 2' },
                             
+                            // 4. Bar: TAŞIT
                             { label: 'Taşıt', data: dataPoints.map(p => convert(p.tasit)), backgroundColor: '#e17055', stack: 'Stack 3' },
 
+                            // 5,6,7. Bar: MEVDUATLAR
                             { label: '1 Ay Vadeli Mev.', data: dataPoints.map(p => convert(p.mev_1ay)), backgroundColor: '#00b894', stack: 'Stack 4' },
                             { label: '3 Ay Vadeli Mev.', data: dataPoints.map(p => convert(p.mev_3ay)), backgroundColor: '#00cec9', stack: 'Stack 5' },
                             { label: 'Toplam Mevduat', data: dataPoints.map(p => convert(p.mev_toplam)), backgroundColor: '#636e72', stack: 'Stack 6' },
@@ -952,12 +961,20 @@
                         responsive: true, maintainAspectRatio: false,
                         interaction: { mode: 'nearest', intersect: false },
                         plugins: {
+                            // Tooltip'te % işareti gösterimi
                             tooltip: {
-                                callbacks: { label: function(c) { return c.dataset.label + ': ' + Number(c.raw).toLocaleString('tr-TR'); } }
+                                callbacks: { label: function(c) { return c.dataset.label + ': %' + Number(c.raw).toLocaleString('tr-TR', {minimumFractionDigits: 2}); } }
                             },
-                            title: { display: true, text: 'Kredi ve Mevduat Hacmi Gelişimi' }
+                            // Başlık Güncellendi
+                            title: { display: true, text: 'Krediler ve Mevduat Faiz Oranları (Akım, %)' }
                         },
-                        scales: { y: { title: { display: true, text: 'Bin TL' }, beginAtZero: true } }
+                        scales: { 
+                            y: { 
+                                // Başlık Kaldırıldı (display: false)
+                                title: { display: false }, 
+                                beginAtZero: true 
+                            } 
+                        }
                     }
                 });
             }
