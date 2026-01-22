@@ -433,7 +433,7 @@
     const fmtMUSD = (n) => n !== null ? Number(n).toLocaleString('tr-TR') + " M$" : "...";
     const fmtMTRY = (n) => n !== null ? Math.round(Number(n)).toLocaleString('tr-TR') + " M₺" : "...";
     const fmtNetFon = (n) => n !== null ? Math.round(Number(n) / 1000).toLocaleString('tr-TR') + " M₺" : "...";
-    const fmtBillion = (n) => n !== null ? (Number(n) / 1000000).toLocaleString('tr-TR', {maximumFractionDigits: 1}) + " Mr₺" : "...";
+    const fmtRaw = (n) => n !== null ? Number(n).toLocaleString('tr-TR') : "...";
     
     // --- TREND OKU HESAPLAYICI ---
     function getTrend(val, prev, reverse = false) {
@@ -887,195 +887,83 @@
             ]);
         }
 
-        // ===============================================
-        // 13. PARA VE BANKA (YENİ EKLENEN KISIM)
-        // ===============================================
+        // 13. PARA VE BANKA (GÜNCELLENEN KISIM)
         if (d.banka && d.banka.length > 0) {
-            // Son veri (Güncel Hafta)
             const son = d.banka[d.banka.length - 1];
-            // Önceki Hafta
             const onceki = d.banka.length > 1 ? d.banka[d.banka.length - 2] : null;
 
-            // Kart Bilgilerini Doldur
             if (document.getElementById('d-banka')) document.getElementById('d-banka').innerText = son.tarih;
             
-            // Karttaki 4 temel veri
+            // KART VERİLERİ (Bölme olmadan ham haliyle)
             if (document.getElementById('v-bnk-iht')) 
-                document.getElementById('v-bnk-iht').innerHTML = fmtBillion(son.ihtiyac_net) + (onceki ? getTrend(son.ihtiyac_net, onceki.ihtiyac_net, false) : "");
+                document.getElementById('v-bnk-iht').innerHTML = fmtRaw(son.ihtiyac_net) + (onceki ? getTrend(son.ihtiyac_net, onceki.ihtiyac_net, false) : "");
             
             if (document.getElementById('v-bnk-tic')) 
-                document.getElementById('v-bnk-tic').innerHTML = fmtBillion(son.ticari_net) + (onceki ? getTrend(son.ticari_net, onceki.ticari_net, false) : "");
+                document.getElementById('v-bnk-tic').innerHTML = fmtRaw(son.ticari_net) + (onceki ? getTrend(son.ticari_net, onceki.ticari_net, false) : "");
 
             if (document.getElementById('v-bnk-kon')) 
-                document.getElementById('v-bnk-kon').innerHTML = fmtBillion(son.konut) + (onceki ? getTrend(son.konut, onceki.konut, false) : "");
+                document.getElementById('v-bnk-kon').innerHTML = fmtRaw(son.konut) + (onceki ? getTrend(son.konut, onceki.konut, false) : "");
                 
             if (document.getElementById('v-bnk-mev')) 
-                document.getElementById('v-bnk-mev').innerHTML = fmtBillion(son.mev_toplam) + (onceki ? getTrend(son.mev_toplam, onceki.mev_toplam, false) : "");
+                document.getElementById('v-bnk-mev').innerHTML = fmtRaw(son.mev_toplam) + (onceki ? getTrend(son.mev_toplam, onceki.mev_toplam, false) : "");
 
             checkFreshness(meta.banka, 'card-banka');
 
-            // --- GRAFİK HAZIRLIĞI ---
-            // 3 Tarihi Bul: 
-            // 1. Güncel (Son veri)
-            // 2. Önceki Hafta (Sondan bir önceki)
-            // 3. 2025 Sonu (Veya geçen yılın sonu)
-            
-            let idx2025 = -1;
-            // Veri setinde geriye doğru gidip 2025'in sonunu bulmaya çalışalım
-            // Eğer 2026 başındaysak, 2025 içeren son tarihi al.
+            // --- GRAFİK ---
+            let idxYearEnd = 0;
             for (let i = d.banka.length - 1; i >= 0; i--) {
                 if (d.banka[i].tarih.includes("2025")) {
-                    idx2025 = i;
-                    break; // Bulduğumuz ilk tarih (sondan geriye geldiğimiz için yılın sonu olur)
+                    idxYearEnd = i;
+                    break; 
                 }
             }
-            // Eğer 2025 verisi yoksa (veri seti kısaysa), en baştaki veriyi al
-            if (idx2025 === -1) idx2025 = 0;
-
-            const dataPoints = [
-                d.banka[idx2025],          // 2025 Sonu
-                d.banka[d.banka.length-2], // Önceki Hafta
-                d.banka[d.banka.length-1]  // Güncel
-            ];
             
-            const labels = ["2025 Sonu (" + dataPoints[0].tarih + ")", "Önceki Hafta", "Güncel (" + dataPoints[2].tarih + ")"];
+            const dataPoints = [d.banka[idxYearEnd], d.banka[d.banka.length-2], d.banka[d.banka.length-1]];
+            const labels = ["2025 Sonu", "Önceki Hafta", "Güncel (" + dataPoints[2].tarih + ")"];
 
-            // Grafik Veri Setleri
-            // 7 Bar İstendi -> "Stacked" (Yığılmış) yapı kullanarak "KMH Dahil" ve "Hariç" mantığını kuracağız.
-            
-            // Verileri Milyar TL'ye çevirelim
-            const convert = (val) => val ? val / 1000000 : 0;
-
-            // Bar 1: İhtiyaç (Net) + İhtiyaç (KMH Farkı)
-            // Bar 2: Ticari (Net) + Ticari (Diğer Farkı)
-            // Bar 3: Konut
-            // Bar 4: Taşıt
-            // Bar 5: 1 Ay Mev
-            // Bar 6: 3 Ay Mev
-            // Bar 7: Toplam Mev
+            // Convert fonksiyonu artık sayıyı bölmüyor, olduğu gibi döndürüyor.
+            const convert = (val) => val ? val : 0; 
 
             const ctx = document.getElementById('ch-banka');
             if (ctx) {
+                if(Chart.getChart("ch-banka")) Chart.getChart("ch-banka").destroy();
+
                 new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: labels, // X Ekseni: Tarihler (3 Tarih)
+                        labels: labels,
                         datasets: [
-                            // 1. İHTİYAÇ (Net + KMH)
-                            {
-                                label: 'İhtiyaç (Net)',
-                                data: dataPoints.map(p => convert(p.ihtiyac_net)),
-                                backgroundColor: '#0984e3',
-                                stack: 'Stack 0',
-                            },
-                            {
-                                label: 'İhtiyaç (KMH/Diğer)',
-                                // KMH Dahil - Net = Sadece KMH kısmı
-                                data: dataPoints.map(p => convert(p.ihtiyac_toplam - p.ihtiyac_net)),
-                                backgroundColor: '#74b9ff',
-                                stack: 'Stack 0',
-                            },
+                            { label: 'İhtiyaç (Net)', data: dataPoints.map(p => convert(p.ihtiyac_net)), backgroundColor: '#0984e3', stack: 'Stack 0' },
+                            { label: 'KMH Farkı', data: dataPoints.map(p => convert(p.ihtiyac_toplam - p.ihtiyac_net)), backgroundColor: '#74b9ff', stack: 'Stack 0' },
 
-                            // 2. TİCARİ (Net + Diğer)
-                            {
-                                label: 'Ticari (Kredi Kartsız)',
-                                data: dataPoints.map(p => convert(p.ticari_net)),
-                                backgroundColor: '#d63031',
-                                stack: 'Stack 1',
-                            },
-                            {
-                                label: 'Ticari (Diğer)',
-                                data: dataPoints.map(p => convert(p.ticari_toplam - p.ticari_net)),
-                                backgroundColor: '#ff7675',
-                                stack: 'Stack 1',
-                            },
+                            { label: 'Ticari (Kredi Kartsız)', data: dataPoints.map(p => convert(p.ticari_net)), backgroundColor: '#d63031', stack: 'Stack 1' },
+                            { label: 'Ticari Diğer', data: dataPoints.map(p => convert(p.ticari_toplam - p.ticari_net)), backgroundColor: '#ff7675', stack: 'Stack 1' },
 
-                            // 3. KONUT
-                            {
-                                label: 'Konut',
-                                data: dataPoints.map(p => convert(p.konut)),
-                                backgroundColor: '#fdcb6e',
-                                stack: 'Stack 2',
-                            },
+                            { label: 'Konut', data: dataPoints.map(p => convert(p.konut)), backgroundColor: '#fdcb6e', stack: 'Stack 2' },
+                            
+                            { label: 'Taşıt', data: dataPoints.map(p => convert(p.tasit)), backgroundColor: '#e17055', stack: 'Stack 3' },
 
-                            // 4. TAŞIT
-                            {
-                                label: 'Taşıt',
-                                data: dataPoints.map(p => convert(p.tasit)),
-                                backgroundColor: '#e17055',
-                                stack: 'Stack 3',
-                            },
-
-                            // 5. 1 AY VADELİ MEVDUAT
-                            {
-                                label: '1 Ay Vadeli Mev.',
-                                data: dataPoints.map(p => convert(p.mev_1ay)),
-                                backgroundColor: '#00b894',
-                                stack: 'Stack 4',
-                            },
-
-                            // 6. 3 AY VADELİ MEVDUAT
-                            {
-                                label: '3 Ay Vadeli Mev.',
-                                data: dataPoints.map(p => convert(p.mev_3ay)),
-                                backgroundColor: '#00cec9',
-                                stack: 'Stack 5',
-                            },
-
-                            // 7. TOPLAM MEVDUAT
-                            {
-                                label: 'Toplam Mevduat',
-                                data: dataPoints.map(p => convert(p.mev_toplam)),
-                                backgroundColor: '#636e72',
-                                stack: 'Stack 6',
-                            },
+                            { label: '1 Ay Vadeli Mev.', data: dataPoints.map(p => convert(p.mev_1ay)), backgroundColor: '#00b894', stack: 'Stack 4' },
+                            { label: '3 Ay Vadeli Mev.', data: dataPoints.map(p => convert(p.mev_3ay)), backgroundColor: '#00cec9', stack: 'Stack 5' },
+                            { label: 'Toplam Mevduat', data: dataPoints.map(p => convert(p.mev_toplam)), backgroundColor: '#636e72', stack: 'Stack 6' },
                         ]
                     },
                     options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        interaction: {
-                            mode: 'index',
-                            intersect: false,
-                        },
+                        responsive: true, maintainAspectRatio: false,
+                        interaction: { mode: 'nearest', intersect: false },
                         plugins: {
                             tooltip: {
-                                callbacks: {
-                                    label: function(context) {
-                                        let label = context.dataset.label || '';
-                                        if (label) {
-                                            label += ': ';
-                                        }
-                                        if (context.parsed.y !== null) {
-                                            label += context.parsed.y.toFixed(1) + ' Mr₺';
-                                        }
-                                        return label;
-                                    }
-                                }
+                                callbacks: { label: function(c) { return c.dataset.label + ': ' + Number(c.raw).toLocaleString('tr-TR'); } }
                             },
-                            legend: {
-                                position: 'bottom',
-                                labels: { boxWidth: 12, font: { size: 11 } }
-                            },
-                            title: {
-                                display: true,
-                                text: '3 Dönem Karşılaştırması (2025 Sonu vs Önceki Hafta vs Güncel)'
-                            }
+                            title: { display: true, text: 'Kredi ve Mevduat Hacmi Gelişimi' }
                         },
-                        scales: {
-                            x: {
-                                title: { display: true, text: 'Dönemler' }
-                            },
-                            y: {
-                                title: { display: true, text: 'Milyar TL' },
-                                beginAtZero: true
-                            }
-                        }
+                        scales: { y: { title: { display: true, text: 'Bin TL' }, beginAtZero: true } }
                     }
                 });
             }
         }
-    }).catch(e => console.error("Veri okuma hatası:", e));
+
+    }).catch(e => console.error("Veri hatası:", e));
 </script>
 
 </body>
