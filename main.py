@@ -647,8 +647,6 @@ meta_data = {
     "eurocpi": get_update_date("eurocpi", locals().get('eurocpi_list', [])),
     "gsyh_oncu": get_update_date("gsyh_oncu", locals().get('oncu_gostergeler_list', [])),
     "banka": get_update_date("banka", banka_list),
-    "yp": get_update_date("yp", yp_list)  
-    "banka": get_update_date("banka", banka_list),
     "yp": get_update_date("yp", yp_list),
     "para_arzi": get_update_date("para_arzi", para_arzi_list) # <--- YENİ
 }
@@ -670,8 +668,6 @@ final_data = {
     "ecb": locals().get('ecb_list', []),
     "eurocpi": locals().get('eurocpi_list', []),
     "gsyh_oncu": locals().get('oncu_gostergeler_list', []),
-    "banka": banka_list,
-    "yp": yp_list
     "banka": banka_list,
     "yp": yp_list,
     "para_arzi": para_arzi_list # <--- YENİ
