@@ -392,12 +392,14 @@
     </div> 
     
     <div id="tab5" class="tab-content">
-        <div class="row-grid" style="grid-template-columns: 1fr 1fr;"> <div class="card" id="card-banka" onclick="togglePanel('panel-banka', this)">
+        <div class="row-grid" style="grid-template-columns: repeat(3, 1fr);"> 
+            
+            <div class="card" id="card-banka" onclick="togglePanel('panel-banka', this)">
                 <div class="card-header">
                     <h3 class="card-title">TL Kredi ve Mevduat</h3>
                     <span class="card-date" id="d-banka">...</span>
                 </div>
-                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0; gap: 10px;">
+                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0; gap: 5px;">
                     <div>
                         <div class="metric"><span class="metric-label">İhtiyaç (TL):</span><span class="metric-value" id="v-bnk-iht">...</span></div>
                         <div class="metric"><span class="metric-label">Konut (TL):</span><span class="metric-value" id="v-bnk-kon">...</span></div>
@@ -415,7 +417,7 @@
                     <h3 class="card-title">YP Kredi ve Mevduat</h3>
                     <span class="card-date" id="d-yp">...</span>
                 </div>
-                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0; gap: 10px;">
+                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0; gap: 5px;">
                     <div>
                         <div class="metric"><span class="metric-label">Ticari (EUR):</span><span class="metric-value" id="v-yp-tic-eur">...</span></div>
                         <div class="metric"><span class="metric-label">Ticari (USD):</span><span class="metric-value" id="v-yp-tic-usd">...</span></div>
@@ -426,6 +428,20 @@
                     </div>
                 </div>
                 <div class="hint">Döviz Faiz Grafiği ▼</div>
+            </div>
+
+            <div class="card" id="card-m3" onclick="togglePanel('panel-m3', this)">
+                <div class="card-header">
+                    <h3 class="card-title">Para Arzı (Yıllık Değ.)</h3>
+                    <span class="card-date" id="d-m3">...</span>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:5px;">
+                    <div class="metric"><span class="metric-label">M3 (Geniş Para):</span><span class="metric-value" id="v-m3-val">...</span></div>
+                    <div class="metric"><span class="metric-label">Vadesiz Mev. (TL):</span><span class="metric-value" id="v-m3-vadesiz">...</span></div>
+                    <div class="metric"><span class="metric-label">Vadeli Mev. (TL):</span><span class="metric-value" id="v-m3-vadeli">...</span></div>
+                    <div class="metric"><span class="metric-label">Para Piy. Fonları:</span><span class="metric-value" id="v-m3-ppf">...</span></div>
+                </div>
+                <div class="hint">M3 Trend Grafiği (5 Yıl) ▼</div>
             </div>
 
         </div>
@@ -453,6 +469,19 @@
                 </div>
             </div>
         </div>
+
+        <div id="panel-m3" class="full-panel-container">
+            <div class="panel-content">
+                <div class="panel-top">
+                    <span class="panel-title">M3 Para Arzı Gelişimi (5 Yıl)</span>
+                    <span class="close-btn" onclick="closeAllPanels()">X KAPAT</span>
+                </div>
+                <div class="big-chart-box" style="height: 450px;">
+                    <canvas id="ch-m3"></canvas>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 <script>
@@ -1076,6 +1105,116 @@
                         },
                         scales: { 
                             y: { title: { display: false }, beginAtZero: true } 
+                        }
+                    }
+                });
+            }
+        }
+
+        // ... (Yukarıdaki YP kodları) ...
+
+        // ===============================================
+        // 15. PARA ARZI (M3) - YENİ
+        // ===============================================
+        if (d.para_arzi && d.para_arzi.length > 0) {
+            const son = d.para_arzi[d.para_arzi.length - 1];
+            
+            // Tarih yaz
+            if (document.getElementById('d-m3')) document.getElementById('d-m3').innerText = son.tarih;
+
+            // --- YILLIK DEĞİŞİM HESAPLAMA ---
+            // Veri setinde geriye gidip 1 yıl öncesini bulmaya çalışacağız.
+            // EVDS tarih formatı: dd-mm-yyyy.
+            // Basit yöntem: İndex bazlı (haftalık veri olduğu için approx 52 hafta geri).
+            // Daha sağlam yöntem: Yıl farkına bakmak.
+            
+            let oncekiYil = null;
+            // Sondan başa doğru tarayarak 1 yıl önceki aynı ayı/günü bulmaya çalışalım
+            const parts = son.tarih.split('-'); // ["dd", "mm", "yyyy"]
+            const targetYear = parseInt(parts[2]) - 1;
+            const targetMonth = parts[1];
+            
+            // Yaklaşık eşleşme için döngü
+            for (let i = d.para_arzi.length - 2; i >= 0; i--) {
+                const pDate = d.para_arzi[i].tarih.split('-');
+                if (parseInt(pDate[2]) === targetYear && pDate[1] === targetMonth) {
+                    oncekiYil = d.para_arzi[i];
+                    break; // İlk bulduğumuzu (ayın son verisi olabilir) alalım
+                }
+            }
+
+            // Yardımcı Fonk: Yıllık Değişim Hesapla
+            const calcYoY = (curr, prev) => {
+                if (!prev || prev === 0) return "...";
+                const change = ((curr - prev) / prev) * 100;
+                return "%" + change.toFixed(1);
+            };
+
+            // Kart Verilerini Doldur (Yıllık Değişimler)
+            if (oncekiYil) {
+                if (document.getElementById('v-m3-val')) 
+                    document.getElementById('v-m3-val').innerHTML = calcYoY(son.m3, oncekiYil.m3) + getTrend(son.m3, oncekiYil.m3);
+                
+                if (document.getElementById('v-m3-vadesiz')) 
+                    document.getElementById('v-m3-vadesiz').innerHTML = calcYoY(son.vadesiz_tl, oncekiYil.vadesiz_tl) + getTrend(son.vadesiz_tl, oncekiYil.vadesiz_tl);
+                
+                if (document.getElementById('v-m3-vadeli')) 
+                    document.getElementById('v-m3-vadeli').innerHTML = calcYoY(son.vadeli_tl, oncekiYil.vadeli_tl) + getTrend(son.vadeli_tl, oncekiYil.vadeli_tl);
+                
+                if (document.getElementById('v-m3-ppf')) 
+                    document.getElementById('v-m3-ppf').innerHTML = calcYoY(son.ppf, oncekiYil.ppf) + getTrend(son.ppf, oncekiYil.ppf);
+            }
+
+            checkFreshness(meta.para_arzi, 'card-m3');
+
+            // --- GRAFİK (Çizgi Grafik, 5 Yıl) ---
+            const ctx = document.getElementById('ch-m3');
+            if (ctx) {
+                if(Chart.getChart("ch-m3")) Chart.getChart("ch-m3").destroy();
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: d.para_arzi.map(x => x.tarih),
+                        datasets: [
+                            {
+                                label: 'M3 Para Arzı',
+                                data: d.para_arzi.map(x => x.m3 / 1000000), // Milyar TL'ye çeviriyoruz (EVDS Bin TL veriyor -> Bin/Milyon = Milyar ?? Hayır. Bin * 1000 = Milyon. Bin / 1000 = Milyon. Bin / 1000000 = Milyar)
+                                // DÜZELTME: EVDS "Bin TL" veriyor. Milyar TL görmek için 1.000.000'a bölmek lazım.
+                                // 1.000.000 Bin TL = 1 Milyar TL.
+                                borderColor: '#2d3436',
+                                backgroundColor: 'rgba(45, 52, 54, 0.1)',
+                                borderWidth: 2,
+                                pointRadius: 0, // Noktaları gizle, sadece çizgi olsun (uzun veri için daha temiz)
+                                pointHoverRadius: 4,
+                                fill: true,
+                                tension: 0.4 // Hafif kavisli çizgi
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: {
+                            tooltip: {
+                                callbacks: { 
+                                    label: function(c) { 
+                                        return c.dataset.label + ': ' + c.raw.toLocaleString('tr-TR', {maximumFractionDigits: 0}) + ' Mr₺'; 
+                                    } 
+                                }
+                            },
+                            title: { display: true, text: 'M3 Para Arzı Gelişimi (Milyar TL)' },
+                            legend: { display: false }
+                        },
+                        scales: {
+                            x: { 
+                                ticks: { maxTicksLimit: 12 } // X ekseninde çok fazla tarih yazmasın
+                            },
+                            y: { 
+                                title: { display: false },
+                                beginAtZero: false // Trendi daha iyi görmek için 0'dan başlatmıyoruz
+                            }
                         }
                     }
                 });
