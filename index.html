@@ -392,24 +392,42 @@
     </div> 
     
     <div id="tab5" class="tab-content">
-        <div class="row-grid">
-            <div class="card" id="card-banka" onclick="togglePanel('panel-banka', this)" style="grid-column: span 2;">
+        <div class="row-grid" style="grid-template-columns: 1fr 1fr;"> <div class="card" id="card-banka" onclick="togglePanel('panel-banka', this)">
                 <div class="card-header">
                     <h3 class="card-title">TL Kredi ve Mevduat</h3>
                     <span class="card-date" id="d-banka">...</span>
                 </div>
-                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0;">
+                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0; gap: 10px;">
                     <div>
                         <div class="metric"><span class="metric-label">İhtiyaç (TL):</span><span class="metric-value" id="v-bnk-iht">...</span></div>
                         <div class="metric"><span class="metric-label">Konut (TL):</span><span class="metric-value" id="v-bnk-kon">...</span></div>
                     </div>
                     <div>
                         <div class="metric"><span class="metric-label">Ticari (TL):</span><span class="metric-value" id="v-bnk-tic">...</span></div>
-                        <div class="metric"><span class="metric-label">Top. Mevduat (TL):</span><span class="metric-value" id="v-bnk-mev">...</span></div>
+                        <div class="metric"><span class="metric-label">Mevduat (TL):</span><span class="metric-value" id="v-bnk-mev">...</span></div>
                     </div>
                 </div>
-                <div class="hint">Detaylı Karşılaştırmalı Grafik ▼</div>
+                <div class="hint">TL Faiz Grafiği ▼</div>
             </div>
+
+            <div class="card" id="card-yp" onclick="togglePanel('panel-yp', this)">
+                <div class="card-header">
+                    <h3 class="card-title">YP Kredi ve Mevduat</h3>
+                    <span class="card-date" id="d-yp">...</span>
+                </div>
+                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0; gap: 10px;">
+                    <div>
+                        <div class="metric"><span class="metric-label">Ticari (EUR):</span><span class="metric-value" id="v-yp-tic-eur">...</span></div>
+                        <div class="metric"><span class="metric-label">Ticari (USD):</span><span class="metric-value" id="v-yp-tic-usd">...</span></div>
+                    </div>
+                    <div>
+                        <div class="metric"><span class="metric-label">Mevduat (EUR):</span><span class="metric-value" id="v-yp-mev-eur">...</span></div>
+                        <div class="metric"><span class="metric-label">Mevduat (USD):</span><span class="metric-value" id="v-yp-mev-usd">...</span></div>
+                    </div>
+                </div>
+                <div class="hint">Döviz Faiz Grafiği ▼</div>
+            </div>
+
         </div>
 
         <div id="panel-banka" class="full-panel-container">
@@ -420,6 +438,18 @@
                 </div>
                 <div class="big-chart-box" style="height: 450px;">
                     <canvas id="ch-banka"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="panel-yp" class="full-panel-container">
+            <div class="panel-content">
+                <div class="panel-top">
+                    <span class="panel-title">YP Ticari Krediler ve Mevduat Faiz Oranları (Akım, %)</span>
+                    <span class="close-btn" onclick="closeAllPanels()">X KAPAT</span>
+                </div>
+                <div class="big-chart-box" style="height: 450px;">
+                    <canvas id="ch-yp"></canvas>
                 </div>
             </div>
         </div>
@@ -947,6 +977,104 @@
                                 title: { display: false }, 
                                 beginAtZero: true 
                             } 
+                        }
+                    }
+                });
+            }
+
+        // ===============================================
+        // 14. YP GÖSTERGELERİ (YENİ EKLENEN KISIM)
+        // ===============================================
+        if (d.yp && d.yp.length > 0) {
+            const son = d.yp[d.yp.length - 1];
+            const onceki = d.yp.length > 1 ? d.yp[d.yp.length - 2] : null;
+
+            if (document.getElementById('d-yp')) document.getElementById('d-yp').innerText = son.tarih;
+
+            // KART VERİLERİ
+            if (document.getElementById('v-yp-tic-eur')) 
+                document.getElementById('v-yp-tic-eur').innerHTML = fmtRate(son.ticari_eur) + (onceki ? getTrend(son.ticari_eur, onceki.ticari_eur, false) : "");
+
+            if (document.getElementById('v-yp-tic-usd')) 
+                document.getElementById('v-yp-tic-usd').innerHTML = fmtRate(son.ticari_usd) + (onceki ? getTrend(son.ticari_usd, onceki.ticari_usd, false) : "");
+
+            if (document.getElementById('v-yp-mev-eur')) 
+                document.getElementById('v-yp-mev-eur').innerHTML = fmtRate(son.mev_eur) + (onceki ? getTrend(son.mev_eur, onceki.mev_eur, false) : "");
+
+            if (document.getElementById('v-yp-mev-usd')) 
+                document.getElementById('v-yp-mev-usd').innerHTML = fmtRate(son.mev_usd) + (onceki ? getTrend(son.mev_usd, onceki.mev_usd, false) : "");
+
+            checkFreshness(meta.yp, 'card-yp');
+
+            // --- GRAFİK ---
+            let idxYearEnd = 0;
+            // 2025 Sonunu bul (yoksa en başı al)
+            for (let i = d.yp.length - 1; i >= 0; i--) {
+                if (d.yp[i].tarih.includes("2025")) {
+                    idxYearEnd = i;
+                    break;
+                }
+            }
+            
+            const dataPoints = [d.yp[idxYearEnd], d.yp[d.yp.length-2], d.yp[d.yp.length-1]];
+            const labels = ["2025 Sonu", "Önceki Hafta", "Güncel (" + dataPoints[2].tarih + ")"];
+            
+            // Veri Dönüştürücü (Direkt al)
+            const convert = (val) => val ? val : 0;
+
+            const ctx = document.getElementById('ch-yp');
+            if (ctx) {
+                if(Chart.getChart("ch-yp")) Chart.getChart("ch-yp").destroy();
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            // EURO GRUBU
+                            { 
+                                label: 'Ticari Kredi (EUR)', 
+                                data: dataPoints.map(p => convert(p.ticari_eur)), 
+                                backgroundColor: '#0984e3', // Mavi
+                                borderColor: '#0984e3',
+                                borderWidth: 1
+                            },
+                            { 
+                                label: 'Mevduat (EUR)', 
+                                data: dataPoints.map(p => convert(p.mev_eur)), 
+                                backgroundColor: '#74b9ff', // Açık Mavi
+                                borderColor: '#74b9ff',
+                                borderWidth: 1
+                            },
+                            
+                            // USD GRUBU
+                            { 
+                                label: 'Ticari Kredi (USD)', 
+                                data: dataPoints.map(p => convert(p.ticari_usd)), 
+                                backgroundColor: '#00b894', // Yeşil
+                                borderColor: '#00b894',
+                                borderWidth: 1
+                            },
+                            { 
+                                label: 'Mevduat (USD)', 
+                                data: dataPoints.map(p => convert(p.mev_usd)), 
+                                backgroundColor: '#55efc4', // Açık Yeşil
+                                borderColor: '#55efc4',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false }, // Gruplu hover
+                        plugins: {
+                            tooltip: {
+                                callbacks: { label: function(c) { return c.dataset.label + ': %' + Number(c.raw).toLocaleString('tr-TR', {minimumFractionDigits: 2}); } }
+                            },
+                            title: { display: true, text: 'YP Ticari Kredi ve Mevduat Oranları (Akım, %)' }
+                        },
+                        scales: { 
+                            y: { title: { display: false }, beginAtZero: true } 
                         }
                     }
                 });
