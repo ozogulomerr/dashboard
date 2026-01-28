@@ -565,7 +565,43 @@ if yp_raw:
                         "mev_usd": mev_usd
                     })
             except ValueError: continue
-                
+
+# ==========================================
+# 5. PARA ARZI (M3 ve Kalemleri) - YENİ
+# ==========================================
+para_arzi_list = []
+# TP.HPBITABLO1.18: M3
+# TP.HPBITABLO1.4: Vadesiz Mevduat (TL)
+# TP.HPBITABLO1.12: Vadeli Mevduat (TL)
+# TP.HPBITABLO1.20: Para Piyasası Fonları
+m3_codes = "TP.HPBITABLO1.18-TP.HPBITABLO1.4-TP.HPBITABLO1.12-TP.HPBITABLO1.20"
+m3_raw = veri_cek_evds(m3_codes)
+
+if m3_raw:
+    for item in m3_raw:
+        tarih = item["Tarih"]
+        # Grafik için 5 yıl istendiği için 2021 ve sonrasını alıyoruz
+        # (Global START_DATE zaten 2021-01-01 idi, filtreye gerek yok ama kontrol iyidir)
+        yil = tarih.split("-")[2] if "-" in tarih else "2000"
+        
+        if int(yil) >= 2021:
+            try:
+                # Veriler Bin TL gelir
+                m3 = float(item.get("TP_HPBITABLO1_18") or 0)
+                vadesiz_tl = float(item.get("TP_HPBITABLO1_4") or 0)
+                vadeli_tl = float(item.get("TP_HPBITABLO1_12") or 0)
+                ppf = float(item.get("TP_HPBITABLO1_20") or 0)
+
+                if m3 > 0:
+                    para_arzi_list.append({
+                        "tarih": tarih,
+                        "m3": m3,
+                        "vadesiz_tl": vadesiz_tl,
+                        "vadeli_tl": vadeli_tl,
+                        "ppf": ppf
+                    })
+            except ValueError: continue
+
 # ==========================================
 # KAYDET VE META VERİ (GÜNCELLEME TARİHİ) OLUŞTUR
 # ==========================================
@@ -611,7 +647,10 @@ meta_data = {
     "eurocpi": get_update_date("eurocpi", locals().get('eurocpi_list', [])),
     "gsyh_oncu": get_update_date("gsyh_oncu", locals().get('oncu_gostergeler_list', [])),
     "banka": get_update_date("banka", banka_list),
-    "yp": get_update_date("yp", yp_list)  # <--- YENİ
+    "yp": get_update_date("yp", yp_list)  
+    "banka": get_update_date("banka", banka_list),
+    "yp": get_update_date("yp", yp_list),
+    "para_arzi": get_update_date("para_arzi", para_arzi_list) # <--- YENİ
 }
 
 final_data = {
@@ -632,7 +671,10 @@ final_data = {
     "eurocpi": locals().get('eurocpi_list', []),
     "gsyh_oncu": locals().get('oncu_gostergeler_list', []),
     "banka": banka_list,
-    "yp": yp_list # <--- YENİ
+    "yp": yp_list
+    "banka": banka_list,
+    "yp": yp_list,
+    "para_arzi": para_arzi_list # <--- YENİ
 }
 
 def sanitize_json(obj):
