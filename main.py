@@ -490,50 +490,35 @@ if not df_eu.empty and 'DATE' in df_eu.columns:
                 "yillik": round(r["YoY"],1)
             })
 
-# ... (Üst kısımdaki importlar ve veri çekme işlemleri AYNI kalacak) ...
+# ==========================================
+# 4. PARA VE BANKA (GÜNCELLENDİ: TL ve YP)
+# ==========================================
 
-# ==========================================
-# 4. PARA VE BANKA (YENİ EKLENEN KISIM)
-# ==========================================
+# --- A) TL VERİLERİ ---
 banka_list = []
-# İstenen Kodlar:
-# TP.KTF10: İhtiyaç (Net)
-# TP.KTF101: İhtiyaç (KMH Dahil)
-# TP.KTF11: Taşıt
-# TP.KTF12: Konut
-# TP.KTF17: Ticari (Genel)
-# TP.KTF18: Ticari (Tüzel KMH/Kart Hariç) -> "Net" olarak kullanacağız
-# TP.TRY.MT01: 1 Ay Mevduat
-# TP.TRY.MT02: 3 Ay Mevduat
-# TP.TRY.MT06: Toplam Mevduat
-
-# Not: EVDS tek seferde çok fazla seriyi bazen vermeyebilir, ancak bu sayı (9) makul.
 banka_codes = "TP.KTF10-TP.KTF101-TP.KTF11-TP.KTF12-TP.KTF17-TP.KTF18-TP.TRY.MT01-TP.TRY.MT02-TP.TRY.MT06"
 banka_raw = veri_cek_evds(banka_codes)
 
 if banka_raw:
     for item in banka_raw:
-        # Tarih filtresi: Sadece 2023 ve sonrası (Veri boyutunu küçültmek için)
         tarih = item["Tarih"]
-        yil = tarih.split("-")[2] if "-" in tarih else "2000" # EVDS dd-mm-yyyy gönderiyor
+        yil = tarih.split("-")[2] if "-" in tarih else "2000"
         
         if int(yil) >= 2023:
-            # Verileri güvenli floata çevir (Bin TL cinsinden gelir genelde)
             try:
-                # Krediler
+                # Krediler (Akım Faiz Oranları)
                 ihtiyac_net = float(item.get("TP_KTF10") or 0)
                 ihtiyac_kmh_dahil = float(item.get("TP_KTF101") or 0)
                 tasit = float(item.get("TP_KTF11") or 0)
                 konut = float(item.get("TP_KTF12") or 0)
                 ticari_genel = float(item.get("TP_KTF17") or 0)
-                ticari_net = float(item.get("TP_KTF18") or 0) # KMH/Kart Hariç
+                ticari_net = float(item.get("TP_KTF18") or 0)
                 
-                # Mevduatlar
+                # Mevduatlar (Akım Faiz Oranları)
                 mev_1ay = float(item.get("TP_TRY_MT01") or 0)
                 mev_3ay = float(item.get("TP_TRY_MT02") or 0)
                 mev_toplam = float(item.get("TP_TRY_MT06") or 0)
 
-                # Sıfır olan satırları atlamayalım, grafik kopuk olmasın ama hepsi 0 ise gereksizdir.
                 if (ihtiyac_net + ticari_genel + mev_toplam) > 0:
                     banka_list.append({
                         "tarih": tarih,
@@ -547,9 +532,40 @@ if banka_raw:
                         "mev_3ay": mev_3ay,
                         "mev_toplam": mev_toplam
                     })
-            except ValueError:
-                continue
+            except ValueError: continue
 
+# --- B) YP VERİLERİ (YENİ EKLENEN KISIM) ---
+yp_list = []
+# TP.KTF17.EUR : Ticari Krediler (Euro) 
+# TP.KTF17.USD: Ticari Krediler (ABD doları) 
+# TP.EUR.MT06: Toplam (Euro Mevduat)
+# TP.USD.MT06: Toplam (ABD doları Mevduat)
+# Not: EVDS json keylerinde noktalar alt çizgiye dönüşür.
+yp_codes = "TP.KTF17.EUR-TP.KTF17.USD-TP.EUR.MT06-TP.USD.MT06"
+yp_raw = veri_cek_evds(yp_codes)
+
+if yp_raw:
+    for item in yp_raw:
+        tarih = item["Tarih"]
+        yil = tarih.split("-")[2] if "-" in tarih else "2000"
+        
+        if int(yil) >= 2023:
+            try:
+                ticari_eur = float(item.get("TP_KTF17_EUR") or 0)
+                ticari_usd = float(item.get("TP_KTF17_USD") or 0)
+                mev_eur = float(item.get("TP_EUR_MT06") or 0)
+                mev_usd = float(item.get("TP_USD_MT06") or 0)
+
+                if (ticari_eur + ticari_usd + mev_eur + mev_usd) > 0:
+                    yp_list.append({
+                        "tarih": tarih,
+                        "ticari_eur": ticari_eur,
+                        "ticari_usd": ticari_usd,
+                        "mev_eur": mev_eur,
+                        "mev_usd": mev_usd
+                    })
+            except ValueError: continue
+                
 # ==========================================
 # KAYDET VE META VERİ (GÜNCELLEME TARİHİ) OLUŞTUR
 # ==========================================
@@ -578,7 +594,7 @@ def get_update_date(key_name, new_list):
 
 # Meta Data
 meta_data = {
-    # ... Mevcut olanlar ...
+    # ... (Diğerleri aynı) ...
     "gsyh": get_update_date("gsyh", locals().get('gsyh_list', [])),
     "tufe": get_update_date("tufe", locals().get('tufe_list', [])),
     "ufe": get_update_date("ufe", locals().get('ufe_list', [])),
@@ -594,8 +610,8 @@ meta_data = {
     "ecb": get_update_date("ecb", locals().get('ecb_list', [])),
     "eurocpi": get_update_date("eurocpi", locals().get('eurocpi_list', [])),
     "gsyh_oncu": get_update_date("gsyh_oncu", locals().get('oncu_gostergeler_list', [])),
-    # YENİ
-    "banka": get_update_date("banka", banka_list)
+    "banka": get_update_date("banka", banka_list),
+    "yp": get_update_date("yp", yp_list)  # <--- YENİ
 }
 
 final_data = {
@@ -615,8 +631,8 @@ final_data = {
     "ecb": locals().get('ecb_list', []),
     "eurocpi": locals().get('eurocpi_list', []),
     "gsyh_oncu": locals().get('oncu_gostergeler_list', []),
-    # YENİ
-    "banka": banka_list
+    "banka": banka_list,
+    "yp": yp_list # <--- YENİ
 }
 
 def sanitize_json(obj):
