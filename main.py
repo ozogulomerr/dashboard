@@ -7,14 +7,11 @@ import math
 from datetime import datetime
 
 # --- AYARLAR ---
-# API Key'i GitHub Secrets'tan alacağız, eğer bulamazsa (lokalde çalışırken) senin yazdığını kullanır.
 API_KEY = os.environ.get("EVDS_API_KEY", "eEojQT7PgD") 
 START_DATE = "01-01-2021"
-# Bitiş tarihini dinamik yapmak daha iyidir, her gün güncelleneceği için bugünün tarihini alabiliriz.
-# Ama senin formatın sabitse böyle de kalabilir.
 END_DATE = datetime.now().strftime("%d-%m-%Y")
 
-# EXCEL DOSYA YOLLARI (Direkt ana dizinden okuyacak)
+# EXCEL DOSYA YOLLARI
 PATH_BUTCE = "butce.xlsx"
 PATH_NAKIT = "Nakit Dengesi.xlsx"
 PATH_ATIL = "atılisgucu.xlsx"
@@ -26,11 +23,21 @@ requests.packages.urllib3.disable_warnings()
 
 # --- YARDIMCI FONKSİYONLAR ---
 def clean_nan(value):
-    """NaN değerleri None (null) yapar, böylece JSON bozulmaz."""
     if isinstance(value, float):
         if math.isnan(value) or math.isinf(value):
             return None
     return value
+
+def get_year_from_date(date_str):
+    """DD-MM-YYYY veya YYYY-MM-DD formatından yılı integer olarak döner."""
+    try:
+        if "-" in date_str:
+            parts = date_str.split("-")
+            if len(parts[0]) == 4: return int(parts[0]) # YYYY-MM-DD
+            if len(parts[2]) == 4: return int(parts[2]) # DD-MM-YYYY
+    except:
+        return 0
+    return 0
 
 def veri_cek_evds(series_code, aylik_yap=False):
     url = f"https://evds2.tcmb.gov.tr/service/evds/series={series_code}&startDate={START_DATE}&endDate={END_DATE}&type=json"
@@ -48,11 +55,8 @@ def veri_cek_fred(series_id):
         if resp.status_code == 200:
             df = pd.read_csv(io.StringIO(resp.text))
             df.columns = [c.strip() for c in df.columns]
-            
-            # Tarih sütunu düzeltme
             if 'observation_date' in df.columns:
                 df.rename(columns={'observation_date': 'DATE'}, inplace=True)
-            
             if 'DATE' in df.columns:
                 df['DATE'] = pd.to_datetime(df['DATE'])
                 return df
@@ -72,7 +76,9 @@ if gsyh_raw:
     temp_vals = [float(x["TP_GSYIH26_IFK_ZH"]) for x in gsyh_raw if x.get("TP_GSYIH26_IFK_ZH")]
     temp_dates = [x["Tarih"] for x in gsyh_raw if x.get("TP_GSYIH26_IFK_ZH")]
     for i in range(len(temp_vals)):
-        if "2023" in temp_dates[i] or "2024" in temp_dates[i] or "2025" in temp_dates[i]:
+        # DÜZELTME: Sabit yıl kontrolü yerine >= 2023 kontrolü
+        yil = get_year_from_date(temp_dates[i])
+        if yil >= 2023:
             yillik = ((temp_vals[i] - temp_vals[i-4])/temp_vals[i-4])*100 if i>=4 else 0
             gsyh_list.append({"tarih": temp_dates[i], "yillik": round(yillik, 1)})
 
@@ -83,7 +89,8 @@ if tufe_raw:
     vals = [float(x["TP_FG_J0"]) for x in tufe_raw if x.get("TP_FG_J0")]
     dates = [x["Tarih"] for x in tufe_raw if x.get("TP_FG_J0")]
     for i in range(len(vals)):
-        if "2023" in dates[i] or "2024" in dates[i] or "2025" in dates[i]:
+        yil = get_year_from_date(dates[i])
+        if yil >= 2023:
             aylik = ((vals[i] - vals[i-1])/vals[i-1])*100 if i>0 else 0
             yillik = ((vals[i] - vals[i-12])/vals[i-12])*100 if i>=12 else 0
             tufe_list.append({"tarih": dates[i], "aylik": round(aylik, 2), "yillik": round(yillik, 2)})
@@ -95,7 +102,8 @@ if ufe_raw:
     vals = [float(x["TP_TUFE1YI_T1"]) for x in ufe_raw if x.get("TP_TUFE1YI_T1")]
     dates = [x["Tarih"] for x in ufe_raw if x.get("TP_TUFE1YI_T1")]
     for i in range(len(vals)):
-        if "2023" in dates[i] or "2024" in dates[i] or "2025" in dates[i]:
+        yil = get_year_from_date(dates[i])
+        if yil >= 2023:
             aylik = ((vals[i] - vals[i-1])/vals[i-1])*100 if i>0 else 0
             yillik = ((vals[i] - vals[i-12])/vals[i-12])*100 if i>=12 else 0
             ufe_list.append({"tarih": dates[i], "aylik": round(aylik, 2), "yillik": round(yillik, 2)})
@@ -110,8 +118,8 @@ if cari_raw:
     df_cari['Cari_Yillik'] = df_cari['TP_HARICCARIACIK_K1'].rolling(window=12).sum()
     df_cari['Cekirdek_Yillik'] = df_cari['TP_HARICCARIACIK_K10'].rolling(window=12).sum()
     for _, row in df_cari.iterrows():
-        yil = row["Tarih"].split("-")[0]
-        if int(yil) >= 2023 and pd.notnull(row['Cari_Yillik']):
+        yil = get_year_from_date(row["Tarih"])
+        if yil >= 2023 and pd.notnull(row['Cari_Yillik']):
             cari_list.append({
                 "tarih": row["Tarih"],
                 "cari_aylik": int(row["TP_HARICCARIACIK_K1"]),
@@ -129,7 +137,8 @@ if os.path.exists(PATH_BUTCE):
         for _, row in df.iterrows():
             tarih = str(row["Tarih"])
             if isinstance(row["Tarih"], pd.Timestamp): tarih = row["Tarih"].strftime('%d-%m-%Y')
-            if "2023" in tarih or "2024" in tarih or "2025" in tarih:
+            yil = get_year_from_date(tarih)
+            if yil >= 2023:
                 butce_list.append({
                     "tarih": tarih,
                     "butce_aylik": clean_nan(float(row["Bütçe Dengesi Aylık"])),
@@ -148,7 +157,8 @@ if os.path.exists(PATH_NAKIT):
         for _, row in df.iterrows():
             tarih = str(row["Tarih"])
             if isinstance(row["Tarih"], pd.Timestamp): tarih = row["Tarih"].strftime('%d-%m-%Y')
-            if "2023" in tarih or "2024" in tarih or "2025" in tarih:
+            yil = get_year_from_date(tarih)
+            if yil >= 2023:
                 nakit_list.append({
                     "tarih": tarih,
                     "nakit_aylik": clean_nan(float(row["Nakit Dengesi Aylık"])),
@@ -163,24 +173,18 @@ atıl_dict = {}
 if os.path.exists(PATH_ATIL):
     try:
         df = pd.read_excel(PATH_ATIL)
-        df.columns = [c.strip() for c in df.columns] # Column isimlerini temizle
+        df.columns = [c.strip() for c in df.columns]
         if "Tarih" in df.columns and "Atıl İşgücü" in df.columns:
             df = df.dropna(subset=["Tarih", "Atıl İşgücü"])
             for _, row in df.iterrows():
-                # Tarih formatlama (YYYY-MM-DD olarak standardize ediyoruz)
                 try:
                     ts = pd.to_datetime(row["Tarih"], dayfirst=True)
                     t_str = ts.strftime('%Y-%m-%d')
-                    
                     val = float(row["Atıl İşgücü"])
-                    # Eğer oran olarak girildiyse (örn: 0.23 -> %23), 100 ile çarpıp yüzdelik yapıyoruz
-                    if val < 1.0 and val > 0:
-                        val = val * 100
-                        
+                    if val < 1.0 and val > 0: val = val * 100
                     atıl_dict[t_str] = val
                 except: pass
-    except Exception as e:
-        print(f"Excel hatası (Atıl İşgücü): {e}")
+    except: pass
 
 isgucu_list = []
 isgucu_raw = veri_cek_evds("TP.TIG08-TP.TIG06")
@@ -188,18 +192,11 @@ isgucu_raw = veri_cek_evds("TP.TIG08-TP.TIG06")
 if isgucu_raw:
     for item in isgucu_raw:
         raw_tarih = item["Tarih"]
-        
-        # EVDS tarihini parse edip formatlayalım
         try:
             dt = pd.to_datetime(raw_tarih, dayfirst=True)
             lookup_date = dt.strftime('%Y-%m-%d')
-            year = dt.year
-            
-            if year >= 2023:
-                # Sözlükten veriyi çek (Yoksa None döner)
+            if dt.year >= 2023:
                 atil_val = atıl_dict.get(lookup_date)
-                
-                # Sadece veri varsa ekle (İsteğe bağlı, EVDS verisi varsa ekleyelim, atıl boş gelebilir)
                 if item.get("TP_TIG08"):
                     isgucu_list.append({
                         "tarih": raw_tarih, 
@@ -209,207 +206,158 @@ if isgucu_raw:
                     })
         except: pass
 
-# --- H) TCMB FONLAMA (REVİZE EDİLDİ) ---
+# --- H) TCMB FONLAMA ---
 fon_list = []
-# Serileri parametre olarak tanımlayalım
-series = "TP.APIFON4-TP.BISTTLREF.ORAN-TP.APIFON3"
-fon_raw = veri_cek_evds(series)
+fon_raw = veri_cek_evds("TP.APIFON4-TP.BISTTLREF.ORAN-TP.APIFON3")
 
-# Gelen veriyi Pandas DataFrame'e çevirmek işi çok kolaylaştırır
 if fon_raw:
     df_fon = pd.DataFrame(fon_raw)
-    
-    # Sütun isimlerini ve tiplerini düzeltelim
-    df_fon.rename(columns={
-        "Tarih": "tarih",
-        "TP_APIFON4": "aofm",
-        "TP_BISTTLREF_ORAN": "tlref",
-        "TP_APIFON3": "net_fonlama"
-    }, inplace=True)
-
-    # Nümerik dönüşüm (Hatalı verileri NaN yapar)
+    df_fon.rename(columns={"Tarih": "tarih", "TP_APIFON4": "aofm", "TP_BISTTLREF_ORAN": "tlref", "TP_APIFON3": "net_fonlama"}, inplace=True)
     cols_to_convert = ["aofm", "tlref", "net_fonlama"]
     for col in cols_to_convert:
         df_fon[col] = pd.to_numeric(df_fon[col], errors='coerce')
-
-    # Tarih formatını standartlaştıralım (DD-MM-YYYY -> YYYY-MM-DD)
-    # EVDS genelde DD-MM-YYYY gönderir.
-    df_fon["tarih_dt"] = pd.to_datetime(df_fon["tarih"], dayfirst=True)
-    df_fon = df_fon.sort_values("tarih_dt") # Eskiden yeniye sırala
-
-    # 2023 sonrası verileri al
-    df_fon = df_fon[df_fon["tarih_dt"].dt.year >= 2023]
-
-    # --- KRİTİK NOKTA: NULL KONTROLÜ ---
-    # Eğer bir satırda HEM aofm HEM tlref NaN (boş) ise o satırı listeye eklemeyelim.
-    # Ancak biri var biri yoksa ekleyelim (Chart.js bunu halleder).
     
-    df_fon = df_fon.dropna(subset=["aofm", "tlref"], how="all") # İkisi birden yoksa düşür
+    df_fon["tarih_dt"] = pd.to_datetime(df_fon["tarih"], dayfirst=True)
+    df_fon = df_fon.sort_values("tarih_dt")
+    # Düzeltme: Yıl >= 2023
+    df_fon = df_fon[df_fon["tarih_dt"].dt.year >= 2023]
+    df_fon = df_fon.dropna(subset=["aofm", "tlref"], how="all")
 
     for _, row in df_fon.iterrows():
-        # Veri setine NaN (None) olarak gidecek ki Chart.js boş geçsin
         aofm_val = row["aofm"] if pd.notnull(row["aofm"]) else None
         tlref_val = row["tlref"] if pd.notnull(row["tlref"]) else None
         net_val = row["net_fonlama"] if pd.notnull(row["net_fonlama"]) else 0
+        fon_list.append({"tarih": row["tarih"], "aofm": aofm_val, "tlref": tlref_val, "net_fonlama": net_val})
 
-        fon_list.append({
-            "tarih": row["tarih"], # Orijinal string tarihi koruyoruz
-            "aofm": aofm_val,
-            "tlref": tlref_val,
-            "net_fonlama": net_val
-        }) 
 # ==========================================
-# I. GSYH ÖNCÜ GÖSTERGELERİ
+# I. GSYH ÖNCÜ GÖSTERGELERİ (REVIZE EDİLDİ)
 # ==========================================
 oncu_gostergeler_list = []
 
-# --- 1. SANAYİ (EVDS'den çekilmeye devam edecek) ---
-
-# --- 2. DİĞERLERİ (Excel'den çekilecek) ---
-# Hizmet, Ticaret, Perakende, İnşaat, Sanayi
-
-excel_mapping = {
-    "Hizmet": "hizmet",
-    "Ticaret": "ticaret",
-    "Perakende": "perakende",
-    "İnşaat": "insaat",
-    "Sanayi": "sanayi"
+# Yeni Sütun İsimleri Eşleşmesi
+# JSON Key -> [Excel Başlık Prefix]
+# Excel'de "Hizmet takvim ar." ve "Hizmet mevsim ar." şeklinde olduğu varsayılmıştır.
+excel_sectors = {
+    "hizmet": "Hizmet",
+    "ticaret": "Ticaret",
+    "perakende": "Perakende",
+    "insaat": "İnşaat",
+    "sanayi": "Sanayi"
 }
 
 if os.path.exists(PATH_GSYH_ONCU):
     try:
         df_oncu = pd.read_excel(PATH_GSYH_ONCU)
+        # Sütun isimlerindeki boşlukları temizleyelim (garanti olsun)
+        df_oncu.columns = [c.strip() for c in df_oncu.columns]
         
-        # Tarih formatını garantiye al
         df_oncu["Tarih"] = pd.to_datetime(df_oncu["Tarih"])
         df_oncu = df_oncu.sort_values("Tarih").reset_index(drop=True)
         
-        # Her bir tür için işlem yap
-        for col_name, json_key in excel_mapping.items():
-            if col_name in df_oncu.columns:
+        for json_key, excel_prefix in excel_sectors.items():
+            col_takvim = f"{excel_prefix} takvim ar."
+            col_mevsim = f"{excel_prefix} mevsim ar."
+            
+            # Her iki sütun da var mı kontrol et
+            if col_takvim in df_oncu.columns and col_mevsim in df_oncu.columns:
                 temp_series = []
-                vals = df_oncu[col_name].values
+                vals_takvim = df_oncu[col_takvim].values
+                vals_mevsim = df_oncu[col_mevsim].values
                 dates = df_oncu["Tarih"].values
                 
-                for i in range(len(vals)):
+                for i in range(len(dates)):
                     current_date = pd.to_datetime(dates[i])
                     
                     if current_date.year >= 2023:
-                        # Yıllık değişim hesabı (12 ay öncesine göre)
+                        # 1. YILLIK DEĞİŞİM (Takvim ar. sütunundan, 12 ay öncesine göre)
                         if i >= 12:
-                            val_now = vals[i]
-                            val_prev = vals[i-12]
-                            if val_prev != 0:
-                                yillik_degisim = ((val_now - val_prev) / val_prev) * 100
-                            else:
-                                yillik_degisim = 0
-                        else:
-                            yillik_degisim = 0
+                            v_now = vals_takvim[i]
+                            v_prev = vals_takvim[i-12]
+                            if v_prev != 0 and pd.notnull(v_now) and pd.notnull(v_prev):
+                                yillik_degisim = ((v_now - v_prev) / v_prev) * 100
+                            else: yillik_degisim = None
+                        else: yillik_degisim = None
                         
-                        # Tarih formatını EVDS gibi yapalım (İsteğe bağlı, burada dd-mm-yyyy kullanıyorum)
+                        # 2. AYLIK DEĞİŞİM (Mevsim ar. sütunundan, 1 ay öncesine göre)
+                        if i >= 1:
+                            v_now_m = vals_mevsim[i]
+                            v_prev_m = vals_mevsim[i-1]
+                            if v_prev_m != 0 and pd.notnull(v_now_m) and pd.notnull(v_prev_m):
+                                aylik_degisim = ((v_now_m - v_prev_m) / v_prev_m) * 100
+                            else: aylik_degisim = None
+                        else: aylik_degisim = None
+                        
+                        # Veri Ekleme
                         tarih_str = current_date.strftime('%d-%m-%Y')
                         
-                        temp_series.append({
-                            "tarih": tarih_str,
-                            "deger": float(vals[i]),
-                            "yillik": round(yillik_degisim, 1)
-                        })
+                        # Eğer veriler NaN değilse listeye alalım
+                        if yillik_degisim is not None or aylik_degisim is not None:
+                            temp_series.append({
+                                "tarih": tarih_str,
+                                "yillik": round(yillik_degisim, 1) if yillik_degisim is not None else None,
+                                "aylik": round(aylik_degisim, 1) if aylik_degisim is not None else None
+                            })
                 
                 oncu_gostergeler_list.append({
                     "tur": json_key,
                     "data": temp_series
                 })
             else:
-                print(f"Uyarı: Excel dosyasında '{col_name}' sütunu bulunamadı.")
+                print(f"Uyarı: '{excel_prefix}' için gerekli sütunlar bulunamadı.")
                 
     except Exception as e:
-        print(f"GSYH Öncü Excel okuma hatası: {e}")
+        print(f"GSYH Öncü Excel hatası: {e}")
 else:
-    print(f"Hata: GSYH Öncü Excel dosyası bulunamadı: {PATH_GSYH_ONCU}")
+    print(f"Hata: Dosya yok -> {PATH_GSYH_ONCU}")
+
 # ==========================================
 # 2. İKİNCİL GÖSTERGELER
 # ==========================================
 
-# --- A) İMALAT SANAYİ PMI VERİSİNİ HAZIRLAMA ---
+# --- A) İMALAT SANAYİ PMI ---
 pmi_dict = {}
-
 if os.path.exists(PATH_PMI):
     try:
         df = pd.read_excel(PATH_PMI)
         df = df.dropna(subset=["Tarih", "İmalat Sanayi PMI"])
-        
-        # Excel'deki tarihi datetime objesine çevir
         df["Tarih"] = pd.to_datetime(df["Tarih"])
-        
         for _, row in df.iterrows():
-            # Standardize et: YYYY-MM-DD (Örn: 2023-01-01)
             t_str = row["Tarih"].strftime('%Y-%m-%d')
             pmi_dict[t_str] = float(row["İmalat Sanayi PMI"])
-        
-    except Exception as e:
-        print(f"Excel okuma hatası: {e}")
-else:
-    print("Excel dosyası bulunamadı.")
+    except: pass
 
-# --- B) EVDS VERİSİ İLE BİRLEŞTİRME (DÜZELTİLMİŞ) ---
+# --- B) KKO ve Birleştirme ---
 imalat_list = []
-
-# EVDS'den KKO verisini çekiyoruz
 kko_raw = veri_cek_evds("TP.KKO2.IS.TOP") 
-
-if 'kko_raw' in locals() and kko_raw:
+if kko_raw:
     for item in kko_raw:
         raw_tarih = item["Tarih"] 
-        
         try:
             dt_object = pd.to_datetime(raw_tarih)
             lookup_key = dt_object.strftime('%Y-%m-%d')
-            
             if dt_object.year >= 2023:
-                # 1. PMI Verisini Sözlükten Çek (Yoksa None gelir)
                 pmi_degeri = pmi_dict.get(lookup_key)
-                
-                # 2. KKO Verisini Al
                 val_kko_raw = item.get("TP_KKO2_IS_TOP")
-                
-                # 3. KONTROL: Her iki veri de MEVCUTSA ve 0'dan BÜYÜKSE listeye ekle.
-                # Böylece PMI henüz açıklanmadıysa o ayı listeye hiç almayız,
-                # grafik ve panel bir önceki (tam olan) ayda durur.
                 if pmi_degeri is not None and val_kko_raw is not None:
-                    val_kko = float(val_kko_raw)
-                    
-                    if pmi_degeri > 0 and val_kko > 0:
+                    if pmi_degeri > 0 and float(val_kko_raw) > 0:
                         imalat_list.append({
                             "tarih": lookup_key,
-                            "kko": val_kko,
+                            "kko": float(val_kko_raw),
                             "pmi": pmi_degeri
                         })
-                        
-        except Exception as err:
-            print(f"Hata ({raw_tarih}): {err}")
-else:
-    print("kko_raw verisi yok.")
+        except: pass
 
-# --- B) GÜVEN ENDEKSLERİ ---
+# --- C) GÜVEN ENDEKSLERİ ---
 guven_list = []
-# İki seriyi tek istekte çekiyoruz: Tüketici Güven ve Reel Kesim Güven
 guven_raw = veri_cek_evds("TP.TG2.Y01-TP.GY1.N2.MA")
-
 for item in guven_raw:
     tarih = item["Tarih"]
-    yil = tarih.split("-")[0]
-    
-    if int(yil) >= 2023:
-        # EVDS, JSON anahtarlarında noktaları alt çizgiye çevirir.
-        # Bu yüzden "TP.GY1.N2.MA" yerine "TP_GY1_N2_MA" kullanmalıyız.
-        
-        # Veri bazen boş string "" veya None gelebilir, güvenli dönüşüm yapalım:
+    yil = get_year_from_date(tarih)
+    if yil >= 2023:
         val_tuketici = item.get("TP_TG2_Y01")
-        val_reel = item.get("TP_GY1_N2_MA") # <--- Düzeltilen kısım (Nokta yerine Alt Çizgi)
-
+        val_reel = item.get("TP_GY1_N2_MA")
         guven_list.append({
             "tarih": tarih,
-            # Değer varsa float'a çevir, yoksa 0 ata
             "tuketici": int(float(val_tuketici)) if val_tuketici else 0,
             "reel": float(val_reel) if val_reel else 0
         })
@@ -421,14 +369,11 @@ for item in guven_raw:
 # --- FED FAİZ ---
 fed_list = []
 df_fed = veri_cek_fred("DFEDTARU") 
-df_effr = veri_cek_fred("EFFR")     
+df_effr = veri_cek_fred("EFFR")      
 df_lower = veri_cek_fred("DFEDTARL")
-
-if not df_fed.empty and not df_effr.empty and 'DATE' in df_fed.columns and 'DATE' in df_effr.columns:
+if not df_fed.empty and not df_effr.empty:
     m = pd.merge(df_fed, df_effr, on="DATE", how="inner", suffixes=('_U', '_E'))
-    if not df_lower.empty and 'DATE' in df_lower.columns:
-        m = pd.merge(m, df_lower, on="DATE", how="inner")
-    
+    if not df_lower.empty: m = pd.merge(m, df_lower, on="DATE", how="inner")
     m = m[m['DATE'].dt.year >= 2023]
     for _, r in m.iterrows():
         if len(r) >= 4:
@@ -442,7 +387,7 @@ if not df_fed.empty and not df_effr.empty and 'DATE' in df_fed.columns and 'DATE
 # --- ABD TÜFE ---
 uscpi_list = []
 df_uscpi = veri_cek_fred("CPIAUCSL")
-if not df_uscpi.empty and 'DATE' in df_uscpi.columns:
+if not df_uscpi.empty:
     col_name = df_uscpi.columns[1]
     df_uscpi['MoM'] = df_uscpi[col_name].pct_change(1)*100
     df_uscpi['YoY'] = df_uscpi[col_name].pct_change(12)*100
@@ -477,7 +422,7 @@ if not df1.empty and not df2.empty and not df3.empty:
 # --- EURO TÜFE ---
 eurocpi_list = []
 df_eu = veri_cek_fred("CP0000EZ19M086NEST")
-if not df_eu.empty and 'DATE' in df_eu.columns:
+if not df_eu.empty:
     col_name = df_eu.columns[1]
     df_eu['MoM'] = df_eu[col_name].pct_change(1)*100
     df_eu['YoY'] = df_eu[col_name].pct_change(12)*100
@@ -491,122 +436,76 @@ if not df_eu.empty and 'DATE' in df_eu.columns:
             })
 
 # ==========================================
-# 4. PARA VE BANKA (GÜNCELLENDİ: TL ve YP)
+# 4. PARA VE BANKA
 # ==========================================
-
-# --- A) TL VERİLERİ ---
 banka_list = []
-banka_codes = "TP.KTF10-TP.KTF101-TP.KTF11-TP.KTF12-TP.KTF17-TP.KTF18-TP.TRY.MT01-TP.TRY.MT02-TP.TRY.MT06"
-banka_raw = veri_cek_evds(banka_codes)
-
+banka_raw = veri_cek_evds("TP.KTF10-TP.KTF101-TP.KTF11-TP.KTF12-TP.KTF17-TP.KTF18-TP.TRY.MT01-TP.TRY.MT02-TP.TRY.MT06")
 if banka_raw:
     for item in banka_raw:
         tarih = item["Tarih"]
-        yil = tarih.split("-")[2] if "-" in tarih else "2000"
-        
-        if int(yil) >= 2023:
+        yil = get_year_from_date(tarih)
+        if yil >= 2023:
             try:
-                # Krediler (Akım Faiz Oranları)
                 ihtiyac_net = float(item.get("TP_KTF10") or 0)
                 ihtiyac_kmh_dahil = float(item.get("TP_KTF101") or 0)
                 tasit = float(item.get("TP_KTF11") or 0)
                 konut = float(item.get("TP_KTF12") or 0)
                 ticari_genel = float(item.get("TP_KTF17") or 0)
                 ticari_net = float(item.get("TP_KTF18") or 0)
-                
-                # Mevduatlar (Akım Faiz Oranları)
                 mev_1ay = float(item.get("TP_TRY_MT01") or 0)
                 mev_3ay = float(item.get("TP_TRY_MT02") or 0)
                 mev_toplam = float(item.get("TP_TRY_MT06") or 0)
-
                 if (ihtiyac_net + ticari_genel + mev_toplam) > 0:
                     banka_list.append({
                         "tarih": tarih,
-                        "ihtiyac_net": ihtiyac_net,
-                        "ihtiyac_toplam": ihtiyac_kmh_dahil,
-                        "tasit": tasit,
-                        "konut": konut,
-                        "ticari_toplam": ticari_genel,
-                        "ticari_net": ticari_net,
-                        "mev_1ay": mev_1ay,
-                        "mev_3ay": mev_3ay,
-                        "mev_toplam": mev_toplam
+                        "ihtiyac_net": ihtiyac_net, "ihtiyac_toplam": ihtiyac_kmh_dahil,
+                        "tasit": tasit, "konut": konut,
+                        "ticari_toplam": ticari_genel, "ticari_net": ticari_net,
+                        "mev_1ay": mev_1ay, "mev_3ay": mev_3ay, "mev_toplam": mev_toplam
                     })
-            except ValueError: continue
+            except: continue
 
-# --- B) YP VERİLERİ (YENİ EKLENEN KISIM) ---
 yp_list = []
-# TP.KTF17.EUR : Ticari Krediler (Euro) 
-# TP.KTF17.USD: Ticari Krediler (ABD doları) 
-# TP.EUR.MT06: Toplam (Euro Mevduat)
-# TP.USD.MT06: Toplam (ABD doları Mevduat)
-# Not: EVDS json keylerinde noktalar alt çizgiye dönüşür.
-yp_codes = "TP.KTF17.EUR-TP.KTF17.USD-TP.EUR.MT06-TP.USD.MT06"
-yp_raw = veri_cek_evds(yp_codes)
-
+yp_raw = veri_cek_evds("TP.KTF17.EUR-TP.KTF17.USD-TP.EUR.MT06-TP.USD.MT06")
 if yp_raw:
     for item in yp_raw:
         tarih = item["Tarih"]
-        yil = tarih.split("-")[2] if "-" in tarih else "2000"
-        
-        if int(yil) >= 2023:
+        yil = get_year_from_date(tarih)
+        if yil >= 2023:
             try:
                 ticari_eur = float(item.get("TP_KTF17_EUR") or 0)
                 ticari_usd = float(item.get("TP_KTF17_USD") or 0)
                 mev_eur = float(item.get("TP_EUR_MT06") or 0)
                 mev_usd = float(item.get("TP_USD_MT06") or 0)
-
                 if (ticari_eur + ticari_usd + mev_eur + mev_usd) > 0:
                     yp_list.append({
-                        "tarih": tarih,
-                        "ticari_eur": ticari_eur,
-                        "ticari_usd": ticari_usd,
-                        "mev_eur": mev_eur,
-                        "mev_usd": mev_usd
+                        "tarih": tarih, "ticari_eur": ticari_eur, "ticari_usd": ticari_usd,
+                        "mev_eur": mev_eur, "mev_usd": mev_usd
                     })
-            except ValueError: continue
+            except: continue
 
-# ==========================================
-# 5. PARA ARZI (M3 ve Kalemleri) - YENİ
-# ==========================================
 para_arzi_list = []
-# TP.HPBITABLO1.18: M3
-# TP.HPBITABLO1.4: Vadesiz Mevduat (TL)
-# TP.HPBITABLO1.12: Vadeli Mevduat (TL)
-# TP.HPBITABLO1.20: Para Piyasası Fonları
-m3_codes = "TP.HPBITABLO1.18-TP.HPBITABLO1.4-TP.HPBITABLO1.12-TP.HPBITABLO1.20"
-m3_raw = veri_cek_evds(m3_codes)
-
+m3_raw = veri_cek_evds("TP.HPBITABLO1.18-TP.HPBITABLO1.4-TP.HPBITABLO1.12-TP.HPBITABLO1.20")
 if m3_raw:
     for item in m3_raw:
         tarih = item["Tarih"]
-        # Grafik için 5 yıl istendiği için 2021 ve sonrasını alıyoruz
-        # (Global START_DATE zaten 2021-01-01 idi, filtreye gerek yok ama kontrol iyidir)
-        yil = tarih.split("-")[2] if "-" in tarih else "2000"
-        
-        if int(yil) >= 2021:
+        yil = get_year_from_date(tarih)
+        if yil >= 2021:
             try:
-                # Veriler Bin TL gelir
                 m3 = float(item.get("TP_HPBITABLO1_18") or 0)
                 vadesiz_tl = float(item.get("TP_HPBITABLO1_4") or 0)
                 vadeli_tl = float(item.get("TP_HPBITABLO1_12") or 0)
                 ppf = float(item.get("TP_HPBITABLO1_20") or 0)
-
                 if m3 > 0:
                     para_arzi_list.append({
-                        "tarih": tarih,
-                        "m3": m3,
-                        "vadesiz_tl": vadesiz_tl,
-                        "vadeli_tl": vadeli_tl,
-                        "ppf": ppf
+                        "tarih": tarih, "m3": m3, "vadesiz_tl": vadesiz_tl,
+                        "vadeli_tl": vadeli_tl, "ppf": ppf
                     })
-            except ValueError: continue
+            except: continue
 
 # ==========================================
-# KAYDET VE META VERİ (GÜNCELLEME TARİHİ) OLUŞTUR
+# KAYDET
 # ==========================================
-
-# 1. Eski veriyi oku (Kıyaslama yapmak için)
 eski_veri = {}
 eski_meta = {}
 if os.path.exists('veri.json'):
@@ -628,49 +527,47 @@ def get_update_date(key_name, new_list):
         else: return eski_meta.get(key_name, bugun_str)
     except: return bugun_str
 
-# Meta Data
 meta_data = {
-    # ... (Diğerleri aynı) ...
-    "gsyh": get_update_date("gsyh", locals().get('gsyh_list', [])),
-    "tufe": get_update_date("tufe", locals().get('tufe_list', [])),
-    "ufe": get_update_date("ufe", locals().get('ufe_list', [])),
-    "cari": get_update_date("cari", locals().get('cari_list', [])),
-    "butce": get_update_date("butce", locals().get('butce_list', [])),
-    "nakit": get_update_date("nakit", locals().get('nakit_list', [])),
-    "isgucu": get_update_date("isgucu", locals().get('isgucu_list', [])),
-    "fonlama": get_update_date("fonlama", locals().get('fon_list', [])),
-    "imalat": get_update_date("imalat", locals().get('imalat_list', [])),
-    "guven": get_update_date("guven", locals().get('guven_list', [])),
-    "fed": get_update_date("fed", locals().get('fed_list', [])),
-    "uscpi": get_update_date("uscpi", locals().get('uscpi_list', [])),
-    "ecb": get_update_date("ecb", locals().get('ecb_list', [])),
-    "eurocpi": get_update_date("eurocpi", locals().get('eurocpi_list', [])),
-    "gsyh_oncu": get_update_date("gsyh_oncu", locals().get('oncu_gostergeler_list', [])),
+    "gsyh": get_update_date("gsyh", gsyh_list),
+    "tufe": get_update_date("tufe", tufe_list),
+    "ufe": get_update_date("ufe", ufe_list),
+    "cari": get_update_date("cari", cari_list),
+    "butce": get_update_date("butce", butce_list),
+    "nakit": get_update_date("nakit", nakit_list),
+    "isgucu": get_update_date("isgucu", isgucu_list),
+    "fonlama": get_update_date("fonlama", fon_list),
+    "imalat": get_update_date("imalat", imalat_list),
+    "guven": get_update_date("guven", guven_list),
+    "fed": get_update_date("fed", fed_list),
+    "uscpi": get_update_date("uscpi", uscpi_list),
+    "ecb": get_update_date("ecb", ecb_list),
+    "eurocpi": get_update_date("eurocpi", eurocpi_list),
+    "gsyh_oncu": get_update_date("gsyh_oncu", oncu_gostergeler_list),
     "banka": get_update_date("banka", banka_list),
     "yp": get_update_date("yp", yp_list),
-    "para_arzi": get_update_date("para_arzi", para_arzi_list) # <--- YENİ
+    "para_arzi": get_update_date("para_arzi", para_arzi_list)
 }
 
 final_data = {
     "meta": meta_data,
-    "gsyh": locals().get('gsyh_list', []),
-    "tufe": locals().get('tufe_list', []),
-    "ufe": locals().get('ufe_list', []),
-    "cari": locals().get('cari_list', []),
-    "butce": locals().get('butce_list', []),
-    "nakit": locals().get('nakit_list', []),
-    "isgucu": locals().get('isgucu_list', []),
-    "fonlama": locals().get('fon_list', []),
-    "imalat": locals().get('imalat_list', []),
-    "guven": locals().get('guven_list', []),
-    "fed": locals().get('fed_list', []),
-    "uscpi": locals().get('uscpi_list', []),
-    "ecb": locals().get('ecb_list', []),
-    "eurocpi": locals().get('eurocpi_list', []),
-    "gsyh_oncu": locals().get('oncu_gostergeler_list', []),
+    "gsyh": gsyh_list,
+    "tufe": tufe_list,
+    "ufe": ufe_list,
+    "cari": cari_list,
+    "butce": butce_list,
+    "nakit": nakit_list,
+    "isgucu": isgucu_list,
+    "fonlama": fon_list,
+    "imalat": imalat_list,
+    "guven": guven_list,
+    "fed": fed_list,
+    "uscpi": uscpi_list,
+    "ecb": ecb_list,
+    "eurocpi": eurocpi_list,
+    "gsyh_oncu": oncu_gostergeler_list,
     "banka": banka_list,
     "yp": yp_list,
-    "para_arzi": para_arzi_list # <--- YENİ
+    "para_arzi": para_arzi_list
 }
 
 def sanitize_json(obj):
@@ -685,4 +582,4 @@ final_clean = sanitize_json(final_data)
 with open('veri.json', 'w', encoding='utf-8') as f:
     json.dump(final_clean, f, ensure_ascii=False, indent=4)
 
-print("✅ GÜNCELLENDİ! (Para ve Banka verileri eklendi)")
+print("✅ VERİLER GÜNCELLENDİ!")
