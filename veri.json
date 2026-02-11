@@ -18359,6 +18359,12 @@
             "mevduat": 2.0,
             "refinans": 2.15,
             "marjinal": 2.4
+        },
+        {
+            "tarih": "11-02-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
         }
     ],
     "eurocpi": [
