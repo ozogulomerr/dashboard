@@ -69,7 +69,6 @@
     </nav>
 
     <div id="tab1" class="tab-content active">
-        
         <div class="row-grid">
             <div class="card" id="card-gsyh" onclick="togglePanel('panel-gsyh', this)">
                 <div class="card-header"><h3 class="card-title">GSYH</h3><span class="card-date" id="d-gsyh">...</span></div>
@@ -100,55 +99,162 @@
             <div class="panel-content">
                 <div class="panel-top"><span class="panel-title">Gayrisafi Yurt İçi Hasıla ve Öncü Göstergeler</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div>
                 <div class="big-chart-box"><canvas id="ch-gsyh"></canvas></div>
-                
                 <div class="sub-grid">
-                    <div class="mini-card">
-                        <div class="mini-title">Sanayi</div>
-                        <div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-sanayi-ay">...</span></div>
-                        <div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-sanayi-yil">...</span></div>
-                        <div class="mini-chart-box"><canvas id="ch-sub-sanayi"></canvas></div>
-                    </div>
-                    <div class="mini-card">
-                        <div class="mini-title">Hizmet</div>
-                        <div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-hizmet-ay">...</span></div>
-                        <div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-hizmet-yil">...</span></div>
-                        <div class="mini-chart-box"><canvas id="ch-sub-hizmet"></canvas></div>
-                    </div>
-                    <div class="mini-card">
-                        <div class="mini-title">Ticaret</div>
-                        <div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-ticaret-ay">...</span></div>
-                        <div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-ticaret-yil">...</span></div>
-                        <div class="mini-chart-box"><canvas id="ch-sub-ticaret"></canvas></div>
-                    </div>
-                    <div class="mini-card">
-                        <div class="mini-title">Perakende</div>
-                        <div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-perakende-ay">...</span></div>
-                        <div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-perakende-yil">...</span></div>
-                        <div class="mini-chart-box"><canvas id="ch-sub-perakende"></canvas></div>
-                    </div>
-                    <div class="mini-card">
-                        <div class="mini-title">İnşaat</div>
-                        <div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-insaat-ay">...</span></div>
-                        <div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-insaat-yil">...</span></div>
-                        <div class="mini-chart-box"><canvas id="ch-sub-insaat"></canvas></div>
-                    </div>
+                    <div class="mini-card"><div class="mini-title">Sanayi</div><div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-sanayi-ay">...</span></div><div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-sanayi-yil">...</span></div><div class="mini-chart-box"><canvas id="ch-sub-sanayi"></canvas></div></div>
+                    <div class="mini-card"><div class="mini-title">Hizmet</div><div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-hizmet-ay">...</span></div><div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-hizmet-yil">...</span></div><div class="mini-chart-box"><canvas id="ch-sub-hizmet"></canvas></div></div>
+                    <div class="mini-card"><div class="mini-title">Ticaret</div><div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-ticaret-ay">...</span></div><div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-ticaret-yil">...</span></div><div class="mini-chart-box"><canvas id="ch-sub-ticaret"></canvas></div></div>
+                    <div class="mini-card"><div class="mini-title">Perakende</div><div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-perakende-ay">...</span></div><div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-perakende-yil">...</span></div><div class="mini-chart-box"><canvas id="ch-sub-perakende"></canvas></div></div>
+                    <div class="mini-card"><div class="mini-title">İnşaat</div><div class="mini-row"><span class="mini-lbl">Aylık:</span><span class="mini-val" id="v-sub-insaat-ay">...</span></div><div class="mini-row"><span class="mini-lbl">Yıllık:</span><span class="mini-val" id="v-sub-insaat-yil">...</span></div><div class="mini-chart-box"><canvas id="ch-sub-insaat"></canvas></div></div>
                 </div>
-
             </div>
         </div>
         
         <div id="panel-tufe" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">TÜFE</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-tufe"></canvas></div></div></div>
         <div id="panel-ufe" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">Yİ-ÜFE</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-ufe"></canvas></div></div></div>
         <div id="panel-cari" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">Cari Denge</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-cari"></canvas></div></div></div>
+        
+        <div class="row-grid" style="margin-top:20px;">
+            <div class="card" id="card-butce" onclick="togglePanel('panel-butce', this)">
+                <div class="card-header"><h3 class="card-title">Bütçe Dengesi</h3><span class="card-date" id="d-butce">...</span></div>
+                <div class="metric"><span class="metric-label">Bütçe (Yıllık):</span><span class="metric-value" id="v-butce-yil">...</span></div>
+                <div class="metric"><span class="metric-label">Faiz Dışı (Yıllık):</span><span class="metric-value" id="v-butce-fd-yil">...</span></div>
+                <div class="hint">Grafiği Göster ▼</div>
+            </div>
+            <div class="card" id="card-nakit" onclick="togglePanel('panel-nakit', this)">
+                <div class="card-header"><h3 class="card-title">Nakit Dengesi</h3><span class="card-date" id="d-nakit">...</span></div>
+                <div class="metric"><span class="metric-label">Nakit (Yıllık):</span><span class="metric-value" id="v-nakit-yil">...</span></div>
+                <div class="hint">Grafiği Göster ▼</div>
+            </div>
+            <div class="card" id="card-isgucu" onclick="togglePanel('panel-isgucu', this)">
+                <div class="card-header"><h3 class="card-title">İşgücü</h3><span class="card-date" id="d-isgucu">...</span></div>
+                <div class="metric"><span class="metric-label">İşsizlik:</span><span class="metric-value" id="v-issiz">...</span></div>
+                <div class="metric"><span class="metric-label">Atıl İşgücü:</span><span class="metric-value" id="v-atil">...</span></div>
+                <div class="hint">Grafiği Göster ▼</div>
+            </div>
+            <div class="card" id="card-fon" onclick="togglePanel('panel-fon', this)">
+                <div class="card-header"><h3 class="card-title">TCMB Fonlama</h3><span class="card-date" id="d-fon">...</span></div>
+                <div class="metric"><span class="metric-label">AOFM:</span><span class="metric-value" id="v-aofm">...</span></div>
+                <div class="metric"><span class="metric-label">TLREF:</span><span class="metric-value" id="v-tlref">...</span></div>
+                <div class="metric"><span class="metric-label">Net Fonlama:</span><span class="metric-value" id="v-netfon">...</span></div>
+                <div class="hint">Grafiği Göster ▼</div>
+            </div>
+        </div>
+
+        <div id="panel-butce" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">Bütçe Dengesi</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-butce"></canvas></div></div></div>
+        <div id="panel-nakit" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">Nakit Dengesi</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-nakit"></canvas></div></div></div>
+        <div id="panel-isgucu" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">İşgücü</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-isgucu"></canvas></div></div></div>
+        <div id="panel-fon" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">TCMB Fonlama</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="double-chart-row"><div class="chart-half"><canvas id="ch-fon-rates"></canvas></div><div class="chart-half"><canvas id="ch-fon-net"></canvas></div></div></div></div>
     </div>
     
-    <div id="tab2" class="tab-content"> </div>
-    <div id="tab3" class="tab-content"> </div>
-    <div id="tab4" class="tab-content"> </div>
-    <div id="tab5" class="tab-content"> </div>
+    <div id="tab2" class="tab-content">
+        <div class="flex-row">
+            <div class="flex-item">
+                <div class="card" id="card-imalat" onclick="togglePanel('panel-imalat', this)">
+                    <div class="card-header"><h3 class="card-title">İmalat Sanayi</h3><span class="card-date" id="d-imalat">...</span></div>
+                    <div class="metric"><span class="metric-label">PMI:</span><span class="metric-value" id="v-pmi">...</span></div>
+                    <div class="metric"><span class="metric-label">KKO:</span><span class="metric-value" id="v-kko">...</span></div>
+                    <div class="hint">Detaylı Grafikler ▼</div>
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class="card" id="card-guven" onclick="togglePanel('panel-guven', this)">
+                    <div class="card-header"><h3 class="card-title">Güven Endeksleri</h3><span class="card-date" id="d-guven">...</span></div>
+                    <div class="metric"><span class="metric-label">Tüketici:</span><span class="metric-value" id="v-guven-tuk">...</span></div>
+                    <div class="metric"><span class="metric-label">Reel Kesim:</span><span class="metric-value" id="v-guven-reel">...</span></div>
+                    <div class="hint">Grafiği Göster ▼</div>
+                </div>
+            </div>
+        </div>
+        <div id="panel-imalat" class="full-panel-container" style="margin-top:20px;">
+            <div class="panel-content">
+                <div class="panel-top"><span class="panel-title">İmalat Sanayi Görünümü</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div>
+                <div class="double-chart-row">
+                    <div class="chart-half"><h5 style="text-align:center;">İmalat Sanayi PMI</h5><canvas id="ch-pmi"></canvas></div>
+                    <div class="chart-half"><h5 style="text-align:center;">İmalat Sanayi KKO (%)</h5><canvas id="ch-kko"></canvas></div>
+                </div>
+            </div>
+        </div>
+        <div id="panel-guven" class="full-panel-container" style="margin-top:20px;">
+            <div class="panel-content">
+                <div class="panel-top"><span class="panel-title">Güven Endeksleri</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div>
+                <div class="big-chart-box"><canvas id="ch-guven"></canvas></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <div class="row-grid">
+            <div class="card" id="card-fed" onclick="togglePanel('panel-fed', this)">
+                <div class="card-header"><h3 class="card-title">FED Faiz Oranları</h3><span class="card-date" id="d-fed">...</span></div>
+                <div class="metric"><span class="metric-label">Üst Limit:</span><span class="metric-value" id="v-fed-ust">...</span></div>
+                <div class="metric"><span class="metric-label">Efektif:</span><span class="metric-value" id="v-fed-eff">...</span></div>
+                <div class="hint">Grafiği Göster ▼</div>
+            </div>
+            <div class="card" id="card-uscpi" onclick="togglePanel('panel-uscpi', this)">
+                <div class="card-header"><h3 class="card-title">ABD TÜFE</h3><span class="card-date" id="d-uscpi">...</span></div>
+                <div class="metric"><span class="metric-label">Aylık:</span><span class="metric-value" id="v-uscpi-ay">...</span></div>
+                <div class="metric"><span class="metric-label">Yıllık:</span><span class="metric-value" id="v-uscpi-yil">...</span></div>
+                <div class="hint">Grafiği Göster ▼</div>
+            </div>
+        </div>
+        <div id="panel-fed" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">FED Politika Faizi</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-fed"></canvas></div></div></div>
+        <div id="panel-uscpi" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">ABD Tüketici Fiyat Endeksi</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-uscpi"></canvas></div></div></div>
+    </div>
+
+    <div id="tab4" class="tab-content">
+        <div class="row-grid">
+            <div class="card" id="card-ecb" onclick="togglePanel('panel-ecb', this)">
+                <div class="card-header"><h3 class="card-title">ECB Faiz Oranları</h3><span class="card-date" id="d-ecb">...</span></div>
+                <div class="metric"><span class="metric-label">Mevduat:</span><span class="metric-value" id="v-ecb-mev">...</span></div>
+                <div class="metric"><span class="metric-label">Refinansman:</span><span class="metric-value" id="v-ecb-ref">...</span></div>
+                <div class="hint">Grafiği Göster ▼</div>
+            </div>
+            <div class="card" id="card-eurocpi" onclick="togglePanel('panel-eurocpi', this)">
+                <div class="card-header"><h3 class="card-title">Euro Bölgesi TÜFE</h3><span class="card-date" id="d-eurocpi">...</span></div>
+                <div class="metric"><span class="metric-label">Aylık:</span><span class="metric-value" id="v-eurocpi-ay">...</span></div>
+                <div class="metric"><span class="metric-label">Yıllık:</span><span class="metric-value" id="v-eurocpi-yil">...</span></div>
+                <div class="hint">Grafiği Göster ▼</div>
+            </div>
+        </div>
+        <div id="panel-ecb" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">ECB Faiz Oranları</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-ecb"></canvas></div></div></div>
+        <div id="panel-eurocpi" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">Euro Bölgesi Enflasyonu</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box"><canvas id="ch-eurocpi"></canvas></div></div></div>
+    </div>
+
+    <div id="tab5" class="tab-content">
+        <div class="row-grid" style="grid-template-columns: repeat(3, 1fr);"> 
+            <div class="card" id="card-banka" onclick="togglePanel('panel-banka', this)">
+                <div class="card-header"><h3 class="card-title">TL Kredi ve Mevduat</h3><span class="card-date" id="d-banka">...</span></div>
+                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0; gap: 5px;">
+                    <div><div class="metric"><span class="metric-label">İhtiyaç:</span><span class="metric-value" id="v-bnk-iht">...</span></div><div class="metric"><span class="metric-label">Konut:</span><span class="metric-value" id="v-bnk-kon">...</span></div></div>
+                    <div><div class="metric"><span class="metric-label">Ticari:</span><span class="metric-value" id="v-bnk-tic">...</span></div><div class="metric"><span class="metric-label">Mevduat:</span><span class="metric-value" id="v-bnk-mev">...</span></div></div>
+                </div>
+                <div class="hint">TL Faiz Grafiği ▼</div>
+            </div>
+            <div class="card" id="card-yp" onclick="togglePanel('panel-yp', this)">
+                <div class="card-header"><h3 class="card-title">YP Kredi ve Mevduat</h3><span class="card-date" id="d-yp">...</span></div>
+                <div class="row-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 0; gap: 5px;">
+                    <div><div class="metric"><span class="metric-label">Tic. (EUR):</span><span class="metric-value" id="v-yp-tic-eur">...</span></div><div class="metric"><span class="metric-label">Tic. (USD):</span><span class="metric-value" id="v-yp-tic-usd">...</span></div></div>
+                    <div><div class="metric"><span class="metric-label">Mev. (EUR):</span><span class="metric-value" id="v-yp-mev-eur">...</span></div><div class="metric"><span class="metric-label">Mev. (USD):</span><span class="metric-value" id="v-yp-mev-usd">...</span></div></div>
+                </div>
+                <div class="hint">Döviz Faiz Grafiği ▼</div>
+            </div>
+            <div class="card" id="card-m3" onclick="togglePanel('panel-m3', this)">
+                <div class="card-header"><h3 class="card-title">Para Arzı (M3)</h3><span class="card-date" id="d-m3">...</span></div>
+                <div style="display:flex; flex-direction:column; gap:2px;">
+                    <div class="metric"><span class="metric-label">M3:</span><span class="metric-value" id="v-m3-val">...</span></div>
+                    <div class="metric"><span class="metric-label">Vadesiz:</span><span class="metric-value" id="v-m3-vadesiz">...</span></div>
+                    <div class="metric"><span class="metric-label">Vadeli:</span><span class="metric-value" id="v-m3-vadeli">...</span></div>
+                    <div class="metric"><span class="metric-label">PPF:</span><span class="metric-value" id="v-m3-ppf">...</span></div>
+                </div>
+                <div class="hint">M3 Trend Grafiği ▼</div>
+            </div>
+        </div>
+        <div id="panel-banka" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">TL Krediler ve Mevduat Faiz Oranları</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box" style="height: 450px;"><canvas id="ch-banka"></canvas></div></div></div>
+        <div id="panel-yp" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">YP Krediler ve Mevduat Faiz Oranları</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box" style="height: 450px;"><canvas id="ch-yp"></canvas></div></div></div>
+        <div id="panel-m3" class="full-panel-container"><div class="panel-content"><div class="panel-top"><span class="panel-title">M3 Para Arzı Gelişimi</span><span class="close-btn" onclick="closeAllPanels()">X KAPAT</span></div><div class="big-chart-box" style="height: 450px;"><canvas id="ch-m3"></canvas></div></div></div>
+    </div>
 
 </div>
-
 <script>
     // --- FORMATLAYICILAR ---
     const fmtDec1 = (n) => n !== null ? "%" + Number(n).toFixed(1) : "...";
