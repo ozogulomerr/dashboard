@@ -3,18 +3,18 @@
         "gsyh": "2026-02-13",
         "tufe": "2026-02-13",
         "ufe": "2026-02-13",
-        "cari": "2026-02-13",
+        "cari": "2026-02-14",
         "butce": "2025-01-01",
         "nakit": "2026-02-11",
         "isgucu": "2026-02-13",
-        "fonlama": "2026-02-13",
+        "fonlama": "2026-02-14",
         "imalat": "2026-02-13",
         "guven": "2026-02-13",
-        "fed": "2026-02-13",
-        "uscpi": "2025-01-01",
-        "ecb": "2026-02-13",
+        "fed": "2026-02-14",
+        "uscpi": "2026-02-14",
+        "ecb": "2026-02-14",
         "eurocpi": "2025-01-01",
-        "gsyh_oncu": "2026-02-13",
+        "gsyh_oncu": "2026-02-14",
         "banka": "2026-02-13",
         "yp": "2026-02-13",
         "para_arzi": "2026-02-13"
@@ -443,247 +443,254 @@
         {
             "tarih": "2023-1",
             "cari_aylik": -9933,
-            "cari_yillik": -49243,
+            "cari_yillik": -49246,
             "cekirdek_aylik": 2514,
-            "cekirdek_yillik": 54139
+            "cekirdek_yillik": 54129
         },
         {
             "tarih": "2023-2",
-            "cari_aylik": -8852,
-            "cari_yillik": -52750,
+            "cari_aylik": -8851,
+            "cari_yillik": -52753,
             "cekirdek_aylik": 758,
-            "cekirdek_yillik": 52937
+            "cekirdek_yillik": 52927
         },
         {
             "tarih": "2023-3",
-            "cari_aylik": -4989,
-            "cari_yillik": -52141,
-            "cekirdek_aylik": 853,
-            "cekirdek_yillik": 51346
+            "cari_aylik": -4990,
+            "cari_yillik": -52148,
+            "cekirdek_aylik": 852,
+            "cekirdek_yillik": 51333
         },
         {
             "tarih": "2023-4",
-            "cari_aylik": -4793,
-            "cari_yillik": -54352,
-            "cekirdek_aylik": 76,
-            "cekirdek_yillik": 47269
+            "cari_aylik": -4794,
+            "cari_yillik": -54359,
+            "cekirdek_aylik": 75,
+            "cekirdek_yillik": 47256
         },
         {
             "tarih": "2023-5",
-            "cari_aylik": -7458,
-            "cari_yillik": -55855,
-            "cekirdek_aylik": -896,
-            "cekirdek_yillik": 45500
+            "cari_aylik": -7460,
+            "cari_yillik": -55864,
+            "cekirdek_aylik": -918,
+            "cekirdek_yillik": 45466
         },
         {
             "tarih": "2023-6",
-            "cari_aylik": 1077,
-            "cari_yillik": -52067,
-            "cekirdek_aylik": 5975,
-            "cekirdek_yillik": 46412
+            "cari_aylik": 1078,
+            "cari_yillik": -52075,
+            "cekirdek_aylik": 5927,
+            "cekirdek_yillik": 46331
         },
         {
             "tarih": "2023-7",
-            "cari_aylik": -5118,
-            "cari_yillik": -54399,
-            "cekirdek_aylik": 1034,
-            "cekirdek_yillik": 42470
+            "cari_aylik": -5127,
+            "cari_yillik": -54416,
+            "cekirdek_aylik": 1024,
+            "cekirdek_yillik": 42379
         },
         {
             "tarih": "2023-8",
-            "cari_aylik": 453,
-            "cari_yillik": -52391,
-            "cekirdek_aylik": 7198,
-            "cekirdek_yillik": 41827
+            "cari_aylik": 441,
+            "cari_yillik": -52419,
+            "cekirdek_aylik": 7147,
+            "cekirdek_yillik": 41687
         },
         {
             "tarih": "2023-9",
-            "cari_aylik": 2732,
-            "cari_yillik": -47578,
-            "cekirdek_aylik": 8021,
-            "cekirdek_yillik": 42174
+            "cari_aylik": 2721,
+            "cari_yillik": -47618,
+            "cekirdek_aylik": 7760,
+            "cekirdek_yillik": 41773
         },
         {
             "tarih": "2023-10",
-            "cari_aylik": -42,
-            "cari_yillik": -46783,
-            "cekirdek_aylik": 4844,
-            "cekirdek_yillik": 38871
+            "cari_aylik": -50,
+            "cari_yillik": -46829,
+            "cekirdek_aylik": 4966,
+            "cekirdek_yillik": 38594
         },
         {
             "tarih": "2023-11",
-            "cari_aylik": -2683,
-            "cari_yillik": -45475,
-            "cekirdek_aylik": 2180,
-            "cekirdek_yillik": 36101
+            "cari_aylik": -2702,
+            "cari_yillik": -45536,
+            "cekirdek_aylik": 2327,
+            "cekirdek_yillik": 35975
         },
         {
             "tarih": "2023-12",
-            "cari_aylik": -1863,
-            "cari_yillik": -41469,
-            "cekirdek_aylik": 4380,
-            "cekirdek_yillik": 36941
+            "cari_aylik": -1874,
+            "cari_yillik": -41541,
+            "cekirdek_aylik": 4396,
+            "cekirdek_yillik": 36832
         },
         {
             "tarih": "2024-1",
             "cari_aylik": -2221,
-            "cari_yillik": -33757,
-            "cekirdek_aylik": 3885,
-            "cekirdek_yillik": 38313
+            "cari_yillik": -33829,
+            "cekirdek_aylik": 3893,
+            "cekirdek_yillik": 38212
         },
         {
             "tarih": "2024-2",
-            "cari_aylik": -3302,
-            "cari_yillik": -28207,
+            "cari_aylik": -3303,
+            "cari_yillik": -28281,
             "cekirdek_aylik": 2046,
-            "cekirdek_yillik": 39601
+            "cekirdek_yillik": 39500
         },
         {
             "tarih": "2024-3",
-            "cari_aylik": -4055,
-            "cari_yillik": -27273,
-            "cekirdek_aylik": 1239,
-            "cekirdek_yillik": 39987
+            "cari_aylik": -4056,
+            "cari_yillik": -27347,
+            "cekirdek_aylik": 1238,
+            "cekirdek_yillik": 39886
         },
         {
             "tarih": "2024-4",
             "cari_aylik": -4822,
-            "cari_yillik": -27302,
-            "cekirdek_aylik": -11,
-            "cekirdek_yillik": 39900
+            "cari_yillik": -27375,
+            "cekirdek_aylik": 1,
+            "cekirdek_yillik": 39813
         },
         {
             "tarih": "2024-5",
             "cari_aylik": -664,
-            "cari_yillik": -20508,
-            "cekirdek_aylik": 3837,
-            "cekirdek_yillik": 44634
+            "cari_yillik": -20579,
+            "cekirdek_aylik": 3839,
+            "cekirdek_yillik": 44571
         },
         {
             "tarih": "2024-6",
             "cari_aylik": 794,
-            "cari_yillik": -20791,
-            "cekirdek_aylik": 4926,
-            "cekirdek_yillik": 43585
+            "cari_yillik": -20863,
+            "cekirdek_aylik": 4930,
+            "cekirdek_yillik": 43574
         },
         {
             "tarih": "2024-7",
-            "cari_aylik": 1397,
-            "cari_yillik": -14276,
-            "cekirdek_aylik": 5711,
-            "cekirdek_yillik": 48262
+            "cari_aylik": 1396,
+            "cari_yillik": -14340,
+            "cekirdek_aylik": 5710,
+            "cekirdek_yillik": 48260
         },
         {
             "tarih": "2024-8",
             "cari_aylik": 4883,
-            "cari_yillik": -9846,
+            "cari_yillik": -9898,
             "cekirdek_aylik": 9595,
-            "cekirdek_yillik": 50660
+            "cekirdek_yillik": 50709
         },
         {
             "tarih": "2024-9",
             "cari_aylik": 2831,
-            "cari_yillik": -9747,
+            "cari_yillik": -9788,
             "cekirdek_aylik": 7572,
-            "cekirdek_yillik": 50211
+            "cekirdek_yillik": 50521
         },
         {
             "tarih": "2024-10",
             "cari_aylik": 2225,
-            "cari_yillik": -7480,
-            "cekirdek_aylik": 7505,
-            "cekirdek_yillik": 52871
+            "cari_yillik": -7513,
+            "cekirdek_aylik": 7504,
+            "cekirdek_yillik": 53058
         },
         {
             "tarih": "2024-11",
-            "cari_aylik": -2761,
-            "cari_yillik": -7558,
-            "cekirdek_aylik": 3557,
-            "cekirdek_yillik": 54249
+            "cari_aylik": -2762,
+            "cari_yillik": -7573,
+            "cekirdek_aylik": 3556,
+            "cekirdek_yillik": 54288
         },
         {
             "tarih": "2024-12",
             "cari_aylik": -4716,
-            "cari_yillik": -10411,
-            "cekirdek_aylik": 2378,
-            "cekirdek_yillik": 52247
+            "cari_yillik": -10415,
+            "cekirdek_aylik": 2387,
+            "cekirdek_yillik": 52279
         },
         {
             "tarih": "2025-1",
-            "cari_aylik": -3870,
-            "cari_yillik": -12060,
-            "cekirdek_aylik": 2314,
-            "cekirdek_yillik": 50675
+            "cari_aylik": -3877,
+            "cari_yillik": -12071,
+            "cekirdek_aylik": 2311,
+            "cekirdek_yillik": 50696
         },
         {
             "tarih": "2025-2",
-            "cari_aylik": -4368,
-            "cari_yillik": -13126,
-            "cekirdek_aylik": 2199,
-            "cekirdek_yillik": 50828
+            "cari_aylik": -4376,
+            "cari_yillik": -13144,
+            "cekirdek_aylik": 2190,
+            "cekirdek_yillik": 50840
         },
         {
             "tarih": "2025-3",
-            "cari_aylik": -4304,
-            "cari_yillik": -13375,
-            "cekirdek_aylik": 1239,
-            "cekirdek_yillik": 50828
+            "cari_aylik": -4309,
+            "cari_yillik": -13397,
+            "cekirdek_aylik": 1234,
+            "cekirdek_yillik": 50836
         },
         {
             "tarih": "2025-4",
-            "cari_aylik": -7863,
-            "cari_yillik": -16416,
-            "cekirdek_aylik": -1939,
-            "cekirdek_yillik": 48900
+            "cari_aylik": -7868,
+            "cari_yillik": -16443,
+            "cekirdek_aylik": -1945,
+            "cekirdek_yillik": 48889
         },
         {
             "tarih": "2025-5",
-            "cari_aylik": -770,
-            "cari_yillik": -16522,
-            "cekirdek_aylik": 3954,
-            "cekirdek_yillik": 49017
+            "cari_aylik": -775,
+            "cari_yillik": -16554,
+            "cekirdek_aylik": 3949,
+            "cekirdek_yillik": 48999
         },
         {
             "tarih": "2025-6",
-            "cari_aylik": -1996,
-            "cari_yillik": -19312,
-            "cekirdek_aylik": 2587,
-            "cekirdek_yillik": 46679
+            "cari_aylik": -2010,
+            "cari_yillik": -19358,
+            "cekirdek_aylik": 2573,
+            "cekirdek_yillik": 46642
         },
         {
             "tarih": "2025-7",
-            "cari_aylik": 1720,
-            "cari_yillik": -18989,
-            "cekirdek_aylik": 5981,
-            "cekirdek_yillik": 46948
+            "cari_aylik": 1711,
+            "cari_yillik": -19043,
+            "cekirdek_aylik": 5973,
+            "cekirdek_yillik": 46904
         },
         {
             "tarih": "2025-8",
-            "cari_aylik": 5368,
-            "cari_yillik": -18504,
-            "cekirdek_aylik": 9923,
-            "cekirdek_yillik": 47276
+            "cari_aylik": 5361,
+            "cari_yillik": -18565,
+            "cekirdek_aylik": 9916,
+            "cekirdek_yillik": 47225
         },
         {
             "tarih": "2025-9",
-            "cari_aylik": 1082,
-            "cari_yillik": -20253,
-            "cekirdek_aylik": 6774,
-            "cekirdek_yillik": 46478
+            "cari_aylik": 1068,
+            "cari_yillik": -20328,
+            "cekirdek_aylik": 6761,
+            "cekirdek_yillik": 46414
         },
         {
             "tarih": "2025-10",
-            "cari_aylik": 487,
-            "cari_yillik": -21991,
-            "cekirdek_aylik": 7040,
-            "cekirdek_yillik": 46013
+            "cari_aylik": 865,
+            "cari_yillik": -21688,
+            "cekirdek_aylik": 7417,
+            "cekirdek_yillik": 46326
         },
         {
             "tarih": "2025-11",
-            "cari_aylik": -3996,
-            "cari_yillik": -23226,
-            "cekirdek_aylik": 2132,
-            "cekirdek_yillik": 44587
+            "cari_aylik": -3744,
+            "cari_yillik": -22670,
+            "cekirdek_aylik": 2388,
+            "cekirdek_yillik": 45158
+        },
+        {
+            "tarih": "2025-12",
+            "cari_aylik": -7253,
+            "cari_yillik": -25207,
+            "cekirdek_aylik": -690,
+            "cekirdek_yillik": 42079
         }
     ],
     "butce": [
@@ -6121,8 +6128,14 @@
         {
             "tarih": "12-02-2026",
             "aofm": 37.0,
-            "tlref": null,
+            "tlref": 36.7394,
             "net_fonlama": -1009754.29
+        },
+        {
+            "tarih": "13-02-2026",
+            "aofm": 37.0,
+            "tlref": null,
+            "net_fonlama": -1066290.0
         }
     ],
     "imalat": [
@@ -11377,12 +11390,18 @@
             "ust": 3.75,
             "efektif": 3.64,
             "alt": 3.5
+        },
+        {
+            "tarih": "12-02-2026",
+            "ust": 3.75,
+            "efektif": 3.64,
+            "alt": 3.5
         }
     ],
     "uscpi": [
         {
             "tarih": "01-01-2023",
-            "aylik": 0.6,
+            "aylik": 0.5,
             "yillik": 6.3
         },
         {
@@ -11397,8 +11416,8 @@
         },
         {
             "tarih": "01-04-2023",
-            "aylik": 0.4,
-            "yillik": 4.9
+            "aylik": 0.3,
+            "yillik": 5.0
         },
         {
             "tarih": "01-05-2023",
@@ -11407,7 +11426,7 @@
         },
         {
             "tarih": "01-06-2023",
-            "aylik": 0.3,
+            "aylik": 0.2,
             "yillik": 3.1
         },
         {
@@ -11428,7 +11447,7 @@
         {
             "tarih": "01-10-2023",
             "aylik": 0.1,
-            "yillik": 3.2
+            "yillik": 3.3
         },
         {
             "tarih": "01-11-2023",
@@ -11452,12 +11471,12 @@
         },
         {
             "tarih": "01-03-2024",
-            "aylik": 0.3,
+            "aylik": 0.4,
             "yillik": 3.5
         },
         {
             "tarih": "01-04-2024",
-            "aylik": 0.3,
+            "aylik": 0.2,
             "yillik": 3.4
         },
         {
@@ -11472,7 +11491,7 @@
         },
         {
             "tarih": "01-07-2024",
-            "aylik": 0.1,
+            "aylik": 0.2,
             "yillik": 2.9
         },
         {
@@ -11487,7 +11506,7 @@
         },
         {
             "tarih": "01-10-2024",
-            "aylik": 0.2,
+            "aylik": 0.3,
             "yillik": 2.6
         },
         {
@@ -11497,12 +11516,12 @@
         },
         {
             "tarih": "01-12-2024",
-            "aylik": 0.4,
+            "aylik": 0.3,
             "yillik": 2.9
         },
         {
             "tarih": "01-01-2025",
-            "aylik": 0.5,
+            "aylik": 0.4,
             "yillik": 3.0
         },
         {
@@ -11512,7 +11531,7 @@
         },
         {
             "tarih": "01-03-2025",
-            "aylik": -0.1,
+            "aylik": 0.0,
             "yillik": 2.4
         },
         {
@@ -11537,7 +11556,7 @@
         },
         {
             "tarih": "01-08-2025",
-            "aylik": 0.4,
+            "aylik": 0.3,
             "yillik": 2.9
         },
         {
@@ -11548,17 +11567,22 @@
         {
             "tarih": "01-10-2025",
             "aylik": 0.0,
-            "yillik": 2.8
+            "yillik": 2.7
         },
         {
             "tarih": "01-11-2025",
-            "aylik": 0.2,
+            "aylik": 0.3,
             "yillik": 2.7
         },
         {
             "tarih": "01-12-2025",
             "aylik": 0.3,
             "yillik": 2.7
+        },
+        {
+            "tarih": "01-01-2026",
+            "aylik": 0.2,
+            "yillik": 2.4
         }
     ],
     "ecb": [
@@ -18392,6 +18416,12 @@
         },
         {
             "tarih": "12-02-2026",
+            "mevduat": 2.0,
+            "refinans": 2.15,
+            "marjinal": 2.4
+        },
+        {
+            "tarih": "13-02-2026",
             "mevduat": 2.0,
             "refinans": 2.15,
             "marjinal": 2.4
