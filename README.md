@@ -102,5 +102,26 @@ ortalamasının nominal yıllık değişiminin ise %42,6’ya gerilediği görü
 
 	ABD, Çekirdek PCE (Kişisel Tüketim Harcamaları) Deflatör: FED’in fiyat artış hızına dair yakından takip ettiği favori göstergesidir. Aralık ayında beklentilerin hafif üzerinde %0,4 artış gösterirken, yıllık bazda artışı %3.0 seviyesine yükseldi. FOMC'nin daha önce beklenenden daha yavaş bir dezenflasyon süreci uyarısıyla uyumlu olarak, Şubat'tan bu yana en keskin artışı yansıttı. Tarifeler ve jeopolitik risklerle artması beklenen fiyatlar ve zayıflayan iş piyasası nedeniyle bu ivmenin ne kadar süreceği belirsizliğini koruyor.
 •	FED, Aralık’ta yayınladığı projeksiyonlarında çekirdek PCE 2026 tahminini %2.6’dan %2.5’e aşağı yönlü revize etti. 2027 tahmini ise %2.1 olarak korundu. Tarife politikaları ve jeopolitik riskler, enflasyon üzerinde yukarı yönlü riskleri canlı tutmaya devam etmekte.
+
+ABD’de çekirdek PCE fiyat endeksi ocak ayında aylık bazda %0,4 artış göstererek piyasa beklentileriyle uyumlu gerçekleşti. Yıllık çekirdek PCE enflasyonu ise %3,1’e yükselerek beklentilere paralel bir gerçekleşmeye işaret ederken, önceki ayın %3,0 seviyesine kıyasla sınırlı bir hızlanma kaydetti.
+
+Aylık artış hızının iki ay üst üste %0,4 seviyesinde kalması, enflasyonun ana eğiliminde kayda değer bir yavaşlama henüz görülmediğine işaret ediyor. Yıllık verideki sınırlı yükseliş de dezenflasyon sürecinin devam etmekle birlikte beklenenden daha yavaş ilerlediği bir patikaya işaret ediyor.
+
+Fed’in en yakından takip ettiği enflasyon göstergelerinden biri olan çekirdek PCE’nin %3 seviyesinin üzerinde kalmaya devam etmesi, fiyat baskılarının hâlâ hedefin oldukça üzerinde seyrettiğini ortaya koyuyor. Bu, özellikle hizmet enflasyonundaki katılığın ve iç talep kaynaklı fiyatlama davranışlarının tamamen ortadan kalkmadığını düşündürüyor.
+
+Son dönemde açıklanan güçlü ÜFE verileri ve maliyet baskılarının üretici fiyatları üzerinden tüketici fiyatlarına gecikmeli olarak yansıma ihtimali de dikkate alındığında, çekirdek enflasyon görünümünde kısa vadede belirgin bir rahatlama oluşması zor görünüyor.
+
+Öte yandan son haftalarda enerji fiyatlarında görülen sert yükseliş ve jeopolitik risklerin yeniden gündeme gelmesi, enflasyon görünümüne yönelik yukarı yönlü riskleri artıran unsurlar arasında yer alıyor. Petrol fiyatlarının kısa süre içinde 100 dolar seviyesine yaklaşmış olması, önümüzdeki aylarda manşet enflasyon üzerinde yeniden baskı oluşturabilir.
+
+Dolayısıyla veri, Fed’in faiz indirimleri konusunda temkinli duruşunu sürdürmesini destekleyen bir görünüm sunuyor. 
+
+Enflasyonun beklentilere paralel gerçekleşmesi piyasalarda güçlü bir sürpriz yaratmasa da çekirdek göstergenin %3’ün üzerinde kalmaya devam etmesi politika gevşemesi için alanın hâlâ sınırlı olduğunu gösteriyor.
+
+Bu yüzden Fed içinde son dönemde dile getirilen “veri bağımlı ve kademeli gevşeme” yaklaşımının önümüzdeki toplantılarda da korunması muhtemel görünüyor. İşgücü piyasasında olası bir zayıflama faiz indirimi beklentilerini desteklese de enflasyon tarafında kalıcı bir iyileşme görülmeden agresif bir gevşeme döngüsünün başlaması zor görünüyor.
+
+Piyasa cephesinde ise beklentilere paralel gelen veri ilk etapta sınırlı bir fiyatlama etkisi yaratabilse de yıllık çekirdek enflasyonun yeniden yukarı yönlü hareket etmesi, faiz indirimi beklentilerinin zamanlamasına ilişkin soru işaretlerini canlı tutmaya devam edebilir.
+
+Önümüzdeki dönemde özellikle enerji fiyatlarının seyri ve üretici fiyatlarındaki maliyet baskılarının tüketici fiyatlarına ne ölçüde yansıyacağı, enflasyonun yönü açısından belirleyici olacak. Mart ve nisan aylarında açıklanacak enflasyon verileri, Fed’in politika patikasına ilişkin beklentiler açısından daha kritik bir rol oynayabilir.
+
 	ABD, TÜFE: Ocak’ta aylık bazda %0.2 yıllık bazda ise %2.4 ile beklentilerin altında geldi. Para politikasının seyri açısından önem arz eden çekirdek TÜFE ise yıllık bazda artış %2.5 ile beklentilere uyumlu gerçekleşti. Hizmet maliyetlerindeki artışın etkisiyle, yılın başında ABD'de çekirdek enflasyon Ağustos ayından bu yana en yüksek seviyede yükseldi.
 	Euro Bölgesi, Sanayi Üretimi: Aralık’ta aylık bazda %1.4 azalışla düşüş beklentisine uyumlu gerçekleşti. Yıllık bazda ise %1.2’ye düşerek beklentilerin hafif altında kaldı. Aynı dönemde, enerji, sermaye malı üretimi ve dayanıksız tüketim malları üretiminde bir önceki aya kıyasla düşüş yaşanırken, dayanıklı tüketim malları üretiminde artış görüldü. 
