@@ -124,4 +124,36 @@ Piyasa cephesinde ise beklentilere paralel gelen veri ilk etapta sınırlı bir 
 Önümüzdeki dönemde özellikle enerji fiyatlarının seyri ve üretici fiyatlarındaki maliyet baskılarının tüketici fiyatlarına ne ölçüde yansıyacağı, enflasyonun yönü açısından belirleyici olacak. Mart ve nisan aylarında açıklanacak enflasyon verileri, Fed’in politika patikasına ilişkin beklentiler açısından daha kritik bir rol oynayabilir.
 
 	ABD, TÜFE: Ocak’ta aylık bazda %0.2 yıllık bazda ise %2.4 ile beklentilerin altında geldi. Para politikasının seyri açısından önem arz eden çekirdek TÜFE ise yıllık bazda artış %2.5 ile beklentilere uyumlu gerçekleşti. Hizmet maliyetlerindeki artışın etkisiyle, yılın başında ABD'de çekirdek enflasyon Ağustos ayından bu yana en yüksek seviyede yükseldi.
+
+Şubat ayında ABD’de tüketici enflasyonu aylık bazda %0,3 artarak piyasa beklentileriyle uyumlu bir gerçekleşme kaydetti. Yıllık enflasyon ise %2,4 seviyesinde sabit kalarak beklentilere paralel bir görünüm sundu.
+
+Bir önceki ay aylık %0,2 artışla görece daha ılımlı bir tablo görülmüş olsa da şubat verisi fiyat artışlarının hafif de olsa yeniden bir miktar hız kazandığına işaret ediyor. Bununla birlikte yıllık enflasyonun yatay seyretmesi, genel fiyat baskılarının şimdilik belirgin bir yeniden hızlanma göstermediğini ortaya koyuyor.
+
+Çekirdek enflasyon tarafında ise daha dengeli bir görünüm dikkat çekiyor. 
+
+Gıda ve enerji hariç çekirdek TÜFE aylık bazda %0,2 artarak beklentilerle uyumlu gerçekleşirken, yıllık çekirdek enflasyon %2,5 seviyesinde sabit kaldı. Ocak ayında aylık %0,3 artış kaydeden çekirdek göstergede hızın bir miktar yavaşlaması, enflasyonun ana eğiliminde sınırlı da olsa bir yumuşamaya işaret ediyor.
+
+Bu, özellikle hizmet enflasyonundaki katılığın tamamen ortadan kalkmadığını ancak fiyat baskılarının kontrolsüz bir şekilde yeniden hızlandığına dair güçlü bir sinyal de üretmediğini gösteriyor. 
+
+Dolayısıyla bu ayki veri, enflasyonun hedefe doğru ilerlediği ancak sürecin oldukça kademeli gerçekleştiği yönündeki genel çerçeveyi büyük ölçüde koruyor.
+
+Fed açısından bakıldığında, veri sürpriz üretmeyen yapısıyla para politikası beklentilerinde ani bir değişime neden olacak nitelikte görünmüyor. Enflasyonun hem manşet hem de çekirdek tarafta piyasa tahminleriyle uyumlu gerçekleşmesi, mart toplantısında faiz oranlarının sabit tutulacağı yönündeki beklentileri güçlendiren bir gelişme olarak değerlendirilebilir.
+
+Bununla birlikte Fed’in politika patikasını belirlerken özellikle çekirdek enflasyonun aylık eğilimine odaklanmaya devam ettiği düşünüldüğünde, %0,2’lik gerçekleşme enflasyonun hedefe doğru kademeli bir normalleşme sürecinde olduğuna dair sınırlı da olsa olumlu bir sinyal sunuyor.
+
+Önümüzdeki dönemde enerji fiyatlarında yaşanan oynaklık ve jeopolitik gelişmelerin enflasyon görünümü üzerinde yaratabileceği etkiler yakından izlenmeye devam edecek.
+
+Özellikle petrol fiyatlarında son haftalarda gözlenen hareketlilik, yılın ilerleyen dönemlerinde manşet enflasyon üzerinde yeniden yukarı yönlü risk oluşturabilir.
+
+Piyasa cephesinde ise beklentilere paralel gelen veri, sert bir yeniden fiyatlama yaratacak nitelikte görünmüyor. Enflasyonun sürpriz üretmemesi, yatırımcıların odağının yeniden Fed’in politika patikasına ve yaklaşan projeksiyonlara kaymasına neden olabilir.
+
+
 	Euro Bölgesi, Sanayi Üretimi: Aralık’ta aylık bazda %1.4 azalışla düşüş beklentisine uyumlu gerçekleşti. Yıllık bazda ise %1.2’ye düşerek beklentilerin hafif altında kaldı. Aynı dönemde, enerji, sermaye malı üretimi ve dayanıksız tüketim malları üretiminde bir önceki aya kıyasla düşüş yaşanırken, dayanıklı tüketim malları üretiminde artış görüldü. 
+
+Eurostat verilerine göre Euro bölgesinde sanayi üretimi ocak ayında beklenmedik şekilde düşüş gösterdi. 21 ülkenin toplam üretimi aylık bazda %1,5 azaldı. Ekonomistler %0,6’lık artış bekliyordu. Yıllık bazda ise üretim %1,2 gerileyerek %1,4’lük büyüme beklentisinin altında kaldı.Sanayi sektörü uzun süredir durağan seyrediyor ve üretim hala 2021 seviyesinin altında bulunuyor. Yüksek enerji maliyetleri, çin’den gelen rekabet, ABD tarifeleri, düşük verimlilik artışı ve avrupa otomobillerine yönelik zayıf küresel talep sektörü olumsuz etkiliyor.
+
+Almanya’da üretim 2021 seviyesinin %9 altında ve yıllardır düşüş eğiliminde. Bu durum, ülke ekonomisinin son üç yıldır durağan kalmasına yol açtı.
+
+2026’da sanayi üretiminin toparlanması bekleniyordu. Almanya hükümetinin savunma ve altyapı harcamaları bu beklentiyi destekliyordu. Ancak enerji fiyatlarındaki sert yükseliş bu iyimserliği gölgeledi.
+
+Yıl başından bu yana petrol fiyatları yaklaşık üçte iki oranında, doğal gaz maliyetleri ise %80 arttı. ABD öncülüğünde iran’da yaşanan savaş, maliyetleri yükseltirken satın alma gücünü de zayıflatıyor. Enerji ithalatçısı olan avrupa, bu tür fiyat şoklarına karşı özellikle hassas durumda.
