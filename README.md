@@ -56,6 +56,50 @@ büyüme görünümü açısından imalat sektörü dışında olumlu işaretler
 
 	Yurtiçi, Ticaret Satış Hacmi (sabit fiyatlarla): Aralık’ta aylık bazda %2.1 arttı, yıllık bazda artış ise %3.8 ile ivme kaybetti. Aylık verideki artışta toptan ticaret satış hacminin %1.0 azalması da dikkat çekti. İlgili veri, ticaret sektöründe faaliyet gösteren farklı tür ve büyüklükteki girişimlerin satış hacimlerini aylık ölçmekte ve endeksler hacim olarak (sabit fiyatlarla) üretilmekte. Genel olarak, Kasım ayındaki düşüş iç talepte ivme kaybının görülmediğine işaret ediyor.
 	Yurtiçi, Perakende Satış Hacmi (sabit fiyatlarla): İç talebin en önemli öncü göstergesi olan endeks Aralık’ta aylık bazda %1.7 ile artışını devam ettirdi. Rekor seviyesini yenileyen ve yaklaşık son 1.5 yıllık dönemde kesintisiz artan endeks, reel tüketim harcamalarının güçlü eğilimini koruduğunu yansıtmakta. Yıllık artış oranı ise %16.3 ile artış gösterdi. Para politikasının etkileyebildiği harcama türü olarak düşünülebilecek gıda dışı satışlar ise aylık bazda %2.6 artışla tarihi zirvesini yenilemiş oldu.
+
+TÜİK toptan ve perakende ticaret satış hacimlerini “Ticaret Satış Hacmi” adı altında hem toplu hem de 
+ayrı ayrı ve baz yılı 2021=100 olarak açıklamakta. Ticaret satış hacim endeksi, ticaret sektöründe 
+faaliyet gösteren farklı tür ve büyüklükteki girişimlerin satış hacimlerini aylık olarak ölçmekte ve 
+endeksler, hacim olarak (sabit fiyatlarla) üretilmektedir. Endeksler, NACE Rev.2 faaliyet sınıflamasına 
+göre; Motorlu kara taşıtlarının ve motosikletlerin toptan ve perakende ticareti ile onarımı, Toptan 
+Ticaret ve Perakende Ticaret (Motorlu Kara Taşıtları ve Motosikletler hariç) sektörlerini kapsamaktadır.
+Endeksler her sektörün ciro verileri ve sektörlere ilişkin deflatörler kullanılarak sabit fiyatlarla satış
+hacimlerinin hesaplanmasını sağladığından reel büyümenin izlenmesine imkân vermektedir. 2026 Ocak
+ayında, bir önceki aya göre, ticaret satış hacmi %0,1, perakende ticaret satış hacmi %2,4, motorlu kara 
+taşıtlarının ve motosikletlerin toptan ve perakende ticareti ile onarımı için satış hacmi %3,4 artarken, toptan ticaret satış hacmi %1,6 azaldı. Bir önceki yılın aynı ayına göre bakıldığında, ticaret satış hacmi 
+%7,6, motorlu kara taşıtlarının ve motosikletlerin toptan ve perakende ticareti ile onarımı için satış
+hacmi %13,6, perakende ticaret satış hacmi %18,8, 
+toptan ticaret satış hacmi ise %1,5 arttı. 
+TÜİK perakende satış hacim endeksinin tüketici 
+güveninin ve hane halkı talebinin göstergesi olarak 
+kabul edilmekte olduğunu belirtiyor. Bu doğrultuda, 
+iç talep göstergesi olarak bu endeksi takip 
+etmekteyiz. Verilere göre, takvim etkilerinden 
+arındırılmış sabit fiyatlarla perakende satış hacmi 
+ocak ayında bir önceki yılın aynı ayına göre %18,8
+artışa hızlanırken, mevsim ve takvim etkilerinden 
+arındırılmış endeks ide önceki aya göre %2,4 artış
+gösterdi ve 2010 yılından bu yana açıklanan endeksin tarihi zirvesini yenilemiş oldu. TÜİK’in 2024 Mart 
+ayından itibaren açıklamaya başladığı saat ve mücevher hariç perakende satış hacmi de yıllık bazda 
+%11,1 artarken, aylık bazda %0,8 artışla tarihi zirvesini yeniledi. İki seri arasındaki ayrışma altın ithalatına 
+kota getirilmesi sonrası devam ederken, iç talebin olduğundan daha güçlü görünmesine neden oluyor. 
+Alt gruplarda ise, ocak ayında gıda dışı satışlar (otomotiv yakıtı hariç) yıllık bazda %26,4, gıda, içecek ve 
+tütün satışları %9,5, otomotiv yakıtı satışları %0,5 artış kaydetti. Gıda dışı satışlarda yıllık bazda en fazla 
+yükseliş %43,1 ile bilgisayar, kitap, iletişim aygıtları grubunda gözlendi. Para politikasının etkileyebildiği 
+harcama türü olarak düşünülebilecek gıda dışı satışlar (otomotiv yakıtı hariç) da aylık bazda %3,4 artışla 
+tarihi zirvesini yenilemiş oldu. 
+Yurt içi talep ve arz göstergesi olarak, perakende satışların ve sanayi üretiminin mevsim etkisinden 
+arındırılmış serilerinin gelişiminde 2022 yılı başından itibaren seçimlere yönelik uygulanan politikalarla 
+belirgin ayrışma gözlenirken, yurt içinde oluşan başta enflasyon ve cari açık olmak üzere makro 
+dengesizliklerin ana nedeni olduğu görülüyordu. 2025 yılının tüm çeyreklerinde perakende satışlardaki 
+artış sanayi üretimindeki artışın üzerinde kalmış ve makro ekonomik dengesizliğin korunduğunu 
+göstermiş ve “talep unsurları arasındaki dengelenmenin” henüz sağlanamadığını düşündürmüştü. 
+Diğer yandan, perakende satışlar verisinin sık frekansta açıklanması nedeni ile öncü göstergesi olan 
+TCMB tarafından açıklanan haftalık kredi kartları harcama tutarı verisi dört haftalık ortalaması 2026
+Ocak sonunda 511,4 milyar TL civarındayken, 2026 Şubat sonunda %5,1 oranında artışla 537,5 milyar 
+TL’ye yükselmiş bulunuyor. Vergi ve BES ödemeleri hariç haftalık kredi kartları harcama tutarı 4 haftalık 
+ortalamasının nominal yıllık değişiminin ise %42,6’ya gerilediği görülüyor
+
 	ABD, Çekirdek PCE (Kişisel Tüketim Harcamaları) Deflatör: FED’in fiyat artış hızına dair yakından takip ettiği favori göstergesidir. Aralık ayında beklentilerin hafif üzerinde %0,4 artış gösterirken, yıllık bazda artışı %3.0 seviyesine yükseldi. FOMC'nin daha önce beklenenden daha yavaş bir dezenflasyon süreci uyarısıyla uyumlu olarak, Şubat'tan bu yana en keskin artışı yansıttı. Tarifeler ve jeopolitik risklerle artması beklenen fiyatlar ve zayıflayan iş piyasası nedeniyle bu ivmenin ne kadar süreceği belirsizliğini koruyor.
 •	FED, Aralık’ta yayınladığı projeksiyonlarında çekirdek PCE 2026 tahminini %2.6’dan %2.5’e aşağı yönlü revize etti. 2027 tahmini ise %2.1 olarak korundu. Tarife politikaları ve jeopolitik riskler, enflasyon üzerinde yukarı yönlü riskleri canlı tutmaya devam etmekte.
 	ABD, TÜFE: Ocak’ta aylık bazda %0.2 yıllık bazda ise %2.4 ile beklentilerin altında geldi. Para politikasının seyri açısından önem arz eden çekirdek TÜFE ise yıllık bazda artış %2.5 ile beklentilere uyumlu gerçekleşti. Hizmet maliyetlerindeki artışın etkisiyle, yılın başında ABD'de çekirdek enflasyon Ağustos ayından bu yana en yüksek seviyede yükseldi.
