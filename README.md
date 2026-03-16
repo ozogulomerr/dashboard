@@ -2,6 +2,58 @@
 •	Son aylardaki yıllıklandırılmış cari açıkta izlenen genişlemeye rağmen, enerji fiyatlarındaki aşağı yönlü seyrin hem enflasyon hem de ödemeler dengesi üzerinde olumlu etkisi olacağını öngörüyoruz. Buna karşın altın fiyatlarındaki yüksek seyrin cari açık üzerinde 2025 dönemi genelinde genişleyici yönde etkide bulunacağını değerlendiriyoruz.
 	Yurtiçi, Sanayi Üretimi: Aralık’ta aylık bazda %1.2 yükselirken, yıllık bazda ise %2.1 düştü. Böylece, 10 ay ardından ilk kez yıllık bazda gerilerken, 2025 yılının son çeyreğinde sanayi üretimi yıllık bazda %0,6 artışla milli gelire katkısı açısından önceki çeyreğe göre zayıflamaya işaret etti. Mevsim ve takvim etkisinden arındırılmış endeksin aynı dönem ortalaması ise önceki çeyreğe göre %0,1 ile sınırlı artışa işaret etti. 
 •	Sanayi üretimini dayanıklı tüketim malı, dayanıksız tüketim malı ve sermaye malı gruplarının aşağı çekerken; ara malı üretimi ve enerji malı üretimi artış gösterdi. Alt sektörler arasında yıllık bazda imalat sanayi grubunda %2,7 üretim düşüşü, madencilik ve taş ocakçılığı grubunda %1,9, elektrik, gaz, buhar grubunda ise %2,4 üretim artışı görüldü.
+
+Takvim etkilerinden arındırılmış sanayi üretim endeksi ocak ayında yıllık bazda %1,8 düşüş gösterirken, 
+mevsim ve takvim etkilerinden arındırılmış endeks de aylık bazda %2,8 geriledi. Böylece sanayi üretim 
+endeksi yıllık bazda üst üste iki ay gerilerken, aylık 
+bazda düşüşü de son 9 ayın en yüksek seviyesinde 
+gerçekleşti. Sanayi üretiminin ana iktisadi faaliyetlere 
+göre seyrine bakıldığında; üretimi dayanıklı tüketim 
+malı, dayanıksız tüketim malı ve ara malı gruplarının 
+aşağı çektiği görülüyor. Dayanıklı tüketim malı 
+üretimi yıllık bazda %17,2, dayanıksız tüketim malı 
+üretimi %8,2 ve ara malı üretimi %3,0 düşüş
+kaydetmiş. Diğer taraftan enerji malı üretimi yıllık 
+%5,4, sermaye malı üretimi %8,3 artış göstermiş. Alt 
+sektörler arasında ise imalat sanayi grubunda yıllık 
+%2,5, madencilik ve taş ocakçılığı grubunda %2,8 üretim düşüşü, elektrik, gaz, buhar grubunda ise 
+yıllık %5,6 üretim artışı görüldü. Toplam sayısı 29 olan alt sektörlerden 19’unda yıllık bazda üretim 
+düşüşü gözlenirken değişime en yüksek katkıda 
+bulunan ilk beş sektörün toplam negatif etkisinin 3,0
+puan olduğu ve düşüşlerin diğer gruplarda daha 
+sınırlı kaldığı görülüyor.
+TÜİK tarafından idari kayıtlara dayanılarak hazırlanan 
+sanayi üretimi endeksinin (arındırılmamış) milli gelir 
+sanayi sektörü serisi (imalat sanayinin katma değer 
+değişimi) ile uyumlu olduğu bilinmektedir. Nitekim, 
+2025 yılında ilk çeyrekte her iki göstergenin endeks 
+ortalamasında bir önceki yılın aynı dönemine göre
+%2,3 düşüş yaşanırken, ikinci çeyrekte sırasıyla %7,1 ve %7,0 artış gerçekleşmişti. Üçüncü çeyrekte artışlar %5,2 ve %7,6 olurken, son çeyrekte ise %0,8 ve %0,9 artış kaydedilmiş ve önceki çeyreklere 
+kıyasla yavaşlama işareti vermişti. Sanayi üretimi genel olarak son üç yılda sadece %3,6 artışla durgunluğa işaret ederken, sektörler 
+arasındaki ayrışmanın belirgin olduğu gözlenmektedir. Beklendiği gibi, ciddi dış rekabet sorunu 
+yaşayan tekstil ve giyim eşyaları gibi 
+alt gruplarda belirgin üretim 
+gerilemesi yaşarken, yatırım eğiliminin 
+ve inşaat sektörünün sürüklediği 
+gruplarda güçlü üretim artışları 
+kaydedilmişti. Bu görünüm ve 
+ayrışmanın önümüzdeki dönemde de 
+devam etmesini bekleriz. 
+Diğer taraftan, milli gelir açısından ilk 
+çeyrek öncü aktivite göstergelerinin 
+ima ettiklerine bakıldığında; Türkiye 
+PMI endeksi ocak-şubat ortalaması 
+48,7 ile bir önceki çeyreğin üzerinde 
+gerçekleşmiş ancak eşik değer altında 
+kalmayı sürdürerek sektördeki 
+daralmanın devam ettiğine işaret 
+etmişti. TCMB Reel Kesim Güven Endeksi (RKGE) ortalaması aynı dönemde 103,6 ile bir önceki 
+çeyreğin üzerinde, kapasite kullanım oranı ortalaması da 74,2 ile bir önceki çeyreğin hafif üzerinde
+gerçekleşmişti. Aynı dönem ortalaması tüketici güven endeksinde 84,7 ile önceki çeyreğin üzerinde 
+oluşurken, diğer sektörel güven endekslerinden perakende ticaret sektöründe önceki çeyrek ile aynı 
+seviyede, hizmet ve inşaat sektöründe bir önceki çeyreğin üzerinde kalmıştı. Bu doğrultuda, ilk çeyrek 
+büyüme görünümü açısından imalat sektörü dışında olumlu işaretler ağır basmıştı.
+
 	Yurtiçi, Ticaret Satış Hacmi (sabit fiyatlarla): Aralık’ta aylık bazda %2.1 arttı, yıllık bazda artış ise %3.8 ile ivme kaybetti. Aylık verideki artışta toptan ticaret satış hacminin %1.0 azalması da dikkat çekti. İlgili veri, ticaret sektöründe faaliyet gösteren farklı tür ve büyüklükteki girişimlerin satış hacimlerini aylık ölçmekte ve endeksler hacim olarak (sabit fiyatlarla) üretilmekte. Genel olarak, Kasım ayındaki düşüş iç talepte ivme kaybının görülmediğine işaret ediyor.
 	Yurtiçi, Perakende Satış Hacmi (sabit fiyatlarla): İç talebin en önemli öncü göstergesi olan endeks Aralık’ta aylık bazda %1.7 ile artışını devam ettirdi. Rekor seviyesini yenileyen ve yaklaşık son 1.5 yıllık dönemde kesintisiz artan endeks, reel tüketim harcamalarının güçlü eğilimini koruduğunu yansıtmakta. Yıllık artış oranı ise %16.3 ile artış gösterdi. Para politikasının etkileyebildiği harcama türü olarak düşünülebilecek gıda dışı satışlar ise aylık bazda %2.6 artışla tarihi zirvesini yenilemiş oldu.
 	ABD, Çekirdek PCE (Kişisel Tüketim Harcamaları) Deflatör: FED’in fiyat artış hızına dair yakından takip ettiği favori göstergesidir. Aralık ayında beklentilerin hafif üzerinde %0,4 artış gösterirken, yıllık bazda artışı %3.0 seviyesine yükseldi. FOMC'nin daha önce beklenenden daha yavaş bir dezenflasyon süreci uyarısıyla uyumlu olarak, Şubat'tan bu yana en keskin artışı yansıttı. Tarifeler ve jeopolitik risklerle artması beklenen fiyatlar ve zayıflayan iş piyasası nedeniyle bu ivmenin ne kadar süreceği belirsizliğini koruyor.
