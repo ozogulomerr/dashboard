@@ -1,29 +1,10 @@
-Sunum Planı 
- 
-1.	TCMB politikaları ve ALM: kararlar/gelişmeler ve aksiyonlarımız – makro bakış
-2.	Maliyet - TL fonlama maliyetinin optimize edilmesi
-                                                               i.      TL bacaklı Londra swapları 
-                                                             ii.      Piyasaya göre TL fonlama avantajımız 
-                                                           iii.      BİST sukuk taahhütlü işlemler
-                                                            iv.      Uygun maliyetli borçlanmalar
-3.	Plasman – TL likidite fazlasının etkin değerlendirilmesi
-                                                               i.      Londra ile TL bacaklı ters swaplar – piyasa fırsatlarının değerlendirilmesi 
-                                                             ii.      TCMB ile altın/TL swap işlemleri 
-                                                           iii.      KTR fonu ve sağladığımız vergi avantajı
-4.	Anahtar stratejik girişimler (Key initiatives)
-                                                               i.      İlk profit rate swap işlemi (KFH float borçlanma hedge işlemi)
-                                                             ii.      BİST kıymetli madenler pazarında ilk swap işlemi 
-5.	Yatırım – 
-                                                               i.      Uzun vadeli sukuk yatırımlarımız ve elde ettiğimiz gelir
-                                                             ii.      TLREFK sukuklar
-6.	Regülalsyon – Makroihtiyati tedbirlere uyum noktasında oluşturduğumuz katkılar
-                                                               i.      ZAY/ZA2 fonları 
-                                                             ii.      Müşterilerle yapılan sukuk taahhütlü işlemler 
-                                                           iii.      KZL fonu – ödünç işlemler 
-                                                            iv.      Büyümeden muaf özel şubeler cari desteklerimiz 
-7.	2027 Stratejik Hedeflerimiz
-                                                               i.      TL likidite yönetiminde araç çeşitlendirmesi 
-                                                             ii.      Yurtdışı yatırım fonlarıyla YP işlemleri 
-                                                           iii.      İştiraklerle işbirlikleri 
-                                                            iv.      Dinamik ALM projesi 
- 
+	Yurtiçi, Cari İşlemler Dengesi: Aralık’ta 7.3 milyar dolar açık verdi. Böylece, dış ticaret açığının etkisiyle belirgin kötüleşme izlendi. Öte yandan, ilk 11 ay gerçekleşmesinde 0.5 milyar dolar aşağı yönlü revizyon gözlendi, 2025 yılında verilen açık 25.2 milyar dolara yükseldi. 12 aylık kümülatif cari açık da 25.2 milyar dolara yükseldi.
+•	Son aylardaki yıllıklandırılmış cari açıkta izlenen genişlemeye rağmen, enerji fiyatlarındaki aşağı yönlü seyrin hem enflasyon hem de ödemeler dengesi üzerinde olumlu etkisi olacağını öngörüyoruz. Buna karşın altın fiyatlarındaki yüksek seyrin cari açık üzerinde 2025 dönemi genelinde genişleyici yönde etkide bulunacağını değerlendiriyoruz.
+	Yurtiçi, Sanayi Üretimi: Aralık’ta aylık bazda %1.2 yükselirken, yıllık bazda ise %2.1 düştü. Böylece, 10 ay ardından ilk kez yıllık bazda gerilerken, 2025 yılının son çeyreğinde sanayi üretimi yıllık bazda %0,6 artışla milli gelire katkısı açısından önceki çeyreğe göre zayıflamaya işaret etti. Mevsim ve takvim etkisinden arındırılmış endeksin aynı dönem ortalaması ise önceki çeyreğe göre %0,1 ile sınırlı artışa işaret etti. 
+•	Sanayi üretimini dayanıklı tüketim malı, dayanıksız tüketim malı ve sermaye malı gruplarının aşağı çekerken; ara malı üretimi ve enerji malı üretimi artış gösterdi. Alt sektörler arasında yıllık bazda imalat sanayi grubunda %2,7 üretim düşüşü, madencilik ve taş ocakçılığı grubunda %1,9, elektrik, gaz, buhar grubunda ise %2,4 üretim artışı görüldü.
+	Yurtiçi, Ticaret Satış Hacmi (sabit fiyatlarla): Aralık’ta aylık bazda %2.1 arttı, yıllık bazda artış ise %3.8 ile ivme kaybetti. Aylık verideki artışta toptan ticaret satış hacminin %1.0 azalması da dikkat çekti. İlgili veri, ticaret sektöründe faaliyet gösteren farklı tür ve büyüklükteki girişimlerin satış hacimlerini aylık ölçmekte ve endeksler hacim olarak (sabit fiyatlarla) üretilmekte. Genel olarak, Kasım ayındaki düşüş iç talepte ivme kaybının görülmediğine işaret ediyor.
+	Yurtiçi, Perakende Satış Hacmi (sabit fiyatlarla): İç talebin en önemli öncü göstergesi olan endeks Aralık’ta aylık bazda %1.7 ile artışını devam ettirdi. Rekor seviyesini yenileyen ve yaklaşık son 1.5 yıllık dönemde kesintisiz artan endeks, reel tüketim harcamalarının güçlü eğilimini koruduğunu yansıtmakta. Yıllık artış oranı ise %16.3 ile artış gösterdi. Para politikasının etkileyebildiği harcama türü olarak düşünülebilecek gıda dışı satışlar ise aylık bazda %2.6 artışla tarihi zirvesini yenilemiş oldu.
+	ABD, Çekirdek PCE (Kişisel Tüketim Harcamaları) Deflatör: FED’in fiyat artış hızına dair yakından takip ettiği favori göstergesidir. Aralık ayında beklentilerin hafif üzerinde %0,4 artış gösterirken, yıllık bazda artışı %3.0 seviyesine yükseldi. FOMC'nin daha önce beklenenden daha yavaş bir dezenflasyon süreci uyarısıyla uyumlu olarak, Şubat'tan bu yana en keskin artışı yansıttı. Tarifeler ve jeopolitik risklerle artması beklenen fiyatlar ve zayıflayan iş piyasası nedeniyle bu ivmenin ne kadar süreceği belirsizliğini koruyor.
+•	FED, Aralık’ta yayınladığı projeksiyonlarında çekirdek PCE 2026 tahminini %2.6’dan %2.5’e aşağı yönlü revize etti. 2027 tahmini ise %2.1 olarak korundu. Tarife politikaları ve jeopolitik riskler, enflasyon üzerinde yukarı yönlü riskleri canlı tutmaya devam etmekte.
+	ABD, TÜFE: Ocak’ta aylık bazda %0.2 yıllık bazda ise %2.4 ile beklentilerin altında geldi. Para politikasının seyri açısından önem arz eden çekirdek TÜFE ise yıllık bazda artış %2.5 ile beklentilere uyumlu gerçekleşti. Hizmet maliyetlerindeki artışın etkisiyle, yılın başında ABD'de çekirdek enflasyon Ağustos ayından bu yana en yüksek seviyede yükseldi.
+	Euro Bölgesi, Sanayi Üretimi: Aralık’ta aylık bazda %1.4 azalışla düşüş beklentisine uyumlu gerçekleşti. Yıllık bazda ise %1.2’ye düşerek beklentilerin hafif altında kaldı. Aynı dönemde, enerji, sermaye malı üretimi ve dayanıksız tüketim malları üretiminde bir önceki aya kıyasla düşüş yaşanırken, dayanıklı tüketim malları üretiminde artış görüldü. 
