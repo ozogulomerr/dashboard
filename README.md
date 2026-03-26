@@ -1,24 +1,26 @@
-	Yurtiçi, Tüketici Güven Endeksi: Şubat’ta 83.7 ile önceki aya göre %2.3 oranında artış gösterdi: Böylece Mart 2025’ten bu yana en yüksek seviyesine yükselmiş oldu. Diğer taraftan; son 3 yıldır uzun dönem ortalamasının (87.7) altında kalmaya devam ediyor. Ocak ayındaki yükselişte mevcut dönem maddi durumu değerlendirmesindeki önceki aya kıyasla %4,6 artış ve gelecek 12 aylık dönemde genel ekonomik durum beklentisindeki önceki aya kıyasla %4,2 artış etkili oldu. 
-•	Diğer yandan, genel ekonomik duruma ilişkin mevcut dönem değerlendirmesinde %1,5, gelecek dönem genel ekonomik durum beklentisinde %0,1 oranında düşüş görüldü.
+	ABD, İmalat Sanayi PMI: Şubat’ta 51.2’ye düşerek beklentilerin ılımlı altında kaldı. Eşik seviyenin (50) üzerinde kalmaya devam etti. İmalat sektör koşullarında hafif iyileşme izlendi. Hizmet Sektörü PMI verisi de 52.3’e düşerek yükseliş beklentilerini karşılayamadı. Sektördeki yeni iş akışları, ihracat siparişlerindeki düşüşün etkisiyle yavaşladı. Müşteri talebindeki duraklama, firmaların marjinal işe alım oranlarını yavaşlatmalarına neden oldu. İleriye dönük olarak, şirketler sert bir kışın sona ermesine ve daha düşük faiz oranları ile vergi indirimlerinin önümüzdeki yıl iş faaliyetlerini destekleyeceğine dair iyimser kaldı. 
+•	FED’in faiz indirim sürecine girmesi ve mevcut tarife düzeyleri üzerinde kalıcı anlaşmalar sağlanmaya başlanmış olsa da PMI verileri iş güveninin azaldığını, fiyat ve talep baskıları konusunda endişelerin devam ettiğini gösteriyor.
+	Euro Bölgesi, İmalat Sanayi PMI: Şubat’ta 50.8 ile beklenti üzerinde gerçekleşti, endeks Eylül 2025 itibariyle eşik değerin altına düşmüştü. Geçtiğimiz ay endeks, sektörde Ağustos ve Eylül aylarında gözlenen nispeten olumlu görünümün tam olarak istikrar kazanamadığına işaret etmişti. Hizmet Sektörü PMI ise 51.8 ile artış göstererek eşik değerin üzerindeki seyrini sürdürdü.
+•	Euro Bölgesi'nin bileşik PMI verileri 51.9 seviyesine yükselerek Kasım’dan bu yana en güçlü genişlemeye işaret etti. Bölgede, ECB faiz indirim süreci ile genişlemeci mali paketler büyümeyi destekleyici unsurlar olarak ön plana çıkarken, tarife belirsizlikleri ve jeopolitik risk kaynaklı enerji fiyatlarındaki artışlar imalat sektörlerinin toparlanmasında risk oluşturuyor.
 
 
-Tüketici güveni mart ayında düşüş gösterdi 
-Tüketici Güven Endeksi mart ayında 85,0 ile bir önceki aya göre %0,8 oranında düşüş gösterdi. 2004 
-yılından beri yayınlanan tarihsel serinin dip seviyesi Haziran 2022’de 63,4 ile görülmüştü. Serinin uzun 
-dönem ortalaması ise 87,6 seviyesinde hesaplanıyor. Tüketici güven endeksinde mart ayında görülen 
-gerilemede gelecek 12 aylık dönemde genel 
-ekonomik durum beklentisi endeksindeki düşüş öne 
-çıktı. Genel ekonomik duruma ilişkin mevcut dönem 
-değerlendirmesi %3,1 artış gösterirken, gelecek 
-dönem genel ekonomik durum beklentisinde %2,9
-oranında düşüş görüldü. 
-Mart ayında hanenin mevcut dönem maddi durumu 
-değerlendirmesi önceki aya göre %2,0 yükselirken, 
-gelecek 12 aylık dönem maddi durum beklentisi 
-endeksinde %1,3 düşüş gözlendi. Mevcut dönemin 
-dayanıklı tüketim harcaması yapma açısından 
-uygunluğu endeksi %2,8 artış kaydederken, gelecek 12 aylık dönemde dayanıklı tüketim mallarına 
-harcama yapma düşüncesi endeksinde ise %0,5 düşüş gözlenmiş. Gelecek 12 ayda işsiz sayısına ilişkin 
-beklentinin %2,2 artış kaydederek işsiz sayısında düşüş beklentisine işaret ettiği görülüyor. İşsiz sayısı 
-beklentisi endeksinin artması işsiz sayısında azalma beklendiğini, endeksin azalması ise işsiz sayısında 
-artış beklendiğini göstermektedir.
+ABD ve Euro Alanı’nda öncü PMI verileri karışık bir görünüm sundu.
+ABD ve Euro Alanı’nda Mart ayına ilişkin öncü PMI verilerinin izlendiği dün ABD 
+verileri karışık bir seyir izledi. İmalat sanayi PMI, 0,3 puanlık düşüş beklentisinin 
+aksine 0,8 puan artarak 52,4 seviyesine yükseldi. Yeni siparişlerin Ekim 2025’ten 
+bu yana en güçlü artışını kaydettiği bu dönemde, gümrük tarifesi kaygılarının 
+azalmasıyla iş dünyası güveni son 13 ayın zirvesine çıksa da hizmetler PMI’ın 51,1 
+ile Nisan 2025 sonrası en düşük seviyesine gerilemesi genel aktivitedeki ivme 
+kaybına işaret etti. Girdi maliyetleri endeksi, enerji maliyetlerindeki sıçramayla 
+son 10 ayın en keskin artışını yaşayarak enflasyonist baskıların sürdüğünü teyit 
+etti. Orta Doğu’daki jeopolitik risklerin tedarik sürelerini Ekim 2022’den bu yana 
+en uzun seviyeye taşıması ve istihdam büyümesinin 8 aylık dip seviyeye 
+gerilemesi, üretim maliyetleri üzerindeki yukarı yönlü risklerin devam ettiğini 
+gösteriyor. 
+Euro Alanı’nda Mart ayı öncü verileri, yükselen enflasyon beklentileri ve tedarik 
+sorunları nedeniyle özel sektör büyümesinin durma noktasına geldiğini teyit etti. 
+Öncü bileşik PMI, Şubat ayındaki 51,9 seviyesinden son 10 ayın dibi olan 50,5’e 
+gerileyerek daralma bölgesine yaklaştı. Bölge genelinde Orta Doğu kaynaklı 
+jeopolitik gerilimlerin girdi maliyetlerini artırmaya devam etmesi ve teslimat 
+sürelerinde 2022 ortalarından bu yana görülen en ciddi aksamalara yol açması, 
+ekonomik aktiviteyi baskılayan ana unsurlar olarak öne çıktı. 
