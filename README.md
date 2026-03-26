@@ -1,5 +1,8 @@
-	Yurtiçi, Kapasite Kullanım Oranı: Ocak’ta 0.2 puan artarak %74.4 ile son 5 aylık kesintisiz artışını sürdürdü. Böylece yılın başında üretici sektörler açısından olumlu bir görünüme işaret etti.
-•	Kapasite kullanım oranı, 2024 yılı başından bu yana geçici dalgalanmalar göstermekle birlikte genel olarak düşüş eğilimi gösteriyor. Son aylarda ise hem reel sektör güveninde hem de mevcut durumu yansıtan kapasite kullanımı sanayi üretiminde kaydedilen toparlanma olumlu görünüme işaret ediyor.
+	Yurtiçi, Kapasite Kullanım Oranı: Mart’ta kapasite kullanım oranı önceki aya göre değişmeyerek %74,0 ile yatay kaldı. Böylece, yılın ilk çeyreğinde kapasite kullanımının bir önceki çeyreğe göre değişmemekle birlikte geçen yılın aynı döneminin altında kalması, üretici sektörler açısından zayıf bir görünüme işaret etti.
+•	Kapasite kullanım oranının son dönemde %75 eşik seviyesinin altında kalmaya devam etmesi, yatırım iştahı açısından olumsuz sinyal verirken, Reel Kesim Güven Endeksi’nin de gerileyerek son 8 ayın en düşük seviyesine inmesi üretim görünümündeki zayıflığı teyit etti. Önümüzdeki döneme ilişkin sipariş, üretim ve yatırım beklentilerindeki bozulma, sanayi üretiminde toparlanmanın henüz kalıcı olmadığını göstermektedir.
+	Yurtiçi, Reel Kesim Güven Endeksi: Şubat’ta 2.5 puan artarak 104.1 seviyesine yükseldi ve iyimserlik eşiğinin üzerindeki seyrini korudu. 
+•	Şubat ayından, son üç aydaki toplam sipariş miktarı, gelecek üç aydaki üretim hacmi, mevcut toplam sipariş miktarı, gelecek üç aydaki ihracat sipariş miktarı, sabit sermaye yatırım harcaması ve mevcut mamul mal stokuna ilişkin değerlendirmeler endeksi artış yönünde etkilerken, gelecek üç aydaki toplam istihdam ve genel gidişata ilişkin değerlendirmeler endeksi azalış yönünde etkiledi.
+
 
 İmalat sanayi öncü göstergeleri ilk çeyrek için olumsuz sinyal verdi 
 Merkez Bankası’nın açıkladığı imalat sanayi öncü göstergeleri mart ayı gerçekleşmesi yılın ilk 
