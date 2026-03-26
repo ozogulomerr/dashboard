@@ -36,4 +36,18 @@ Hane halkının geleceğe yönelik enflasyon beklentilerinde, manşet enflasyon 
 etken olduğu biliniyor. Bu nedenle, hane halkının seviye olarak enflasyon beklentisi yanında, 
 enflasyonun yönüne dair beklentilerinin takibi de önemli. Enflasyonun düşeceğini bekleyenlerin oranı 
 mart ayında önceki aya kıyasla 5,19 puan azalarak 15,14 seviyesine geriledi. Anket kapsamına alınan 
-diğer bir yeni soru ile katılımcılara, enflasyon ve kur beklentileri ışığında, şu anda yatırım
+diğer bir yeni soru ile katılımcılara, enflasyon ve kur beklentileri ışığında, şu anda yatırım yapabilecekleri nakit varlıkları olsa öncelikli olarak hangi yatırım aracını tercih edecekleri soruluyor. Mart
+ayında, katılımcıların %55,2’si altını öncelikli yatırım aracı olarak sıralarken, %29,5’i gayrimenkulü öne 
+çıkardı.
+Enflasyon beklentileri aynı zamanda önemli bir 
+ekonomik gösterge olan reel borçlanma maliyetleri 
+hesaplamak açısından da önem taşıyor. Bu 
+bağlamda TCMB’nin açıkladığı faiz istatistiklerini ve 
+TCMB’nin sektörel enflasyon beklentileri anketinde 
+bulunan reel sektörün 12 ay sonrası için enflasyon 
+beklentilerini kullanarak ticari kredilerde beklenen 
+reel faiz seviyesini hesaplıyoruz. Ticari kredilerde 
+beklenen reel faiz 2025 Haziran ayında 2015 
+yılından bu yana hesaplayabildiğimiz serinin en 
+yüksek seviyesine ulaşmıştı. Mart ayının ortasında 
+ise önceki aya kıyasla 0,8 puan arttığı görülüyor.
