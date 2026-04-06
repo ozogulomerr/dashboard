@@ -1,3 +1,7 @@
+Yurtiçi, TÜFE: Mart’ta aylık bazda %1.94 ile beklentilerin altında artış kaydetti. Böylece yıllık TÜFE %30.87 seviyesine gerileyerek önceki aya göre düşüş gösterse de enflasyon görünümünde kalıcılık devam etti. Gıda grubunda aylık artış %1.8 ile sınırlı kalırken, enerji grubunda %4.75’lik yükseliş dikkat çekti. Yurtiçi ÜFE’de ise yıllık artış %28.1’e yükselerek maliyet yönlü baskıların güçlendiğine işaret etti.
+
+• Yıllık TÜFE gerileme kaydetmesine rağmen, çekirdek göstergelerdeki yükseliş (B endeksi %30.1, C endeksi %29.7) enflasyonun ana eğiliminde bozulmaya işaret etmektedir. Artan emtia fiyatları ve ithalat maliyetleri enflasyon üzerindeki yukarı yönlü riskleri canlı tutarken, yıl sonu TÜFE’nin %27.5 seviyesinde gerçekleşeceğini ve risklerin yukarı yönlü olduğunu değerlendiriyoruz.
+
 	Yurtiçi, TÜFE: Eylül’de aylık bazda %3.2 beklenti üzerinde artış kaydetti. Böylece, yıllık TÜFE %33.3 düzeyine yükselirken Haziran 2024’ten bu yana yıllık enflasyonda izlenen dezenflasyon süreci sekteye uğradı. Yurtiçi ÜFE’de ise aylık artış %2.5 ile ivme kazanırken, yıllık bazda %26.6 düzeyine yükseldi.
 •	Yıllık TÜFE, TCMB ara hedefinin (%24.0) ve yıl sonu enflasyon tahmin aralığının (%25 - %29) üzerinde kalmaya devam ediyor. Enflasyonda süregelen katılığın da etkisiyle yıllık TÜFE’nin TCMB’nin son Enflasyon Raporunda güncellediği tahmin aralığının üzerinde gerçekleşeceğini tahmin ediyoruz.
 
