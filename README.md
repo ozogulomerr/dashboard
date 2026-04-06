@@ -1,29 +1,40 @@
-Yurtiçi, Dış Ticaret Dengesi (Öncü): Ticaret Bakanlığı geçici gümrük verilerine (Genel Ticaret Sistemi) göre, mart ayında toplam ihracat yıllık bazda %6,4 düşüşle 21,9 milyar dolar olurken, ithalat %8,4 artışla 33,2 milyar dolar oldu, dış ticaret açığı ise %56,6 artışla 11,3 milyar dolar düzeyinde gerçekleşti. Geçen yılın aynı ayında 7,2 milyar dolar açık verilmişti. İhracatın ithalatı karşılama oranı %66,1 ve enerji-altın hariç karşılama oranı %78,9 seviyesinde gerçekleşti. Enerji ithalatının 5,7 milyar dolar ile yine ilgili ayın ithalatı içinde önemli bir yer tuttuğu ancak önceki yılın aynı ayına göre sınırlı gerilediği görüldü. Buna karşılık, mart ayında kıymetli taş ve metaller (altın dahil) ithalatı 2,1 milyar dolar ile geçen yılın aynı ayının hafif altında gerçekleşti. Enerji ve altın dışı ithalat ise geçen yılın aynı ayına göre %11,3 yükseldi.
-
-• Dış ticaret açığında gözlenen belirgin genişlemede ithalat artışı ve ihracattaki daralma etkili olurken, özellikle ara malı ve yatırım malı ithalatındaki artışlar iç talep ve üretim görünümüne ilişkin güçlü sinyaller vermektedir. Bu doğrultuda, cari açığın mart ayında yaklaşık 9,5 milyar dolar seviyesinde gerçekleşeceğini ve yıllıklandırılmış açığın 39,5 milyar doların üzerine yükseleceğini tahmin ediyoruz.
-
-	Yurtiçi, Dış Ticaret Dengesi (Öncü): Ticaret Bakanlığı geçici gümrük verilerine (Genel Ticaret Sistemi) göre, şubat ayında toplam ihracat yıllık bazda %1,6 artışla 21,1 milyar dolar olurken, ithalat %6,1 artışla 30,3 milyar dolar oldu, dış ticaret açığı ise %18,1 artışla 9,2 milyar dolar düzeyinde gerçekleşti. Geçen yılın aynı ayında 7,8 milyar dolar açık verilmişti. İhracatın ithalatı karşılama oranı %69,6 ve enerji-altın hariç karşılama oranı %86,9 seviyesinde gerçekleşti. Enerji ithalatının 5,1 milyar dolar ile yine ilgili ayın ithalatı içinde önemli bir yer tuttuğu ancak önceki yılın aynı ayının altında gerçekleştiği görüldü. Buna karşılık, şubat ayında kıymetli taş ve metaller (altın dahil) ithalatı 3,4 milyar dolar ile geçen yılın 0,9 milyar dolar üzerinde gerçekleşti. Enerji ve altın dışı ithalat ise geçen yılın aynı ayına göre %12,9 yükseldi. 
-
-Dış ticaret açığı mart ayında belirgin yükseldi 
-Ticaret Bakanlığı geçici gümrük verilerine (Genel Ticaret Sistemi) göre, mart ayında toplam ihracat yıllık 
-bazda %6,4 düşüşle 21,9 milyar dolar olurken, ithalat %8,4 artışla 33,2 milyar dolar oldu, dış ticaret 
-açığı ise %56,6 artışla 11,3 milyar dolar düzeyinde gerçekleşti. Geçen yılın aynı ayında 7,2 milyar dolar 
-açık verilmişti. Bir önceki yılın aynı ayına göre ihracatın ithalatı karşılama oranı 10,4 puan azalarak %66,1
-ve enerji-altın hariç karşılama oranı 14,0 puan azalarak %78,9 seviyesinde gerçekleşti. Enerji ithalatının 
-5,7 milyar dolar ile yine ilgili ayın ithalatı içinde önemli bir yer tuttuğu ancak önceki yılın aynı ayının
-sınırlı altında gerçekleştiği görüldü. Benzer olarak, mart ayında kıymetli taş ve metaller (altın dahil) 
-ithalatı 2,1 milyar dolar ile geçen yılın 0,1 milyar dolar altında gerçekleşti. Enerji ve altın dışı ithalat ise 
-geçen yılın aynı ayına göre %11,3 yükselmiş oldu.
-Öte yandan, yatırım malı ithalatı yıllık %7,9, ara malı ithalatı yıllık %11,5 artarken, tüketim malı ithalatı 
-ise %5,3 düşüş kaydetti. Özel yatırımların öncü göstergesi makine ve elektrikli makine toplam ithalatı 
-geçen yılın aynı dönemine göre %16,8 artış kaydetti. Sanayi imalatı için öncü gösterge olan enerji ve 
-altın hariç ara malı ithalatı (Euro karşılığı) ise yıllık %12,7 civarı artışla sanayi üretimi açısından pozitif
-sinyal verdi. Bu sonuçlardan sonra, cari dengenin mart ayında 9,5 milyar dolar civarı açık verebileceğini 
-ve geçen yıl aynı ayda 4,9 milyar dolar açık verilmesi nedeni ile son 12 aylık açığın 39,5 milyar doların 
-üzerine yükseleceğini tahmin ediyoruz.
-
 	Yurtiçi, İmalat Sanayi PMI: Eylül’de 46.7 ile önceki aya göre 0.6 puan geriledi. Endeks, son 18 aydır da eşik değerin (50.0) altında seyretmekte. Endeksin üçüncü çeyrek ortalaması ise 46.6 ile bir önceki çeyreğin altında kaldı. Anket katılımcılarına göre, Eylül’de zorlayıcı talep koşullarının devamının yeni siparişler ile ihracatın daha da yavaşlamasına yol açarak imalat sanayi üretiminde belirgin düşüşe neden olduğu belirtildi.
 •	En sert üretim düşüşü ise Ağustos ayına göre hafiflemekle birlikte yine tekstil ürünlerinde gerçekleşti. Üretimde olduğu gibi, yeni siparişlerde de en sert yavaşlama tekstilde görüldü.
+
+İSO Türkiye İmalat PMI mart ayında son beş ayın en düşük seviyesine geriledi 
+S&P Global Market Intelligence tarafından İstanbul Sanayi Odası (İSO) için hazırlanan İstanbul Sanayi 
+Odası Türkiye İmalat PMI mart ayında 47,9 ile 
+önceki aya göre 1,4 puan düşüş gösterdi. Böylece 
+endeks önceki ay yükseldiği Nisan 2024’ten bu 
+yana yüksek seviyesinden gerileyerek son beş ayın 
+en düşük seviyesinde gerçekleşti. Endeksin ilk 
+çeyrek ortalaması ise 48,4 ile bir önceki çeyreğin 
+üzerinde kaldı. Endeks son 24 aydır eşik değerin 
+altında kalmaya devam ediyor. Endeks daha önce 
+Nisan 2018’den başlayarak 21 ay, küresel krizde 
+ise Kasım 2007’den başlayarak 18 ay eşik değerin 
+altında kalmıştı. Pandemi krizinde ise bu süre 3 ay 
+ile sınırlı kalırken, 2022 yılı Mart-Aralık dönemi ve Temmuz 23- Ocak 24 döneminde eşik değerin 
+altında seyretmişti. Endeksin 2025 yılı ortalaması da 47,3 ile 48,1 olan 2024 yılı ortalamasının altında 
+kalmıştı. Endekste 50'nin altındaki değerler üretimde potansiyeline göre daralmaya, üzeri ise 
+büyümeye işaret ediyor.
+S&P Global Market Intelligence tarafından yapılan açıklamada, imalat PMI’ın ilk çeyreğin sonu itibarıyla 
+faaliyet koşullarında ılımlı bir bozulma sinyali verdiği ve böylece sektörün performansında kesintisiz 
+yavaşlama eğiliminin iki yıla ulaştığı belirtildi. Mart ayı verileri hem toplam yeni siparişlerde hem de 
+yeni ihracat siparişlerinde yavaşlamanın keskinleştiğine işaret etti. Mart ayında Orta Doğu’daki savaşın 
+yol açtığı belirsizlik ve bu durumun piyasa talebi üzerindeki etkileri faaliyet koşulları üzerinde belirleyici 
+oldu. Fiyatlardaki yükselişin de yeni siparişlerdeki yavaşlamada rolü olduğu bildirildi. Talepteki zayıflık 
+ve fiyat baskıları, imalat sanayi üretiminde yavaşlamanın devam etmesine neden oldu. Üretimdeki 
+düşüş 2025 Kasım ayından bu yana en yüksek oranda gerçekleşti. Anket katılımcılarına göre fiyat baskıları genellikle Orta Doğu’daki savaşa bağlı olarak navlun, yakıt ve petrol maliyetlerinde yaşanan 
+artıştan kaynaklandı. Benzer şekilde ham madde fiyatlarında da yükseliş bildirildi. Bunların sonucu 
+olarak, girdi maliyetlerinde son 23 ayın, nihai ürün fiyatlarında ise son 25 ayın en hızlı artışı gözlendi. 
+Savaşın bir diğer etkisi de malzeme yetersizliği ve taşımacılıktaki aksamalar nedeniyle tedarikçilerin 
+teslim sürelerinin uzaması oldu. Teslimat sürelerinde Ağustos 2024’ten bu yana en belirgin artış
+kaydedildi. Yeni siparişlerin yavaşlaması ve üretim gereksinimlerinin azalmasıyla birlikte, Türk 
+imalatçıları istihdamı son altı ayın en yüksek oranında azaltırken, satın alma faaliyetleri ile stok 
+seviyelerinde de düşüş gerçekleştirdi. Kuruluş tarafından yapılan açıklamada sektörün kısa vadeli 
+görünümünün, Orta Doğu’daki çatışmaların ne kadar süreceğine ve bunun küresel fiyat ve arz koşulları 
+üzerindeki etkilerine bağlı olacağı değerlendirildi.
 
 	ABD, Tarım Dışı İstihdam: Gecikmelerden dolayı son 2 ayın beraber açıklandığı verilere göre Ekim’de 105 bin kişi gerilerken Kasım’da 64 bin beklenti üzerinde arttı. Ekim ve Kasım istihdam verileri ile veri açıklamalarındaki aksaklıklar işgücü piyasasına dair net değerlendirmeler yapmayı güçleştiriyor. 
 •	Kasım’da sağlık hizmetleri (+46 bin), inşaat sektörü (+28 bin) ve sosyal yardımda (+18 bin) görülen iş artışları, ulaştırma ve depolama sektöründe (-18 bin) ve Beyaz Saray'ın harcama kesintileri nedeniyle federal hükümette (-6 bin) yaşanan kaybın üzerinde gerçekleşti. 
