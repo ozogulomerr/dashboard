@@ -1,3 +1,12 @@
+ABD, Tarım Dışı İstihdam: Mart’ta 65 bin artış beklentisine karşın 178 bin artarak güçlü bir performans sergiledi. Şubat ayındaki zayıf görünümün ardından gelen bu toparlanma, işgücü piyasasının jeopolitik risklere rağmen dayanıklılığını koruduğuna işaret etti.
+• Mart ayında istihdam artışı geniş tabanlı gerçekleşirken, güçlü veri ekonomik aktivitede beklenenden daha olumlu bir görünüme işaret etti. Buna karşılık, ortalama saatlik kazançların aylık %0.2 ve yıllık %3.5 ile beklentilerin altında kalması ücret kaynaklı baskıların sınırlı seyrettiğini gösterdi.
+
+ ABD, İşsizlik Oranı: Mart’ta %4.3 seviyesine gerileyerek beklentilerin altında gerçekleşti. İşsiz sayısı 332 bin azalarak 7.24 milyona düşerken, iş gücüne katılım oranı 0.1 puan gerileyerek %61.9 oldu.
+• İşsizlik oranındaki düşüşe rağmen iş gücüne katılımın gerilemesi ve çalışma saatlerindeki azalma işgücü piyasasında dengelenme sinyallerine işaret ederken, güçlü istihdam artışı Fed’in faiz indirimlerinde temkinli kalabileceğini düşündürmektedir.
+
+ ABD, Perakende Satış Hacmi: Şubat’ta aylık bazda %0.6 artarak beklentilerin üzerinde gerçekleşti. Otomotiv ve akaryakıt hariç çekirdek endeks de %0.4 artış kaydetti.
+• Perakende satışlardaki artışta otomobil satışlarındaki toparlanma etkili olurken, tüketici talebinin güçlü seyrini koruduğu görüldü. Bununla birlikte, artan enerji fiyatlarının önümüzdeki dönemde tüketim kompozisyonu üzerinde aşağı yönlü risk oluşturabileceğini değerlendiriyoruz.
+
 	ABD, Tarım Dışı İstihdam: Gecikmelerden dolayı son 2 ayın beraber açıklandığı verilere göre Ekim’de 105 bin kişi gerilerken Kasım’da 64 bin beklenti üzerinde arttı. Ekim ve Kasım istihdam verileri ile veri açıklamalarındaki aksaklıklar işgücü piyasasına dair net değerlendirmeler yapmayı güçleştiriyor. 
 •	Kasım’da sağlık hizmetleri (+46 bin), inşaat sektörü (+28 bin) ve sosyal yardımda (+18 bin) görülen iş artışları, ulaştırma ve depolama sektöründe (-18 bin) ve Beyaz Saray'ın harcama kesintileri nedeniyle federal hükümette (-6 bin) yaşanan kaybın üzerinde gerçekleşti. 
 
