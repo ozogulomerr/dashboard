@@ -1,3 +1,7 @@
+Yurtiçi, İmalat Sanayi PMI: Mart’ta 47.9 ile önceki aya göre 1.4 puan geriledi. Endeks, son 24 aydır eşik değerin (50.0) altında seyretmeye devam ederken, son beş ayın en düşük seviyesine indi. Endeksin ilk çeyrek ortalaması ise 48.4 ile bir önceki çeyreğin üzerinde gerçekleşti. Anket katılımcılarına göre, mart ayında zayıf talep koşulları ve artan maliyet baskıları yeni siparişler ile ihracat siparişlerinde yavaşlamayı derinleştirerek imalat sanayi üretiminde daralmanın sürmesine neden oldu.
+
+• Üretimdeki düşüş Kasım 2025’ten bu yana en yüksek seviyede gerçekleşirken, yeni siparişlerdeki yavaşlama ve maliyet artışları (özellikle enerji, navlun ve ham madde) sektör genelinde baskı oluşturdu. Buna ek olarak, tedarik zincirinde aksamalar teslimat sürelerini uzatırken, firmaların istihdam ve satın alma faaliyetlerini azaltmasına yol açtı.
+
 	Yurtiçi, İmalat Sanayi PMI: Eylül’de 46.7 ile önceki aya göre 0.6 puan geriledi. Endeks, son 18 aydır da eşik değerin (50.0) altında seyretmekte. Endeksin üçüncü çeyrek ortalaması ise 46.6 ile bir önceki çeyreğin altında kaldı. Anket katılımcılarına göre, Eylül’de zorlayıcı talep koşullarının devamının yeni siparişler ile ihracatın daha da yavaşlamasına yol açarak imalat sanayi üretiminde belirgin düşüşe neden olduğu belirtildi.
 •	En sert üretim düşüşü ise Ağustos ayına göre hafiflemekle birlikte yine tekstil ürünlerinde gerçekleşti. Üretimde olduğu gibi, yeni siparişlerde de en sert yavaşlama tekstilde görüldü.
 
